@@ -1,2 +1,2 @@
-import css from "./css/style.css";
+import "./css/main.scss";
 
