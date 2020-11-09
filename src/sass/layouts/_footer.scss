@@ -1,26 +1,26 @@
 .footer {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: center;
-    // align-items: baseline;
-    color: $footer-text-color;
-    padding: 15px 5px;
-    background-color: $footer-background-color;
-    font-size: 14px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: baseline;
+  color: $footer-text-color;
+  padding: 15px 5px;
+  background-color: $footer-background-color;
+  font-size: 14px;
 
-      @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 16px;
   }
 }
 
 .main-logo {
-    font-size: 25px;
-    font-weight: 500;
-    color: $accent-color;
-    display: flex;
-    margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 500;
+  color: $accent-color;
+  display: flex;
+  margin-bottom: 15px;
 
-      @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 30px;
   }
 }
@@ -36,75 +36,76 @@
     align-items: baseline;
     font-size: 18px;
   }
-
 }
 
 .applications {
   text-align: center;
-  margin-bottom: 25px;
   padding: 10px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 25px;
+  }
 }
 
 .app-list {
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .app-item {
-  color: $footer-text-color ;
+  color: $footer-text-color;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-      &:hover,
-      &:focus {
+  &:hover,
+  &:focus {
     fill: $accent-color;
     transition: transform 500ms ease;
   }
-  
 }
 
 .app-svg {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .app-item:focus .app-svg,
 .app-item:hover .app-svg {
-    fill: $accent-color
+  fill: $accent-color;
 }
 
 .copyright {
-     @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
   }
 }
 
 .copyright-desc {
-    text-align: center;
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .developer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-svg {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .section-desc {
-    margin-bottom: 25px;
-        margin-bottom: 15px;
-    margin-top: 15px;
-    text-transform: uppercase;
+  margin-bottom: 25px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-transform: uppercase;
 }
 
 .socials {
-    text-align: center;
-     margin-bottom: 25px;
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 25px;
+  }
 }
 
 .socials .section-desc {
@@ -114,44 +115,42 @@
 }
 
 .social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   border: 1px solid $accent-color;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-list {
-    display: flex;
-    justify-content:space-evenly;
-   
+  display: flex;
+  justify-content: space-evenly;
 }
 
- .social-link:hover,
-  .social-link:focus {
-      background-color: $accent-color;
-  }
+.social-link:hover,
+.social-link:focus {
+  background-color: $accent-color;
+}
 
 .social-svg {
-    fill: $accent-color;
-     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $accent-color;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   .social-link:hover &,
   .social-link:focus & {
-    fill:white;
+    fill: white;
   }
 }
 
 .logo {
-    color: black;
-    font-weight: 600;
+  color: black;
+  font-weight: 600;
 }
 
 .accent {
-    color: $accent-color;
-    font-weight: 600;
+  color: $accent-color;
+  font-weight: 600;
 }
