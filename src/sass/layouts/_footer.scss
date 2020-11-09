@@ -4,16 +4,32 @@
     // justify-content: center;
     // align-items: baseline;
     color: $footer-text-color;
-    padding: 29px 5px;
+    padding: 20px 5px;
     background-color: $footer-background-color;
     font-size: 14px;
+
+      @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.footer-section {
+  border: 1px solid $accent-color;
+  border-radius: 4px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    font-size: 18px;
+  }
+
 }
 
 .applications {
-    text-align: center;
-     margin-bottom: 25px;
-      border: 1px solid $accent-color;
-  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 25px;
   padding: 10px;
 }
 
@@ -21,9 +37,6 @@
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-   
-      
-
 }
 
 .app-item {
@@ -39,13 +52,24 @@
   
 }
 
+.app-svg {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
 .app-item:focus .app-svg,
 .app-item:hover .app-svg {
     fill: $accent-color
 }
 
-
 .copyright {
+     @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.copyright-desc {
     text-align: center;
     margin-bottom: 10px;
 }
@@ -71,6 +95,12 @@
      margin-bottom: 25px;
 }
 
+.socials .section-desc {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
 .social-link {
     display: flex;
     justify-content: center;
@@ -79,6 +109,8 @@
   height: 40px;
   border-radius: 50%;
   border: 1px solid $accent-color;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .socials-list {
@@ -87,8 +119,19 @@
    
 }
 
+ .social-link:hover,
+  .social-link:focus {
+      background-color: $accent-color;
+  }
+
 .social-svg {
     fill: $accent-color;
+     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .social-link:hover &,
+  .social-link:focus & {
+    fill:white;
+  }
 }
 
 .logo {
