@@ -1,17 +1,29 @@
 .footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: baseline;
 color: $footer-text-color;
-background-color: $footer-background-color;
-padding: 29px 10px;
+padding: 29px 5px;
+    background-color: $footer-background-color;
+    font-size: 14px;
+
 }
 
-// .footer p {
-//     margin: 0;
-// }
+.applications {
+    text-align: center;
+}
 
+.app-list {
+    padding: 0;
+     display: flex;
+    justify-content:space-between;
+
+}
+
+.app-item {
+  color: $footer-text-color ;
+}
 
 .copyright {
     text-align: center;
@@ -20,13 +32,37 @@ padding: 29px 10px;
 
 .developer {
     display: flex;
+    justify-content: center;
 }
 
 .footer-svg {
     margin: 0 10px;
-   
+}
+
+.socials {
+    text-align: center;
 }
 
 .socials-list {
     display: flex;
+    justify-content:space-evenly;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.social-svg {
+    fill: $accent-color;
+    
+}
+
+.logo {
+   
+    color: black;
+        font-weight: 600;
+
+}
+
+.accent {
+    color: $accent-color;
+    font-weight: 600;
 }
