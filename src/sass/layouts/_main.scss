@@ -28,6 +28,10 @@
 .film-list-item {
     margin-top: 22px;
     width: 280px;
+
+    .film-image {
+        width: 100%;
+    }
         
     & picture {
         height: 402px;
