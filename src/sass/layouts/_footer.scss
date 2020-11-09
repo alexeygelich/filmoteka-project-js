@@ -12,21 +12,38 @@
 .applications {
     text-align: center;
      margin-bottom: 25px;
+      border: 1px solid $accent-color;
+  border-radius: 4px;
+  padding: 10px;
 }
 
 .app-list {
     display: flex;
     justify-content:space-evenly;
     align-items: center;
+   
+      
+
 }
 
 .app-item {
   color: $footer-text-color ;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+    fill: $accent-color;
+    transition: transform 500ms ease;
+  }
+  
 }
 
-// .app-svg {
-//     fill: #;
-// }
+.app-item:focus .app-svg,
+.app-item:hover .app-svg {
+    fill: $accent-color
+}
+
 
 .copyright {
     text-align: center;
@@ -44,6 +61,9 @@
 
 .section-desc {
     margin-bottom: 25px;
+        margin-bottom: 15px;
+    margin-top: 15px;
+    text-transform: uppercase;
 }
 
 .socials {
