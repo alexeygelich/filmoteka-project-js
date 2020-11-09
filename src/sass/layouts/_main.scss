@@ -54,6 +54,7 @@
     }
 
     .number {
+        display: inline-block;
         background-color: white;
         border: 0px;
         border-radius: 5px;
@@ -87,6 +88,11 @@
         border-radius: 5px;
     }
 
+    .is-active {
+        background-color: $accent-color;
+        color: $header-text-color;
+    }
+
     @media screen and (min-width: 768px) {
 
         .film-list {
@@ -98,6 +104,10 @@
             & .film-list-item {
                 @media screen and (max-width: 1199px) {
                     width: 294px;
+                }
+
+                & picture {
+                    width: 274px;
                 }
                 margin-top: 31px;
             }
