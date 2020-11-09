@@ -21,6 +21,9 @@ module.exports = env => ({
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
+      'posthtml-include': {
+      root: "./src",
+    },
     }),
   ],
   devServer: {

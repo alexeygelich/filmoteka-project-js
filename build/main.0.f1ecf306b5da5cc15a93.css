@@ -1,0 +1,1 @@
+main{flex:1 0 auto}header{flex:0 0 auto}img{display:block;max-width:100%;height:auto}ul{list-style:none}a{text-decoration:none;font-style:normal}button{cursor:pointer}.container{margin:0 auto;padding:0 20px;width:320px}@media screen and (min-width:768px){.container{width:658px}}@media screen and (min-width:1200px){.container{width:922px}}
