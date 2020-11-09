@@ -30,6 +30,7 @@
         
     & picture {
         width: 280px;
+        height: 402px;
     }
 }
 
@@ -98,14 +99,17 @@
                 margin-top: 31px;
 
                 & picture {
-                    width: 294px;
-                    height: 398px;
+                    
                 }
             }
         }
 
         .film-list-item:not(:nth-child(2n)) {
-            margin-right: 21px;
+
+            @media screen and (max-width: 1199px) {
+                margin-right: 30px;
+            }
+            
         }
 
         .pagination {
@@ -125,13 +129,12 @@
 
         .film-list-item {
             & picture {
-                width: 274px;
-                height: 398px;
+                
             }
         }
 
         .film-list-item:not(:nth-child(3n)) {
-            margin-right: 10px;
+            margin-right: 21px;
         }
 
     }
