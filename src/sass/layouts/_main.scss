@@ -27,9 +27,9 @@
 
 .film-list-item {
     margin-top: 22px;
+    width: 280px;
         
     & picture {
-        width: 280px;
         height: 402px;
     }
 }
@@ -96,6 +96,9 @@
             padding-top: 29px;
 
             & .film-list-item {
+                @media screen and (max-width: 1199px) {
+                    width: 294px;
+                }
                 margin-top: 31px;
             }
         }
@@ -125,6 +128,10 @@
 
         .film-list-item {
             width: 274px;
+
+            & picture {
+                width: 274px;
+            }
         }
 
         .film-list-item:not(:nth-child(3n)) {
