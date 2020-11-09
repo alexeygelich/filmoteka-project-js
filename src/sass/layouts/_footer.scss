@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+color: $footer-text-color;
+background-color: $footer-background-color;
+padding: 29px 10px;
+}
+
+// .footer p {
+//     margin: 0;
+// }
+
+
+.copyright {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.developer {
+    display: flex;
+}
+
+.footer-svg {
+    margin: 0 10px;
+   
+}
+
+.socials-list {
+    display: flex;
+}
