@@ -1,0 +1,32 @@
+.container {
+  width: 320px;
+  height: 230px;
+  background-color: aquamarine;
+}
+.header-container {
+  padding-top: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+// .header-nav-container {
+//   display: flex;
+// }
+// .header-nav {
+//   display: flex;
+// }
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  padding-top: 10px;
+}
+.nav-item:not(:last-child) {
+  margin-right: 40px;
+}
