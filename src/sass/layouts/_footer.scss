@@ -4,12 +4,24 @@
     // justify-content: center;
     // align-items: baseline;
     color: $footer-text-color;
-    padding: 20px 5px;
+    padding: 15px 5px;
     background-color: $footer-background-color;
     font-size: 14px;
 
       @media screen and (min-width: 768px) {
     font-size: 16px;
+  }
+}
+
+.main-logo {
+    font-size: 25px;
+    font-weight: 500;
+    color: $accent-color;
+    display: flex;
+    margin-bottom: 15px;
+
+      @media screen and (min-width: 768px) {
+    font-size: 30px;
   }
 }
 
