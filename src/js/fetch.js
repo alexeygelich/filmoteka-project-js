@@ -25,7 +25,15 @@ export default function(page = 1, searchValue = false) {
     }
     if(searchValue) {
       fetch(`${refs.defaultSearch}?api_key=${refs.API}&page=${page}&query=zapros&page=1&include_adult=false`)
-  
+      .then(data => data.json())
+        // .then(json => {console.log(json.results); return json})
+        .then(json => {
+          if (json.results.length){
+            return json.results
+          } 
+          return "errrr"
+        })
+        .catch('error')
     }
 
 
