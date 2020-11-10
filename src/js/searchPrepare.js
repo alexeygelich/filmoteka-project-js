@@ -1,22 +1,12 @@
-import getMovies from './fetch.js';
+import getMovies from "./fetch.js";
 
-const error = document.querySelector('.search-error');
-const input = document.querySelector('input');
-const form = document.querySelector('form');
+const error = document.querySelector(".search-error");
 
-const search = function(value) {
-
-    if (value === "") {
-        alert("Введите запрос!")
-    } else {
-        getMovies(1, value);
-        error.classList.add('is-hidden');
-    }
-
+export const search = function (value) {
+  if (value === "") {
+    alert("Введите запрос!");
+  } else {
+    error.innerHTML = "";
+    return getMovies(1, value);
+  }
 };
-
-form.addEventListener('submit', (e)=> {
-    e.preventDefault();
-    search(input.value);
-})
-
