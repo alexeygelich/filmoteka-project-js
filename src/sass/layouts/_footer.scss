@@ -13,27 +13,28 @@
   }
 }
 
-.main-logo {
+.footer-logo {
   font-size: 25px;
   font-weight: 500;
   color: $accent-color;
   display: flex;
   margin-bottom: 15px;
+  justify-content: center;
 
   @media screen and (min-width: 768px) {
     font-size: 30px;
     align-items: baseline;
+    justify-content: flex-start;
   }
 }
 
-.logo-svg {
+.footer-logo-svg {
   fill: #ff6b08;
 }
 
 .footer-section {
   border-top: 1px solid $accent-color;
   border-bottom: 1px solid $accent-color;
-  // border-radius: 4px;
   margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
