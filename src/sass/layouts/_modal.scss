@@ -24,7 +24,7 @@
   margin-bottom: 20px;
 }
 .backdrop {
-  display: none;
+  // display: none;
   position: absolute;
   overflow-y: scroll;
   width: 100%;
@@ -61,6 +61,7 @@
   margin-top: 30px;
   margin-bottom: 20px;
   font-weight: 500;
+  text-transform: uppercase;
 
   @media screen and (min-width: 768px) {
     font-size: 30px;
@@ -68,6 +69,12 @@
     margin-top: 0;
   }
 }
+
+.original-title {
+  text-transform: uppercase;
+
+}
+
 .subtitle {
   font-weight: 500;
   font-size: $primary-font-size;

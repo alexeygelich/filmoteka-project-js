@@ -1,5 +1,5 @@
 {{#each this}}
-<img class="film-image" src="./images/Rectangle 18.jpg" alt="Фильм" />
+<img class="film-image" src="http://image.tmdb.org/t/p/w440_and_h660_face/{{poster_path}}" alt="Фильм" />
 <div class="info-section">
     <h2 class="title">{{title}}</h2>
     <div class="modal-info">
@@ -20,23 +20,23 @@
         <ul class="list-info">
             <li>
                 <p class="about-film-info">
-                    <span class="about-film-vote">7.3</span> / 1260
+                    <span class="about-film-vote">{{vote_average}}</span> / {{vote_count}}
                 </p>
             </li>
             <li>
-                <p class="about-film-info">100.2</p>
+                <p class="about-film-info">{{popularity}}</p>
             </li>
             <li>
-                <p class="about-film-info">A FISTFUL OF LEAD</p>
+                <p class="about-film-info original-title">{{title}}</p>
             </li>
             <li>
-                <p class="about-film-info">Western</p>
+                <p class="about-film-info">{{genre_ids}}</p>
             </li>
         </ul>
     </div>
     <div>
         <h3 class="subtitle">ABOUT</h3>
-        <p class="description"></p>
+        <p class="description">"{{overview}}"</p>
     </div>
     <button class="first add-btn" type="button">ADD TO WATCHED</button>
     <button class="second add-btn" type="button">ADD TO QUEUE</button>
