@@ -10,7 +10,7 @@ const search = function(value) {
         alert("Введите запрос!")
     } else {
         getMovies(1, value);
-        error.innerHTML = "";
+        error.classList.add('is-hidden');
     }
 
 };
