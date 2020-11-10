@@ -13,6 +13,51 @@
     <title>Filmoteka</title>
   </head>
   <body>
+<header class="header">
+  <div class="container nav-container">
+    <!-- !Navigation -->
+
+    <div class="header-container">
+      <div class="header-logo-container">
+        <a href="./index.html" class="logo-link">
+          <svg width="24" height="24">
+            <use href="./images/sprite.svg#icon-film"></use>
+          </svg>
+        </a>
+        <p class="logo-text">Filmoteka</p>
+      </div>
+      <div class="header-nav-container">
+        <nav class="header-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./index.html" class="link current">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="./library.html" class="link">MY LIBRARY</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- !Input -->
+
+    <div class="input-container">
+      <div class="input-wrap">
+        <input type="text" class="header-input" placeholder="Поиск фильмов" />
+        <svg width="12" height="12" class="input-icon">
+          <use href="./images/sprite.svg#icon-search-2"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="search-error-container">
+      <p class="search-error">
+        Search result not successful. Enter the correct movie name and
+      </p>
+    </div>
+  </div>
+</header>
+
     <main>
       <div class="container main">
         <ul class="film-list">
