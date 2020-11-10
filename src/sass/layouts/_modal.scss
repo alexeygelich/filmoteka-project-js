@@ -1,0 +1,142 @@
+.modal-section {
+  padding-bottom: 40px;
+  padding-top: 20px;
+  color: $main-text-color;
+  background-color: $header-text-color;
+  font-size: $primary-font-size;
+  line-height: 1.33;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.modal-info {
+  display: flex;
+  margin-bottom: 20px;
+}
+.backdrop {
+  display: none;
+  position: absolute;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #1a273136;
+}
+.close-modal-btn {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.film-image {
+  width: 280px;
+  height: 416px;
+
+  @media screen and (min-width: 768px) {
+    width: 294px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 426px;
+    height: 514px;
+  }
+}
+.title {
+  font-size: 20px;
+  line-height: 1.15;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: 500;
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+    line-height: 1.17;
+    margin-top: 0;
+  }
+}
+.subtitle {
+  font-weight: 500;
+  font-size: $primary-font-size;
+}
+
+.list-info {
+  margin-right: 41px;
+
+  :not(:last-child) {
+    padding-bottom: 10px;
+  }
+}
+.about-film {
+  color: $about-text-color;
+  line-height: 1.33;
+}
+
+.about-film-vote {
+  color: $header-text-color;
+  background-color: $accent-color;
+  border-radius: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 1.17;
+}
+.description {
+  line-height: 1.67;
+  margin-bottom: 40px;
+  margin-top: 10px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+.add-btn {
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  background-color: $header-text-color;
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+
+  &:hover,
+  :focus {
+    color: $header-text-color;
+    background-color: $accent-color;
+    border: none;
+  }
+}
+
+.first.add-btn {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-right: 15px;
+}
+.second.add-btn {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+@media screen and (min-width: 768px) {
+  .info-section {
+    margin-left: 30px;
+  }
+}
