@@ -227,23 +227,13 @@
   color: white;
 }
 .search-error {
+  font-size: 14px;
+  line-height: 16px;
   margin-top: 22px;
   color: red;
 }
 
 // !LIBRARY
-// .container.lib-container {
-//   width: 320px;
-//   height: 230px;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-image: linear-gradient(
-//       to right,
-//       rgba(0, 0, 0, 0.56),
-//       rgba(0, 0, 0, 0.56)
-//     ),
-//     url(../images/header-lib.jpg);
-// }
 
 .btn-container {
   margin-top: 49px;
@@ -272,6 +262,7 @@
 }
 
 .lib-btn:focus {
+  box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
   background-color: #ff6b01;
   border: 0;
   border-radius: 5px;

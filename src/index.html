@@ -14,7 +14,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container lib-container">
+      <div class="container nav-container">
         <!-- !Navigation -->
 
         <div class="header-container">
@@ -41,9 +41,25 @@
         </div>
 
         <!-- !Input -->
-        <div class="btn-container">
-          <button class="lib-btn">Watched</button>
-          <button class="lib-btn">Queue</button>
+
+        <div class="input-container">
+          <form action="">
+            <div class="input-wrap">
+              <input
+                type="text"
+                class="header-input"
+                placeholder="Поиск фильмов"
+              />
+              <svg width="12" height="12" class="input-icon">
+                <use href="./images/sprite.svg#icon-search-2"></use>
+              </svg>
+            </div>
+          </form>
+        </div>
+        <div class="search-error-container">
+          <p class="search-error">
+            Search result not successful. Enter the correct movie name and
+          </p>
         </div>
       </div>
     </header>
