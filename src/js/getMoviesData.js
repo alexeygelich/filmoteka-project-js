@@ -5,16 +5,16 @@ const error = document.querySelector(".search-error");
 const input = document.querySelector("input");
 const form = document.querySelector("form");
 
-const getMoviesData = function (promis) {
+const getMoviesData = async function (promis) {
   let array = [];
   const filmArr = [];
-  promis
+  await promis
     .then((data) => {
       array = [...data.results];
       let str = "";
-      array.forEach((e) => {
+      array.forEach((e, i) => {
         const obj = {};
-        obj.id = e.id;
+        obj.id = i;
         obj.popularity = e.popularity;
         obj.poster_path = e.poster_path;
         obj.title = e.title;
