@@ -6,7 +6,7 @@ export const search = function (value) {
   if (value === "") {
     alert("Введите запрос!");
   } else {
-    error.innerHTML = "";
+    // error.innerHTML = "";
     return getMovies(1, value);
   }
 };

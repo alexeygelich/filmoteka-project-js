@@ -38,6 +38,7 @@ const getMoviesData = async function (promis) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  refs.errorNotification.classList.add('is-hidden');
   const moviesData = search(input.value);
   console.log(getMoviesData(moviesData));
 });
