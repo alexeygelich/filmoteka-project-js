@@ -14,32 +14,37 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header-container">
-          <a href="./index.html" class="logo-link">
-            <svg width="24" height="24">
-              <use href="./images/sprite.svg#icon-film"></use>
-            </svg>
-          </a>
+      <div class="container lib-container">
+        <!-- !Navigation -->
 
-          <!-- <div class="header-nav-container"> -->
-          <nav class="header-nav">
-            <ul class="nav-list">
-              <li class="nav-item">HOME</li>
-              <li class="nav-item">MY LIBRARY</li>
-            </ul>
-          </nav>
-          <!-- </div> -->
+        <div class="header-container">
+          <div class="header-logo-container">
+            <a href="./index.html" class="logo-link">
+              <svg width="24" height="24">
+                <use href="./images/sprite.svg#icon-film"></use>
+              </svg>
+            </a>
+            <p class="logo-text">Filmoteka</p>
+          </div>
+          <div class="header-nav-container">
+            <nav class="header-nav">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="./index.html" class="link current">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./library.html" class="link">MY LIBRARY</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div class="input-container">
-          <input type="text" class="header-input" placeholder="Поиск фильмов" />
-          <svg width="24" height="24">
-            <use href="./images/sprite.svg#icon-search-2"></use>
-          </svg>
+
+        <!-- !Input -->
+        <div class="btn-container">
+          <button class="lib-btn">Watched</button>
+          <button class="lib-btn">Queue</button>
         </div>
-        <p class="search-error">
-          Search result not successful. Enter the correct movie name and
-        </p>
       </div>
     </header>
   </body>
