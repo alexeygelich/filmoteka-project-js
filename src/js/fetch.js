@@ -44,10 +44,6 @@ export default function(page = 1, searchValue = false) {
     }
   })
 
-  
-}
-
-
 
 
 
