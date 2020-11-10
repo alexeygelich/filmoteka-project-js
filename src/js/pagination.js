@@ -1,4 +1,4 @@
-import Paginator from "paginator"
+// import Paginator from "paginator"
 // import Pagination from "tui-pagination"
 import Pagination from "tui-pagination"
 import "tui-pagination/dist/tui-pagination.css"
@@ -8,6 +8,14 @@ var pagination1 = new Pagination("pagination", {
   itemsPerPage: 9,
   visiblePages: 7,
 })
+
+const ref = {
+  pagination: document.querySelector('#pagination'),
+}
+ref.pagination.addEventListener('click', someFunc);
+function someFunc() {
+
+}
 
 // возможность переключатся по страницам как вперед так и в противоположном направлении ( при клике на вкладку  HOME или MY LIBRARY   возвращает на первую страницу )
 
