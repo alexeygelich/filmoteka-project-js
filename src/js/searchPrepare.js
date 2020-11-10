@@ -9,7 +9,7 @@ const search = function(value) {
     if (value === "") {
         alert("Введите запрос!")
     } else {
-        getMovies(1, value);
+        console.log(getMovies(1, value));
         error.innerHTML = "";
     }
 
