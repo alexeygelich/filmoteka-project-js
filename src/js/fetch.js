@@ -45,7 +45,7 @@ export default function(page = 1, screen = 'desktop', searchValue) {
     return go.call(URIparameters, URIparameters)
   }
 
-  console.dir(calculateURIparameters());
+  // console.dir(calculateURIparameters());
 
 
  
@@ -57,7 +57,6 @@ export default function(page = 1, screen = 'desktop', searchValue) {
         .then(json => {
           draftArray.push(json.results.slice(obj.firstIndexOfElements, obj.lastIndexOfElements));
         })
-        
     }
     const multipleFetch = function() {
       const pageBefore = fetch(`${refs.defaultURL}?api_key=${refs.API}&page=${obj.currentPageOnServer-1}`)
@@ -73,16 +72,16 @@ export default function(page = 1, screen = 'desktop', searchValue) {
     if(obj.isElementsOnPageBefore) {
       multipleFetch()
         .then(data => {
-          console.log(data);
           data.forEach(el => draftArray.push(...el));
-          return draftArray
         })
-        // .then(data => draftArray)
+        
+        
     }
 
   }
   QUERY(calculateURIparameters())
-  return draftArray
+  return draftArray 
+
  
 }
 

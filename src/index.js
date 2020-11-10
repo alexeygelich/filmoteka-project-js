@@ -7,41 +7,55 @@ const dom = {
   span: document.querySelector('span'),
   outField: document.querySelector('#out-field')
 }
-const fgdsfg = '';
+let screen = '';
 window.onload = function(event) {
   console.log(event.currentTarget.innerWidth);
   if (event.currentTarget.innerWidth > 1000) {
-    const draftArray = getMovies(1, 'desktop');
+    screen = 'desktop';
+    const draftArray = getMovies(1, screen);
     console.log(draftArray);
   }
   if (event.currentTarget.innerWidth > 700 && event.currentTarget.innerWidth < 1000) {
-    const draftArray = getMovies(1, 'tablet');
+    screen = 'tablet';
+    const draftArray = getMovies(1, screen);
     console.log(draftArray);
   }
   if (event.currentTarget.innerWidth < 700) {
-    
-      // const draftArray = async function() {
-      //   const arr = await getMovies(1, 'mobile').then(data => console.dir(data))
-        
-      // }
-      
-    const testt = getMovies(1, 'mobile')
-    console.log(testt);
-      
-      
-     
-         
-         
-            
-  
-    
-    
+    // const draftArray = async function() {
+    //   const arr = await getMovies(1, 'mobile').then(data => console.dir(data))
+    // }
+    screen = 'mobile';
+    const draftArray = getMovies(1, screen);
+    console.log(draftArray);
   }
 }
 
 dom.buttons.addEventListener('click', changePage)
 
+let currentPageOnUser = 1;
 function changePage(event) {
- console.log(event);
+  if(event.view.innerWidth> 1000){
+    screen = 'desktop';
+  } else if (event.view.innerWidth > 700 && event.view.innerWidth< 1000) {
+    screen = 'tablet';
+  } else {
+    screen = 'mobile';
+  }
+  if (event.target.dataset.name == 'right') {
+    currentPageOnUser+=1
+    dom.span.innerText = currentPageOnUser;
+    
+    console.log(currentPageOnUser, screen);
+    const draftArray = getMovies(currentPageOnUser, screen);
+    console.log(draftArray);
+  }
+  if (event.target.dataset.name == 'left') {
+    currentPageOnUser-=1
+    dom.span.innerText = currentPageOnUser;
+
+    console.log(currentPageOnUser, screen);
+    const draftArray = getMovies(currentPageOnUser, screen);
+    console.log(draftArray);
+  }
 }
 
