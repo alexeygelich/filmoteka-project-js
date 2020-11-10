@@ -9,8 +9,8 @@
 // http://image.tmdb.org/t/p/w220_and_h330_face/ugZW8ocsrfgI95pnQ7wrmKDxIe.jpg
 
 const refs = {
-    API:'2d536748299a0654176fee96f4763797',
-  genres:[
+  API: '2d536748299a0654176fee96f4763797',
+  genres: [
     {
       "id": 28,
       "name": "Action"
@@ -88,4 +88,8 @@ const refs = {
       "name": "Western"
     }
   ],
+
+  filmList: document.querySelector('.film-list'),
 }
+
+export default refs
