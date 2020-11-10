@@ -90,4 +90,5 @@
         "name": "Western"
       }
     ],
+      filmList: document.querySelector('.film-list'),
   }
