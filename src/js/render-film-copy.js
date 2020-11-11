@@ -1,5 +1,5 @@
 import mainTemplate from "./templates/mainTemplate.hbs";
-import libraryTemplate from "./templates/libraryTemplate.hbs";
+import libraryTemplate from "./templates/mainTemplate.hbs";
 import refs from './refs.js';
 
 const renderMain = function(filmArr) {

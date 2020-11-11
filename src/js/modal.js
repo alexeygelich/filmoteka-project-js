@@ -1,21 +1,20 @@
+export default function (arr) {
+  const filmList = document.querySelector('.film-list');
 
-export default function (arr) { 
-  const filmListItem = document.querySelector('.film-list-item');
-const filmList = document.querySelector('.film-list');
-
-
-const onModalOpen = e => {
+  const onModalOpen = e => {
+  
     e.path.forEach(el => {
-        if (el.className === 'film-list-item') {
-            const elId = +el.dataset.id;
-            arr.forEach(el => {
-                if (el.id === elId) {
-                    const filmModal = document.querySelector('.modal-section');
-                    filmModal.innerHTML = `
+      if (el.className === 'film-list-item') {
+        const elId = +el.dataset.id;
+        // arr.forEach(el => {
+        // if (el.id === elId) {
+        document.body.classList.add('stop-scroll');
+        const filmModal = document.querySelector('.modal-section');
+        filmModal.innerHTML = `
     <button class="close-modal-btn" type="button">X</button>
-      <img class="film-image" src="http://image.tmdb.org/t/p/w440_and_h660_face${el.poster_path}" alt="${el.title}" />
+      <img class="film-image" src="http://image.tmdb.org/t/p/w440_and_h660_face${arr[elId].poster_path}" alt="${arr[elId].title}" />
       <div class="info-section">
-        <h2 class="title">${el.title}</h2>
+        <h2 class="title">${arr[elId].title}</h2>
         <div class="modal-info">
           <ul class="list-info">
             <li>
@@ -34,50 +33,69 @@ const onModalOpen = e => {
           <ul class="list-info">
             <li>
               <p class="about-film-info">
-                <span class="about-film-vote">${el.vote_average}</span> / ${el.vote_count}
+                <span class="about-film-vote">${arr[elId].vote_average}</span> / ${arr[elId].vote_count}
               </p>
             </li>
             <li>
-              <p class="about-film-info">${el.popularity}</p>
+              <p class="about-film-info">${arr[elId].popularity}</p>
             </li>
             <li>
-              <p class="about-film-info">${el.title}</p>
+              <p class="about-film-info">${arr[elId].title}</p>
             </li>
             <li>
-              <p class="about-film-info">${el.genre_ids}</p>
+              <p class="about-film-info">${arr[elId].genre_ids}</p>
             </li>
           </ul>
         </div>
         <div>
           <h3 class="subtitle">ABOUT</h3>
           <p class="description">
-            ${el.overview}
+            ${arr[elId].overview}
           </p>
         </div>
         <button class="first add-btn" type="button">ADD TO WATCHED</button>
         <button class="second add-btn" type="button">ADD TO QUEUE</button>
     </div>`
-                }
-            })
-        }
-
-        const modalOn = document.querySelector('.backdrop')
-      modalOn.classList.remove('is-hidden')
-
-      const onEscapeClose = function () { 
-        // modalOn.classList.add('is-hidden')
       }
-      
-      window.addEventListener('keydown', onEscapeClose);
-
-        const closeBtn = document.querySelector('.close-modal-btn');
-        closeBtn.addEventListener('click', (e) => {
-            modalOn.classList.add('is-hidden')
-        })
-
-
     })
-}
+        
 
-filmList.addEventListener('click', onModalOpen )
+    const modalOn = document.querySelector('.backdrop')
+    modalOn.classList.remove('is-hidden')
+      
+  
+
+    const onEscapeClose = function (e) {
+      console.log(e.key);
+      if (e.key === "Escape") {
+        modalOn.classList.add('is-hidden');
+        document.body.classList.remove('stop-scroll');
+        window.removeEventListener('keydown', onEscapeClose);
+      }
+    }
+      
+    window.addEventListener('keydown', onEscapeClose);
+
+    modalOn.addEventListener('click', e => {
+      if (e.target === e.currentTarget) {
+        window.removeEventListener('keydown', onEscapeClose);
+        document.body.classList.remove('stop-scroll');
+        modalOn.classList.add('is-hidden');
+      }
+    }
+    )
+
+    const closeBtn = document.querySelector('.close-modal-btn');
+    closeBtn.addEventListener('click', (e) => {
+      window.removeEventListener('keydown', onEscapeClose);
+      document.body.classList.remove('stop-scroll');
+      modalOn.classList.add('is-hidden');
+    })
+
+
+    
+  }
+
+
+  filmList.addEventListener('click', onModalOpen)
 }
