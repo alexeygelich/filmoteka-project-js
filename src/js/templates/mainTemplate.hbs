@@ -1,5 +1,5 @@
 {{#each this}}
-<li class="gallery-item" data-id="{{id}}">
+<li class="film-list-item" data-id="{{id}}">
     <picture>
         <source srcset="http://image.tmdb.org/t/p/w220_and_h330_face/{{poster_path}}" media="(min-width: 320px)" />
         <source srcset="http://image.tmdb.org/t/p/w440_and_h660_face/{{poster_path}}" media="(min-width: 768px)" />
@@ -7,7 +7,6 @@
         <img class="film-image" src="http://image.tmdb.org/t/p/w440_and_h660_face/{{poster_path}}" alt="film poster">
     </picture>
     <h3 class="film-name">"{{title}}"</h3>
-    <p class="{{overview}}"><span> "{{genre_ids}}" </span>
-        <span> "{{release_date}}" </span></p>
+    <p class="film-about">{{genre_ids}} | {{release_date}}</p>
 </li>
 {{/each}}

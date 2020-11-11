@@ -1,9 +1,4 @@
-import { search } from "./searchPrepare.js";
-import refs from "./refs.js";
-const error = document.querySelector(".search-error");
-
-const input = document.querySelector("input");
-const form = document.querySelector("form");
+import refs from './refs.js';
 
 const getMoviesData = async function (promis) {
   let array = [];
@@ -18,27 +13,30 @@ const getMoviesData = async function (promis) {
         obj.popularity = e.popularity;
         obj.poster_path = e.poster_path;
         obj.title = e.title;
+        str = "";
+        let arr = [];
         [...e.genre_ids].forEach((number) => {
           refs.genres.forEach((ref) => {
             if (number === ref.id) {
-              str += `${ref.name}, `;
+              
+              arr.push(ref.name);
+              // str += `${ref.name}, `;
             }
           });
         });
+        str = arr.join(', ');
         obj.genre_ids = str;
         obj.overview = e.overview;
         obj.vote_average = e.vote_average;
         obj.vote_count = e.vote_count;
+        obj.release_date = e.release_date.split('-')[0];
         filmArr.push(obj);
       });
     })
-    .catch((er) => (error.innerHTML = er));
+    .catch(er => console.log(er) );
   return filmArr;
 };
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  refs.errorNotification.classList.add('is-hidden');
-  const moviesData = search(input.value);
-  console.log(getMoviesData(moviesData));
-});
+export default getMoviesData;
+
+
