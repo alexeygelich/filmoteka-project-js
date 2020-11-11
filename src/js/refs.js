@@ -91,6 +91,6 @@ export default {
     }
   ],
   filmList: document.querySelector('.film-list'),
-
+  errorNotification: document.querySelector('.search-error'),
   modal: document.querySelector('.modal-section')
 }

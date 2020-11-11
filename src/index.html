@@ -13,47 +13,53 @@
     <title>Filmoteka</title>
   </head>
   <body>
-<header class="header">
-  <div class="container nav-container">
-    <!-- !Navigation -->
+    <header class="header">
+      <div class="container nav-container">
+        <!-- !Navigation -->
 
-    <div class="header-container">
-      <div class="header-logo-container">
-        <a href="./index.html" class="logo-link">
-          <svg width="24" height="24">
-            <use href="./images/sprite.svg#icon-film"></use>
-          </svg>
-        </a>
-        <p class="logo-text">Filmoteka</p>
-      </div>
-      <div class="header-nav-container">
-        <nav class="header-nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="./index.html" class="link current">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a href="./library.html" class="link">MY LIBRARY</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+        <div class="header-container">
+          <div class="header-logo-container">
+            <a href="./index.html" class="logo-link">
+              <svg width="24" height="24">
+                <use href="./images/sprite.svg#icon-film"></use>
+              </svg>
+            </a>
+            <p class="logo-text">Filmoteka</p>
+          </div>
+          <div class="header-nav-container">
+            <nav class="header-nav">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="./index.html" class="link current">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./library.html" class="link">MY LIBRARY</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
 
-    <!-- !Input -->
+        <!-- !Input -->
 
-    <div class="input-container">
-      <div class="input-wrap">
-        <form action="">
-          <input type="text" class="header-input" placeholder="Поиск фильмов" />
-          <svg width="12" height="12" class="input-icon">
-            <use href="./images/sprite.svg#icon-search"></use>
-          </svg>
-        </form>
+        <div class="input-container">
+          <div class="input-wrap">
+            <form action="">
+              <input type="text" class="header-input" placeholder="Поиск фильмов" />
+              <svg width="12" height="12" class="input-icon">
+                <use href="./images/sprite.svg#icon-search"></use>
+              </svg>
+            </form>
+          </div>
+        </div>
+        <div class="search-error-container">
+          <p class="search-error">Search result not successful. Enter the correct movie name and</p>
+        </div>
       </div>
+
     </div>
     <div class="search-error-container">
-      <p class="search-error">
+      <p class="search-error is-hidden">
         Search result not successful. Enter the correct movie name and
       </p>
     </div>
@@ -62,13 +68,14 @@
 
     <main>
       <div class="container main">
+
         <ul class="film-list">
           <li class="film-list-item" data-id="0">
             <picture>
               <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
               <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
               <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster">
+              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster" />
             </picture>
             <h3 class="film-name">GREYHOUND</h3>
             <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
@@ -78,7 +85,7 @@
               <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
               <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
               <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster">
+              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster" />
             </picture>
             <h3 class="film-name">GREYHOUND</h3>
             <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
@@ -88,7 +95,7 @@
               <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
               <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
               <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster">
+              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster" />
             </picture>
             <h3 class="film-name">GREYHOUND</h3>
             <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
@@ -98,80 +105,100 @@
               <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
               <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
               <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster">
+              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster" />
             </picture>
             <h3 class="film-name">GREYHOUND</h3>
             <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
-          </li> 
+          </li>
         </ul>
+
+<!--Paginator!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+        <div id="pagination" class="tui-pagination"></div>
+        
+<!--/Paginator!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->        
+        
       </div>
     </main>
 
-      <footer class="footer">
-        <div class="container">
-          <a href="./index.html" class="footer-logo">
-            <svg class="footer-logo-svg" width="24" height="24">
-              <use href="./images/sprite.svg#icon-film"></use>
-            </svg>
-            Filmoteka
-          </a>
-          <div class="footer-section">
-            <div class="applications">
-              <p class="section-desc">Our applications</p>
-              <ul class="app-list">
-                <li class="app-item"><a href="">
-                    <svg width="60" height="50" class="app-svg">
-                      <use href="./images/sprite.svg#icon-appleinc"></use>
-                    </svg>
-                  </a></li>
-                <li class="app-item"><a href="">
-                    <svg width="120" height="70" class="app-svg">
-                      <use href="./images/sprite.svg#icon-youtube2"></use>
-                    </svg>
-                  </a></li>
-              </ul>
-            </div>
-            <div class="socials">
-              <p class="section-desc">Join us on our networks</p>
-              <ul class="socials-list">
-                <li>
-                  <a href="#" class="social-link">
-                    <svg class="social-svg" width="20" height="20">
-                      <use href="./images/sprite.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="social-link">
-                    <svg class="social-svg" width="20" height="20">
-                      <use href="./images/sprite.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="social-link">
-                    <svg class="social-svg" width="20" height="20">
-                      <use href="./images/sprite.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="support">
-              <p class="section-desc">Support</p>
-              <a href="mailto:support@filmoteka.tv" class="email">support@filmoteka.tv</a>
-            </div>
+    <footer class="footer">
+      <div class="container">
+        <a href="./index.html" class="footer-logo">
+          <svg class="footer-logo-svg" width="24" height="24">
+            <use href="./images/sprite.svg#icon-film"></use>
+          </svg>
+          Filmoteka
+        </a>
+        <div class="footer-section">
+          <div class="applications">
+            <p class="section-desc">Our applications</p>
+            <ul class="app-list">
+              <li class="app-item">
+                <a href="">
+                  <svg width="60" height="50" class="app-svg">
+                    <use href="./images/sprite.svg#icon-appleinc"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="app-item">
+                <a href="">
+                  <svg width="120" height="70" class="app-svg">
+                    <use href="./images/sprite.svg#icon-youtube2"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="copyright">
-            <p class="copyright-desc">&copy 2020 | All Rights Reserved | </p>
-            <p class="developer"> Developed with <span> <svg class="footer-svg" width="14" height="13">
-                  <use href="./images/sprite.svg#icon-favorite"></use>
-                </svg> </span> by &nbsp <a href="https://goit.ua/"><span class="copyright-logo">Go</span> <span class="copyright-accent">IT
-                </span> </a> &nbsp Students </p>
-      
+          <div class="socials">
+            <p class="section-desc">Join us on our networks</p>
+            <ul class="socials-list">
+              <li>
+                <a href="#" class="social-link">
+                  <svg class="social-svg" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link">
+                  <svg class="social-svg" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link">
+                  <svg class="social-svg" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="support">
+            <p class="section-desc">Support</p>
+            <a href="mailto:support@filmoteka.tv" class="email">support@filmoteka.tv</a>
           </div>
         </div>
-      
+        <div class="copyright">
+          <p class="copyright-desc">&copy 2020 | All Rights Reserved |</p>
+          <p class="developer">
+            Developed with
+            <span>
+              <svg class="footer-svg" width="14" height="13">
+                <use href="./images/sprite.svg#icon-favorite"></use>
+              </svg>
+            </span>
+            by &nbsp
+            <a href="https://goit.ua/"
+              ><span class="copyright-logo">Go</span> <span class="copyright-accent">IT </span>
+            </a>
+            &nbsp Students
+          </p>
+        </div>
+        <div class="pagination"></div>
+      </div>
+  
       </footer>
 <div class="backdrop is-hidden">
   <div class="container modal-section">
@@ -231,5 +258,6 @@
       
   </div>
 </div>
+        
   </body>
 </html>

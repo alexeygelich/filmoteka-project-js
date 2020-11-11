@@ -21,7 +21,7 @@ export default function (page = 1, searchValue = false) {
           throw 'Масив з данними пустий [запит виконано]';
         })
         .then(json => resolve(json))
-        .catch(data => reject(data))
+        .catch(data => console.log('ошибка'))
     }
     if (searchValue) {
        
@@ -40,7 +40,7 @@ export default function (page = 1, searchValue = false) {
           throw 'Масив з данними пустий [запит виконано]';
         })
         .then(json => resolve(json))
-        .catch(data => reject(data))
+        .catch(data => refs.errorNotification.classList.remove('is-hidden'))
     }
   })
 }
