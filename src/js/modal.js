@@ -1,4 +1,6 @@
 import localStorage from "./localStorage";
+import trailer from "./trailers";
+
 export default function (arr) {
   const filmList = document.querySelector(".film-list");
   let elId;
@@ -61,6 +63,11 @@ export default function (arr) {
     });
 
     localStorage(arr[elId]);
+    const titleRef = document.querySelector('.title');
+
+    titleRef.addEventListener('click', () => { 
+      trailer(titleRef.textContent,arr[elId].release_date);
+    })
 
     const modalOn = document.querySelector(".backdrop");
     modalOn.classList.remove("is-hidden");
