@@ -27,10 +27,10 @@ function changePage(event, searchValue=false) {
   // console.log(event.target);
 //! не корректна робота погінатора, якщо клікаємо на стрілочку в середині спана
 //! потрібно додати data атрибут
+
   const searchClassDisable = ([...arr]) => arr.includes('tui-is-disabled');
   // console.log(searchClassDisable(event.target.classList));
   if(!searchClassDisable(event.target.classList)){
-
   const screen  = event.view.innerWidth;
   let countOfElements = 4;
   if (screen > 768 && screen < 1200) {
