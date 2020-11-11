@@ -29,8 +29,6 @@ function changePage(event, searchValue=false) {
 //! потрібно додати data атрибут
   const searchClassDisable = ([...arr]) => arr.includes('tui-is-disabled');
   // console.log(searchClassDisable(event.target.classList));
-
-
   if(!searchClassDisable(event.target.classList)){
 
   const screen  = event.view.innerWidth;
@@ -93,43 +91,33 @@ function changePage(event, searchValue=false) {
       }
     return go.call(URIparameters, URIparameters)
   }
-  //обчислений об'єкт з параметрами URI
-  // console.dir(calculateURIparameters());
-
+  //---обчислений об'єкт з параметрами URI---
+  //console.dir(calculateURIparameters());
     const QUERY = async function(obj) {
       let draftArray = [];
-
   //! елементи на 2(двох) сторінка на сервері --->  [FALSE]
       if(!obj.isElementsOnPageBefore) {
-          getMoviesData(getFetch(`${obj.currentPageOnServer}`))
+          await getMoviesData(getFetch(`${obj.currentPageOnServer}`))
             .then(data => {
             return draftArray = [...data.slice(obj.firstIndexOfElements, obj.lastIndexOfElements)]
           })
-          .then(data => renderMain(data))
       }
-
       const multipleFetch = async function() {
         const pageBefore = await getMoviesData(getFetch(`${obj.currentPageOnServer-1}`))
           .then(data => data.slice(obj.firstIndexOfElements))
-          // .then(data => data.json())
-          // .then(json => json.results.slice(obj.firstIndexOfElements));
         const curentPage = await getMoviesData(getFetch(`${obj.currentPageOnServer}`))
           .then(data => data.slice(0, obj.lastIndexOfElements))
-          // .then(data => data.json())
-          // .then(json => json.results.slice(0, obj.lastIndexOfElements));
-        return Promise.all([pageBefore, curentPage])
+        return [pageBefore, curentPage]
       }
   //! елементи на 2(двох) сторінка на сервері --->  [TRUE]
       if(obj.isElementsOnPageBefore) {
-        await multipleFetch()
+         await multipleFetch()
           .then(data => {
             data.forEach(el => draftArray.push(...el));
           })
       }
-      // return draftArray;
       renderMain(draftArray)
     }
     QUERY(calculateURIparameters())
-  
   }
 }
