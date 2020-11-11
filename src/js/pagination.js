@@ -9,6 +9,7 @@ import renderMain from './render-film.js';
 import modalOpen from './modal.js';
 
 
+
 export default async function(value=false, promisTotalItems) {
   const totalItems = await promisTotalItems;
   let page = 1;
