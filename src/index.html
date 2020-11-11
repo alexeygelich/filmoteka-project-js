@@ -45,7 +45,11 @@
         <div class="input-container">
           <div class="input-wrap">
             <form action="">
-              <input type="text" class="header-input" placeholder="Поиск фильмов" />
+              <input
+                type="text"
+                class="header-input"
+                placeholder="Поиск фильмов"
+              />
               <svg width="12" height="12" class="input-icon">
                 <use href="./images/sprite.svg#icon-search"></use>
               </svg>
@@ -53,71 +57,159 @@
           </div>
         </div>
         <div class="search-error-container">
-          <p class="search-error is-hidden">Search result not successful. Enter the correct movie name and</p>
+          <p class="search-error is-hidden">
+            Search result not successful. Enter the correct movie name and
+          </p>
         </div>
       </div>
 
-    </div>
-    <div class="search-error-container">
-      <p class="search-error is-hidden">
-        Search result not successful. Enter the correct movie name and
-      </p>
-    </div>
-  </div>
-</header>
+      <div class="search-error-container">
+        <p class="search-error is-hidden">
+          Search result not successful. Enter the correct movie name and
+        </p>
+      </div>
+    </header>
 
     <main>
       <div class="container main">
+        <div class="loader loader--style3" title="2">
+          <svg
+            class="icon-loader"
+            version="1.1"
+            id="loader-1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 50 50"
+            style="enable-background: new 0 0 50 50"
+            xml:space="preserve"
+          >
+            <path
+              fill="#000"
+              d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
+            >
+              <animateTransform
+                attributeType="xml"
+                attributeName="transform"
+                type="rotate"
+                from="0 25 25"
+                to="360 25 25"
+                dur="0.6s"
+                repeatCount="indefinite"
+              />
+            </path>
+          </svg>
+        </div>
 
         <ul class="film-list">
           <li class="film-list-item" data-id="0">
             <picture>
-              <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
-              <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
-              <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster" />
+              <source
+                srcset="./images/example-poster-mobile.jpg"
+                media="(min-width: 320px)"
+              />
+              <source
+                srcset="./images/example-poster-tablet.jpg"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="./images/example-poster-desktop.jpg"
+                media="(min-width: 1200px)"
+              />
+              <img
+                class="film-image"
+                src="./images/example-poster-desktop.jpg"
+                alt="film poster"
+              />
             </picture>
             <h3 class="film-name">GREYHOUND</h3>
-            <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
+            <p class="film-about">
+              <span> Drama, Action </span><span> | 2020 </span>
+            </p>
           </li>
           <li class="film-list-item" data-id="1">
             <picture>
-              <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
-              <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
-              <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster" />
+              <source
+                srcset="./images/example-poster-mobile.jpg"
+                media="(min-width: 320px)"
+              />
+              <source
+                srcset="./images/example-poster-tablet.jpg"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="./images/example-poster-desktop.jpg"
+                media="(min-width: 1200px)"
+              />
+              <img
+                class="film-image"
+                src="./images/example-poster-desktop.jpg"
+                alt="film poster"
+              />
             </picture>
             <h3 class="film-name">GREYHOUND</h3>
-            <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
+            <p class="film-about">
+              <span> Drama, Action </span><span> | 2020 </span>
+            </p>
           </li>
           <li class="film-list-item" data-id="2">
             <picture>
-              <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
-              <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
-              <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster" />
+              <source
+                srcset="./images/example-poster-mobile.jpg"
+                media="(min-width: 320px)"
+              />
+              <source
+                srcset="./images/example-poster-tablet.jpg"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="./images/example-poster-desktop.jpg"
+                media="(min-width: 1200px)"
+              />
+              <img
+                class="film-image"
+                src="./images/example-poster-desktop.jpg"
+                alt="film poster"
+              />
             </picture>
             <h3 class="film-name">GREYHOUND</h3>
-            <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
+            <p class="film-about">
+              <span> Drama, Action </span><span> | 2020 </span>
+            </p>
           </li>
           <li class="film-list-item" data-id="3">
             <picture>
-              <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
-              <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
-              <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster" />
+              <source
+                srcset="./images/example-poster-mobile.jpg"
+                media="(min-width: 320px)"
+              />
+              <source
+                srcset="./images/example-poster-tablet.jpg"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="./images/example-poster-desktop.jpg"
+                media="(min-width: 1200px)"
+              />
+              <img
+                class="film-image"
+                src="./images/example-poster-desktop.jpg"
+                alt="film poster"
+              />
             </picture>
             <h3 class="film-name">GREYHOUND</h3>
-            <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
+            <p class="film-about">
+              <span> Drama, Action </span><span> | 2020 </span>
+            </p>
           </li>
         </ul>
 
-<!--Paginator!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <!--Paginator!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
         <div id="pagination" class="tui-pagination"></div>
-        
-<!--/Paginator!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->        
-        
+
+        <!--/Paginator!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
       </div>
     </main>
 
@@ -177,7 +269,9 @@
           </div>
           <div class="support">
             <p class="section-desc">Support</p>
-            <a href="mailto:support@filmoteka.tv" class="email">support@filmoteka.tv</a>
+            <a href="mailto:support@filmoteka.tv" class="email"
+              >support@filmoteka.tv</a
+            >
           </div>
         </div>
         <div class="copyright">
@@ -191,73 +285,70 @@
             </span>
             by &nbsp
             <a href="https://goit.ua/"
-              ><span class="copyright-logo">Go</span> <span class="copyright-accent">IT </span>
+              ><span class="copyright-logo">Go</span>
+              <span class="copyright-accent">IT </span>
             </a>
             &nbsp Students
           </p>
         </div>
         <div class="pagination"></div>
       </div>
-  
-      </footer>
-<div class="backdrop is-hidden">
-  <div class="container modal-section">
-    <button class="close-modal-btn" type="button">X</button>
-      <img class="film-image" src="./images/Rectangle 18.jpg" alt="Фильм" />
-      <div class="info-section">
-        <h2 class="title">A FISTFUL OF LEAD</h2>
-        <div class="modal-info">
-          <ul class="list-info">
-            <li>
-              <p class="about-film">Vote / Votes</p>
-            </li>
-            <li>
-              <p class="about-film">Popularity</p>
-            </li>
-            <li>
-              <p class="about-film">Original Title</p>
-            </li>
-            <li>
-              <p class="about-film genre">Genre</p>
-            </li>
-          </ul>
-          <ul class="list-info">
-            <li>
-              <p class="about-film-info">
-                <span class="about-film-vote">7.3</span> / 1260
-              </p>
-            </li>
-            <li>
-              <p class="about-film-info">100.2</p>
-            </li>
-            <li>
-              <p class="about-film-info">A FISTFUL OF LEAD</p>
-            </li>
-            <li>
-              <p class="about-film-info">Western</p>
-            </li>
-          </ul>
+    </footer>
+    <div class="backdrop is-hidden">
+      <div class="container modal-section">
+        <button class="close-modal-btn" type="button">X</button>
+        <img class="film-image" src="./images/Rectangle 18.jpg" alt="Фильм" />
+        <div class="info-section">
+          <h2 class="title">A FISTFUL OF LEAD</h2>
+          <div class="modal-info">
+            <ul class="list-info">
+              <li>
+                <p class="about-film">Vote / Votes</p>
+              </li>
+              <li>
+                <p class="about-film">Popularity</p>
+              </li>
+              <li>
+                <p class="about-film">Original Title</p>
+              </li>
+              <li>
+                <p class="about-film genre">Genre</p>
+              </li>
+            </ul>
+            <ul class="list-info">
+              <li>
+                <p class="about-film-info">
+                  <span class="about-film-vote">7.3</span> / 1260
+                </p>
+              </li>
+              <li>
+                <p class="about-film-info">100.2</p>
+              </li>
+              <li>
+                <p class="about-film-info">A FISTFUL OF LEAD</p>
+              </li>
+              <li>
+                <p class="about-film-info">Western</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="subtitle">ABOUT</h3>
+            <p class="description">
+              Four of the West’s most infamous outlaws assemble to steal a huge
+              stash of gold from the most corrupt settlement of the gold rush
+              towns. But not all goes to plan one is killed and the other three
+              escapes with bags of gold hide out in the abandoned gold mine
+              where they happen across another gang of three – who themselves
+              were planning to hit the very same bank! As tensions rise, things
+              go from bad to worse as they realise the bags of gold are filled
+              with lead... they’ve been double crossed – but by who and how?
+            </p>
+          </div>
+          <button class="first add-btn" type="button">ADD TO WATCHED</button>
+          <button class="second add-btn" type="button">ADD TO QUEUE</button>
         </div>
-        <div>
-          <h3 class="subtitle">ABOUT</h3>
-          <p class="description">
-            Four of the West’s most infamous outlaws assemble to steal a huge
-            stash of gold from the most corrupt settlement of the gold rush towns.
-            But not all goes to plan one is killed and the other three escapes
-            with bags of gold hide out in the abandoned gold mine where they
-            happen across another gang of three – who themselves were planning to
-            hit the very same bank! As tensions rise, things go from bad to worse
-            as they realise the bags of gold are filled with lead... they’ve been
-            double crossed – but by who and how?
-          </p>
-        </div>
-        <button class="first add-btn" type="button">ADD TO WATCHED</button>
-        <button class="second add-btn" type="button">ADD TO QUEUE</button>
-
+      </div>
     </div>
-      
-  </div>
-</div>
-        
   </body>
 </html>
