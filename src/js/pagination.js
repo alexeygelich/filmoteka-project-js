@@ -1,5 +1,3 @@
-// import Paginator from "paginator"
-// import Pagination from "tui-pagination"
 import Pagination from "tui-pagination"
 import "tui-pagination/dist/tui-pagination.css"
 import refs from './refs.js';
@@ -62,6 +60,7 @@ export default async function(value=false, promisTotalItems) {
       }
     // } 
     const calculateURIparameters = function() {
+
       const URIparameters = {
         currentPageOnServer: 1,
         ElementsOnCurrentPage: 0,
