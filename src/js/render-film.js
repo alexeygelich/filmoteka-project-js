@@ -2,15 +2,15 @@ import mainTemplate from "./templates/mainTemplate.hbs";
 import libraryTemplate from "./templates/libraryTemplate.hbs";
 import refs from './refs.js';
 
-const renderMain = function (arr) {
-    const film = mainTemplate(filmArr);
-    refs.filmList.insertAdjacentHTML('beforeend', film);
+export const renderMain = function (arr) {
+    const film = mainTemplate(arr);
+    refs.filmList.innerHTML = film;
 }
 
-const renderLibrary = function (arr) {
-    const film = libraryTemplate(filmArr);
-    refs.filmList.insertAdjacentHTML('beforeend', film);
+export const renderLibrary = function (arr) {
+    const film = libraryTemplate(arr);
+    refs.filmList.innerHTML = film;
 }
 
-export default { renderMain,renderLibrary };
+// export default { renderMain,renderLibrary };
 

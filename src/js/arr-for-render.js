@@ -15,4 +15,6 @@ const arrRender = function (arrFilmList) {
   return newArrList;
 };
 
+
+
 export default arrRender;

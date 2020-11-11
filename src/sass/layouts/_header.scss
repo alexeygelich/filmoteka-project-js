@@ -104,6 +104,8 @@
     width: 336px;
     background-color: transparent;
     border-color: white;
+    color: white;
+    outline: none;
   }
 
   .input-icon {
@@ -154,6 +156,8 @@
     width: 280px;
     background-color: transparent;
     border-color: white;
+    color: white;
+    outline: none;
   }
   .logo-text {
     color: white;
@@ -210,6 +214,8 @@
   line-height: 16px;
   margin-top: 22px;
   color: red;
+  opacity: 1;
+  transition: all 0.3s;
 }
 
 // !LIBRARY
@@ -246,4 +252,9 @@
   border: 0;
   border-radius: 5px;
   outline: none;
+}
+
+.is-hidden {
+  opacity: 0;
+  transition: all 0.3s;
 }

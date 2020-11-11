@@ -90,5 +90,6 @@
         "name": "Western"
       }
     ],
-      filmList: document.querySelector('.film-list'),
+  filmList: document.querySelector('.film-list'),
+  errorNotification: document.querySelector('.search-error'),
   }
