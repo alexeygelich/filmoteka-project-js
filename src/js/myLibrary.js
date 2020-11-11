@@ -3,20 +3,22 @@ import refs from "./refs.js";
 const myLibraryLink = document.querySelector(".lib-link");
 const headerOfLib = document.querySelector(".header");
 
-const localStorageArrW = JSON.parse(localStorage.getItem(`w`)) || [];
-const localStorageArrQ = JSON.parse(localStorage.getItem(`q`)) || [];
-
 const watched = function () {
-  bodyOfLib.insertAdjacentHTML("beforeend", libMark(localStorageArrW));
+  document.querySelector(".watched").classList.add("current-btn");
+  document.querySelector(".queue").classList.remove("current-btn");
+  const localStorageArrW = JSON.parse(localStorage.getItem(`w`)) || [];
+  refs.filmList.innerHTML = `${libMark(localStorageArrW)}`;
 };
 const queue = function () {
-  bodyOfLib.insertAdjacentHTML("beforeend", libMark(localStorageArrQ));
+  document.querySelector(".watched").classList.remove("current-btn");
+  document.querySelector(".queue").classList.add("current-btn");
+  const localStorageArrQ = JSON.parse(localStorage.getItem(`q`)) || [];
+
+  refs.filmList.innerHTML = `${libMark(localStorageArrQ)}`;
 };
 
 const libMarkup = function () {
-  headerOfLib.insertAdjacentHTML(
-    "afterbegin",
-    `   <div class="container lib-container">
+  headerOfLib.innerHTML = `   <div class="container lib-container">
 
     <div class="header-container">
       <div class="header-logo-container">
@@ -31,10 +33,10 @@ const libMarkup = function () {
         <nav class="header-nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="./index.html" class="link current">HOME</a>
+              <a href="./index.html" class="link ">HOME</a>
             </li>
             <li class="nav-item">
-              <a href="./librar" class="link">MY LIBRARY</a>
+               <button class="lib-link current" type="button">MY LIBRARY</button>
             </li>
           </ul>
         </nav>
@@ -42,11 +44,12 @@ const libMarkup = function () {
     </div>
 
     <div class="btn-container">
-      <button class="lib-btn">Watched</button>
-      <button class="lib-btn">Queue</button>
+      <button class="lib-btn watched">Watched</button>
+      <button class="lib-btn queue">Queue</button>
     </div>
-  </div>`
-  );
+  </div>`;
+
+  watched();
   document.querySelector(".watched").addEventListener("click", watched);
   document.querySelector(".queue").addEventListener("click", queue);
 };
