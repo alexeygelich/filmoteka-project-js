@@ -6,7 +6,7 @@ import refs from './refs.js';
 import getFetch from './fetch.js';
 
 import getMoviesData from './getMoviesData.js';
-import {renderMain} from './render-film.js';
+import renderMain from './render-film.js';
 
 
 //! перший пагінатор генеруємо при рендері main.page
