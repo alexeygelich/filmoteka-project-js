@@ -25,7 +25,7 @@
 }
 
 .backdrop {
-  position: absolute;
+  position: fixed;
   overflow-y: scroll;
   width: 100%;
   height: 100%;
@@ -35,7 +35,7 @@
 }
 
 .is-hidden {
- display: none;
+  display: none;
 }
 .close-modal-btn {
   position: absolute;
@@ -76,7 +76,6 @@
 
 .original-title {
   text-transform: uppercase;
-
 }
 
 .subtitle {
