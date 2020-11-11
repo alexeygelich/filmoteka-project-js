@@ -1,0 +1,35 @@
+.loader {
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 30%;
+  }
+}
+.icon-loader {
+  width: 50px;
+  height: 50px;
+
+  @media screen and (min-width: 768px) {
+    width: 70px;
+    height: 70px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+.loader.is-hidden {
+  display: none;
+}
+svg path,
+svg rect {
+  fill: $accent-color;
+}
