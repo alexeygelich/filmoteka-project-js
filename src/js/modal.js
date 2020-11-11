@@ -1,11 +1,14 @@
-const filmListItem = document.querySelector('.film-list-item');
-const filmList = document.querySelector('.film-list')
+
+export default function (arr) { 
+  const filmListItem = document.querySelector('.film-list-item');
+const filmList = document.querySelector('.film-list');
+
 
 const onModalOpen = e => {
     e.path.forEach(el => {
         if (el.className === 'film-list-item') {
             const elId = +el.dataset.id;
-            filmArr.forEach(el => {
+            arr.forEach(el => {
                 if (el.id === elId) {
                     const filmModal = document.querySelector('.modal-section');
                     filmModal.innerHTML = `
@@ -77,3 +80,4 @@ const onModalOpen = e => {
 }
 
 filmList.addEventListener('click', onModalOpen )
+}

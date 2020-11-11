@@ -3,6 +3,7 @@ import refs from "./refs.js";
 import arrRender from './arr-for-render';
 import { renderMain, renderLibrary } from './render-film';
 import getMoviesData from './getMoviesData.js';
+import modalOpen from './modal.js';
 
 
 const error = document.querySelector(".search-error");
@@ -17,5 +18,8 @@ form.addEventListener("submit", (e) => {
   const moviesData = search(input.value);
   getMoviesData(moviesData)
     .then(data => arrRender(data))
-  .then(data=>renderMain(data))
+    .then(data => {
+      renderMain(data);
+      modalOpen(data);
+    })
 });
