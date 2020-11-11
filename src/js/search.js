@@ -1,7 +1,7 @@
 import { search } from "./searchPrepare.js";
 import refs from "./refs.js";
 import arrRender from './arr-for-render';
-import { renderMain, renderLibrary } from './render-film';
+import renderMain from './render-film';
 import getMoviesData from './getMoviesData.js';
 import modalOpen from './modal.js';
 
