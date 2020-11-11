@@ -2,7 +2,6 @@ import { error } from "../../node_modules/@pnotify/core";
 import "../../node_modules/@pnotify/core/dist/BrightTheme.css";
 import "../../node_modules/@pnotify/core/dist/PNotify.css";
 export default function (data) {
-  console.log(data);
   const addToWatched = document.querySelector(".first");
   const addToQueue = document.querySelector(".second");
 

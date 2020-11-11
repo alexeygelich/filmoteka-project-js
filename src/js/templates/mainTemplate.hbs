@@ -1,12 +1,21 @@
-{{#each this}}
-<li class="film-list-item" data-id="{{id}}">
-    <picture>
-        <source srcset="http://image.tmdb.org/t/p/w220_and_h330_face/{{poster_path}}" media="(min-width: 320px)" />
-        <source srcset="http://image.tmdb.org/t/p/w440_and_h660_face/{{poster_path}}" media="(min-width: 768px)" />
-        <source srcset="https://image.tmdb.org/t/p/w500/{{poster_path}}" media="(min-width: 1200px)" />
-        <img class="film-image" src="http://image.tmdb.org/t/p/w440_and_h660_face/{{poster_path}}" alt="film poster">
-    </picture>
-    <h3 class="film-name">"{{title}}"</h3>
-    <p class="film-about">{{genre_ids}} | {{release_date}} <span class="mark">{{vote_average}}</span></p>
-</li>
-{{/each}}
+<div class="container">
+
+    <ul class="film-list">
+        {{#each this}}
+
+        <li class="film-list-item" data-id="{{id}}">
+            <picture>
+                <source srcset="http://image.tmdb.org/t/p/w220_and_h330_face/{{poster_path}}"
+                    media="(min-width: 320px)" />
+                <source srcset="http://image.tmdb.org/t/p/w440_and_h660_face/{{poster_path}}"
+                    media="(min-width: 768px)" />
+                <source srcset="https://image.tmdb.org/t/p/w500/{{poster_path}}" media="(min-width: 1200px)" />
+                <img class="film-image" src="http://image.tmdb.org/t/p/w440_and_h660_face/{{poster_path}}"
+                    alt="film poster">
+            </picture>
+            <h3 class="film-name">"{{title}}"</h3>
+            <p class="film-about">{{genre_ids}} | {{release_date}} <span class="mark">{{vote_average}}</span></p>
+        </li>
+        {{/each}}
+    </ul>
+</div>
