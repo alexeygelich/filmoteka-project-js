@@ -9,6 +9,7 @@
 // http://image.tmdb.org/t/p/w220_and_h330_face/ugZW8ocsrfgI95pnQ7wrmKDxIe.jpg
 
 export default {
+  ARR: [],
   API: '2d536748299a0654176fee96f4763797',
   defaultURL: 'https://api.themoviedb.org/3/movie/popular',
   defaultSearch: 'https://api.themoviedb.org/3/search/movie',

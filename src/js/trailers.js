@@ -1,6 +1,6 @@
-export default function (name, yaer) { 
+export default function (name, year) { 
     const KEY_YOUTUBE = 'AIzaSyC2bl8RG1baEBqc2I1X_QiZQWc1V6oCfTU'
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${name + ` ${yaer}` + ' trailer'}&key=${KEY_YOUTUBE}`)
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${name + ` ${year}` + ' trailer'}&key=${KEY_YOUTUBE}`)
         .then(data => data.json())
         .then(data => {
             const idYoutube = data.items[0].id.videoId;

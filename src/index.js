@@ -1,4 +1,5 @@
 import './sass/main.scss';
+import './js/listenerForModal.js'
 import './js/popular.js';
 // import './js/searchPrepare.js';
 import './js/pagination.js';

@@ -5,6 +5,7 @@ import getFetch from './fetch.js';
 import getMoviesData from './getMoviesData.js';
 import renderMain from './render-film.js';
 import modalOpen from './modal.js';
+import clearInput from './clearInput'
 
 
 
@@ -124,7 +125,9 @@ export default async function(value=false, promisTotalItems) {
               })
           }
           renderMain(draftArray);
-          modalOpen(draftArray);
+          refs.ARR = [...draftArray];
+          clearInput();
+          // modalOpen(draftArray);
         }
         QUERY(calculateURIparameters())
       }
@@ -165,7 +168,9 @@ export default async function(value=false, promisTotalItems) {
       draftArray = [...w_FullArray.slice(firstIndexOfElements, lastIndexOfElements)]
 
       renderMain(draftArray);
-      modalOpen(draftArray);
+      refs.ARR = [...draftArray];
+      clearInput();
+      // modalOpen(draftArray);
     } // закриваємо [promisTotalItems is FALSE ]
   }
 }
