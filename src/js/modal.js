@@ -22,10 +22,10 @@ export default function (arr) {
       
       localStorage(test);
     
-    const titleRef = document.querySelector('.title');
+    const trailerRef = document.querySelector('.trailer-btn');
 
-    titleRef.addEventListener('click', () => { 
-      trailer(titleRef.textContent,arr[elId].release_date);
+    trailerRef.addEventListener('click', () => { 
+      trailer(test.title,test.release_date);
     })
     
     const onEscapeClose = function (e) {
