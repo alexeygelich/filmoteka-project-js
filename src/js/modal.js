@@ -1,17 +1,22 @@
 //! ВИПРАВИТИ ШАПБЛОН (КНОПКА close)
 import modalTemplate from './templates/modalTemplate-new.hbs';
-import localStorage from "./localStorage";
+import localStorage from './localStorage';
 
 import trailer from "./trailers";
 
 export default function (arr) {
   const filmList = document.querySelector('.film-list');
+  const searchPrediction = document.querySelector('.search-list');
   const onModalOpen = e => {
     let test;
+    console.log(e.path);
     e.path.forEach(el => {
-      if (el.className === 'film-list-item') {
+      if (
+        el.className === 'film-list-item' ||
+        el.className === 'search-list-item'
+      ) {
         const elId = +el.dataset.id;
-         test = arr.find(el => el.id === elId);
+        test = arr.find(el => el.id === elId);
         document.body.classList.add('stop-scroll');
         const filmModal = document.querySelector('.modal-section');
         filmModal.innerHTML = modalTemplate(test);
@@ -30,12 +35,12 @@ export default function (arr) {
     
     const onEscapeClose = function (e) {
       console.log(e.key);
-      if (e.key === "Escape") {
+      if (e.key === 'Escape') {
         modalOn.classList.add('is-hidden');
         document.body.classList.remove('stop-scroll');
         window.removeEventListener('keydown', onEscapeClose);
       }
-    }
+    };
     window.addEventListener('keydown', onEscapeClose);
     modalOn.addEventListener('click', e => {
       if (e.target === e.currentTarget) {
@@ -43,14 +48,14 @@ export default function (arr) {
         document.body.classList.remove('stop-scroll');
         modalOn.classList.add('is-hidden');
       }
-    }
-    )
+    });
     const closeBtn = document.querySelector('.close-modal-btn');
-    closeBtn.addEventListener('click', (e) => {
+    closeBtn.addEventListener('click', e => {
       window.removeEventListener('keydown', onEscapeClose);
       document.body.classList.remove('stop-scroll');
       modalOn.classList.add('is-hidden');
-    })
-  }
+    });
+  };
   filmList.addEventListener('click', onModalOpen);
+  searchPrediction.addEventListener('click', onModalOpen);
 }
