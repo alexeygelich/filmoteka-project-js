@@ -14,10 +14,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  @media screen and (max-width: 767px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+
 }
 .modal-info {
   display: flex;
@@ -34,9 +31,11 @@
   background-color: #1a273136;
 }
 
+
 .is-hidden {
   display: none;
 }
+
 .close-modal-btn {
   position: absolute;
   top: 7px;
@@ -54,7 +53,9 @@
   @media screen and (min-width: 768px) {
     width: 294px;
   }
-  @media screen and (max-width: 767px) {
+
+  @media screen and (min-width: 1024px) {
+
     width: 426px;
     height: 514px;
   }
@@ -67,6 +68,7 @@
   font-weight: 500;
   text-transform: uppercase;
 
+
   @media screen and (min-width: 768px) {
     font-size: 30px;
     line-height: 1.17;
@@ -74,9 +76,11 @@
   }
 }
 
+
 .original-title {
   text-transform: uppercase;
 }
+
 
 .subtitle {
   font-weight: 500;
