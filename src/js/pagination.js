@@ -43,6 +43,9 @@ export default async function(value=false, promisTotalItems) {
     //! не корректна робота погінатора, якщо клікаємо на стрілочку в середині спана
     //! потрібно додати data атрибут
       const searchClassDisable = ([...arr]) => arr.includes('tui-is-disabled');
+
+      console.dir(event.target);
+
       if(!searchClassDisable(event.target.classList)){
         if(event.target.textContent === "next") {
           page+=1;
@@ -60,9 +63,7 @@ export default async function(value=false, promisTotalItems) {
         else {
           page = Number(event.target.textContent) || page;
         }
-
 //!спостерігається проблема коли на оствнній сторінці натискаєш [>]
-
       const calculateURIparameters = function() {
         const URIparameters = {
           currentPageOnServer: 1,
@@ -130,8 +131,7 @@ export default async function(value=false, promisTotalItems) {
     }
   } // закриваємо [promisTotalItems is TRUE ]
   else {
-
-    const w_FullArray = JSON.parse(localStorage.getItem('w'));
+    const w_FullArray = JSON.parse(localStorage.getItem(value));
     const totalItems = w_FullArray.length;
     var pagination1 = new Pagination("pagination", {
       totalItems: totalItems,
@@ -152,7 +152,6 @@ export default async function(value=false, promisTotalItems) {
           page = Number(activeChildren.textContent);
         } else if(event.target.textContent === "last"){
           page = Math.ceil(totalItems/countOfElements);
-          console.log(page, 'page from last');
         } else if(event.target.textContent === "first"){
           page = 1;
         } 
@@ -161,21 +160,9 @@ export default async function(value=false, promisTotalItems) {
         }
       }
       let draftArray = [];
-      console.log(page, 'page');
-      console.log(countOfElements, 'countOfElements');
-      console.log(buttonsOnPage, 'visiblePages');
-
-      console.log(w_FullArray);
-
       let lastIndexOfElements = page*countOfElements;
       let firstIndexOfElements = lastIndexOfElements-countOfElements;
-      console.log(lastIndexOfElements, 'lastIndexOfElements');
-      console.log(firstIndexOfElements, 'firstIndexOfElements');
-  
       draftArray = [...w_FullArray.slice(firstIndexOfElements, lastIndexOfElements)]
-
-      console.log(draftArray, 'draftArray');
-
 
       renderMain(draftArray);
     } // закриваємо [promisTotalItems is FALSE ]

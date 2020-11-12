@@ -118,12 +118,12 @@
 }
 .film-list-item {
   &:not(:nth-child(-n + 2)) {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
       margin-top: 31px;
     }
   }
   &:not(:nth-child(-n + 3)) {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1024px) {
       margin-top: 31px;
     }
   }
@@ -134,10 +134,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 50px;
-    padding-top: 29px;
+    // padding-top: 29px;
 
     & .film-list-item {
-      @media screen and (max-width: 1199px) {
+      @media screen and (max-width: 1023px) {
         width: 294px;
       }
 
@@ -148,7 +148,7 @@
   }
 
   .film-list-item:not(:nth-child(2n)) {
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1023px) {
       margin-right: 30px;
     }
   }
@@ -165,7 +165,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .film-list-item {
     width: 274px;
 

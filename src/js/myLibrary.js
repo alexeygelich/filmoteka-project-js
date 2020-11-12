@@ -6,6 +6,7 @@ const myLibraryLink = document.querySelector(".lib-link");
 const headerOfLib = document.querySelector(".header");
   
 const watched = function () {
+  pagination("w"); //передаємо в пагінатор ключ localstorag
   const mainDiv = document.querySelector('.main');
 mainDiv.innerHTML = `
     <ul class="film-list">
@@ -19,6 +20,7 @@ mainDiv.innerHTML = `
   filmList.innerHTML = `${libMark(localStorageArrW)}`;
 };
 const queue = function () {
+  pagination("q"); //передаємо в пагінатор ключ localstorag
   const mainDiv = document.querySelector('.main');
 mainDiv.innerHTML = `
     <ul class="film-list">
@@ -34,7 +36,7 @@ console.log(filmList);
 };
 
 const libMarkup = function () {
-  pagination();
+  
   headerOfLib.innerHTML = `   <div class="container lib-container">
 
     <div class="header-container">
