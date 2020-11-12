@@ -3,11 +3,6 @@ import refs from './refs.js';
 
 const mainDiv = document.querySelector('.main');
 
-
-
-
-
-
 export default function (arr) {
     mainDiv.innerHTML = `
     <ul class="film-list">
@@ -18,7 +13,3 @@ export default function (arr) {
     const film = mainTemplate(arr);
     filmList.innerHTML = film;
 }
-
-
-// export default { renderMain,renderLibrary };
-
