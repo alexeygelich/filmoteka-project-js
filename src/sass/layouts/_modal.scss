@@ -14,10 +14,6 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  @media screen and (max-width: 767px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
 }
 .modal-info {
   display: flex;
@@ -49,7 +45,7 @@
   @media screen and (min-width: 768px) {
     width: 294px;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 1024px) {
     width: 426px;
     height: 514px;
   }
