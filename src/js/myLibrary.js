@@ -1,6 +1,6 @@
 import libMark from "./templates/mainTemplate.hbs";
 import refs from "./refs.js";
-
+import pagination from './pagination.js';
 
 const myLibraryLink = document.querySelector(".lib-link");
 const headerOfLib = document.querySelector(".header");
@@ -12,7 +12,7 @@ mainDiv.innerHTML = `
     </ul>
     `;
     const filmList = document.querySelector('.film-list');
-console.log(filmList);
+// console.log(filmList);
   document.querySelector(".watched").classList.add("current-btn");
   document.querySelector(".queue").classList.remove("current-btn");
   const localStorageArrW = JSON.parse(localStorage.getItem(`w`)) || [];
@@ -34,6 +34,7 @@ console.log(filmList);
 };
 
 const libMarkup = function () {
+  pagination();
   headerOfLib.innerHTML = `   <div class="container lib-container">
 
     <div class="header-container">
