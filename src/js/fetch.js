@@ -40,7 +40,10 @@ export default function (page = 1, searchValue = false) {
           throw 'Масив з данними пустий [запит виконано]';
         })
         .then(json => resolve(json))
-        .catch(data => refs.errorNotification.classList.remove('is-hidden'))
+        .catch(data => { 
+          console.log('catch',data);
+          refs.errorNotification.classList.remove('is-hidden')
+        })
     }
   })
 }

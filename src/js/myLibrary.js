@@ -18,7 +18,8 @@ const watched = function () {
   // filmList.innerHTML = `${libMark(localStorageArrW)}`;
   localStorageArrW=arrForRender(localStorageArrW);
   renderFilm(localStorageArrW);
-  modal(localStorageArrW);
+  refs.ARR = [...localStorageArrW]
+  // modal(localStorageArrW);
 };
 const queue = function () {
   pagination("q"); //передаємо в пагінатор ключ localstorag
@@ -29,7 +30,8 @@ const queue = function () {
   // filmList.innerHTML = `${libMark(localStorageArrQ)}`;
   localStorageArrQ=arrForRender(localStorageArrQ);
   renderFilm(localStorageArrQ);
-  modal(localStorageArrQ);
+  refs.ARR = [...localStorageArrQ]
+  // modal(localStorageArrQ);
 };
 
 const libMarkup = function () {

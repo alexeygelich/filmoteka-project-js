@@ -1,28 +1,36 @@
 import fetchQuery from './fetch.js';
 import getMoviesData from './getMoviesData.js';
-import modal from './modal.js';
+import refs from './refs.js';
+import debounce from '../../node_modules/lodash.debounce/'
 
 const input = document.querySelector('input');
-const inputWrap = document.querySelector('.input-wrap');
+const searchUl = document.querySelector('.search-list');
+// const inputWrap = document.querySelector('.input-wrap');
 
-inputWrap.insertAdjacentHTML(
-  'beforeend',
-  `<div class="search-wrapper">
-            </div>`,
-);
-const searchWrapper = document.querySelector('.search-wrapper');
+// inputWrap.insertAdjacentHTML(
+//   'beforeend',
+//   `<div class="search-wrapper">
+//             </div>`,
+// );
+// const searchWrapper = document.querySelector('.search-wrapper');
 
 const inputSearch = function () {
-  searchWrapper.innerHTML = '';
-  searchWrapper.insertAdjacentHTML(
-    'beforeend',
-    `<ul class="search-list">
-            </ul>`,
-  );
-  const searchUl = document.querySelector('.search-list');
+  searchUl.innerHTML = '';
+  refs.errorNotification.classList.add('is-hidden');
+
+  if (!input.value) { 
+   console.log('проверка');
+    return;
+  }
+  console.log('перед фетчем');
 
   getMoviesData(fetchQuery(1, input.value)).then(data => {
-    console.log(data);
+    console.log('до',data.length);
+    if (!data.length) { 
+      console.log(data.length);
+      refs.errorNotification.classList.remove('is-hidden');
+      return;
+    }
     let i = 0;
     data.forEach(({ title, id, vote_average }) => {
       if (i > 4) {
@@ -34,8 +42,9 @@ const inputSearch = function () {
         `<li class="search-list-item" data-id=${id}>${title} - ${vote_average}</li>`,
       );
     });
-    modal(data);
-  });
+    // modal(data);
+    refs.ARR = [...data];
+  })
 };
 
-input.addEventListener('input', inputSearch);
+input.addEventListener('input', debounce(inputSearch,500));

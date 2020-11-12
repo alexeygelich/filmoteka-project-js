@@ -124,7 +124,8 @@ export default async function(value=false, promisTotalItems) {
               })
           }
           renderMain(draftArray);
-          modalOpen(draftArray);
+          refs.ARR = [...draftArray];
+          // modalOpen(draftArray);
         }
         QUERY(calculateURIparameters())
       }
@@ -165,7 +166,8 @@ export default async function(value=false, promisTotalItems) {
       draftArray = [...w_FullArray.slice(firstIndexOfElements, lastIndexOfElements)]
 
       renderMain(draftArray);
-      modalOpen(draftArray);
+      refs.ARR = [...draftArray];
+      // modalOpen(draftArray);
     } // закриваємо [promisTotalItems is FALSE ]
   }
 }
