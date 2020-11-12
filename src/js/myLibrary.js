@@ -1,13 +1,16 @@
 import libMark from "./templates/mainTemplate.hbs";
 import refs from "./refs.js";
+import pagination from './pagination.js';
 import modal from "./modal.js";
 import arrForRender from './arr-for-render.js';
 import renderFilm from './render-film.js'; 
+
 
 const myLibraryLink = document.querySelector(".lib-link");
 const headerOfLib = document.querySelector(".header");
 
 const watched = function () {
+  pagination("w"); //передаємо в пагінатор ключ localstorag
 
   document.querySelector(".watched").classList.add("current-btn");
   document.querySelector(".queue").classList.remove("current-btn");
@@ -18,6 +21,7 @@ const watched = function () {
   modal(localStorageArrW);
 };
 const queue = function () {
+  pagination("q"); //передаємо в пагінатор ключ localstorag
 
   document.querySelector(".watched").classList.remove("current-btn");
   document.querySelector(".queue").classList.add("current-btn");
@@ -29,6 +33,7 @@ const queue = function () {
 };
 
 const libMarkup = function () {
+  
   headerOfLib.innerHTML = `   <div class="container lib-container">
 
     <div class="header-container">
