@@ -35,13 +35,13 @@ export default function (page = 1, searchValue = false) {
         .then(data => data.json())
         .then(json => {
           if (json.results.length > 0) {
+            console.log("json ",json);
             return json
           }
           throw 'Масив з данними пустий [запит виконано]';
         })
         .then(json => resolve(json))
         .catch(data => { 
-          console.log('catch',data);
           refs.errorNotification.classList.remove('is-hidden')
         })
     }

@@ -22,7 +22,6 @@ export default function (ID) {
     })
     
     const onEscapeClose = function (e) {
-      console.log(e.key);
       if (e.key === 'Escape') {
         modalOn.classList.add('is-hidden');
         document.body.classList.remove('stop-scroll');

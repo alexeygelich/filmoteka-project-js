@@ -19,15 +19,12 @@ const inputSearch = function () {
   refs.errorNotification.classList.add('is-hidden');
 
   if (!input.value) { 
-   console.log('проверка');
     return;
   }
-  console.log('перед фетчем');
 
   getMoviesData(fetchQuery(1, input.value)).then(data => {
-    console.log('до',data.length);
+   
     if (!data.length) { 
-      console.log(data.length);
       refs.errorNotification.classList.remove('is-hidden');
       return;
     }
@@ -43,7 +40,7 @@ const inputSearch = function () {
       );
     });
     // modal(data);
-    refs.ARR = [...data];
+    refs.ARR = [...refs.ARR,...data];
   })
 };
 
