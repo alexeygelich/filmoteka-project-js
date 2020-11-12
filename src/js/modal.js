@@ -2,6 +2,8 @@
 import modalTemplate from './templates/modalTemplate-new.hbs';
 import localStorage from './localStorage';
 
+import trailer from "./trailers";
+
 export default function (arr) {
   const filmList = document.querySelector('.film-list');
   const searchPrediction = document.querySelector('.search-list');
@@ -18,12 +20,19 @@ export default function (arr) {
         document.body.classList.add('stop-scroll');
         const filmModal = document.querySelector('.modal-section');
         filmModal.innerHTML = modalTemplate(test);
-      }
-    });
-    const modalOn = document.querySelector('.backdrop');
-    modalOn.classList.remove('is-hidden');
+      } 
+    })
+    const modalOn = document.querySelector('.backdrop')
+      modalOn.classList.remove('is-hidden')
+      
+      localStorage(test);
+    
+    const trailerRef = document.querySelector('.trailer-btn');
 
-    localStorage(test);
+    trailerRef.addEventListener('click', () => { 
+      trailer(test.title,test.release_date);
+    })
+    
     const onEscapeClose = function (e) {
       console.log(e.key);
       if (e.key === 'Escape') {

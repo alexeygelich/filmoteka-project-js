@@ -63,7 +63,7 @@ button {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .container {
     width: 922px;
   }
@@ -213,7 +213,7 @@ button {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .film-list-item picture {
     width: 274px;
     height: 398px;
