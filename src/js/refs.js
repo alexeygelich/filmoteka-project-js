@@ -8,9 +8,11 @@
 // http://image.tmdb.org/t/p/w440_and_h660_face/ugZW8ocsrfgI95pnQ7wrmKDxIe.jpg
 // http://image.tmdb.org/t/p/w220_and_h330_face/ugZW8ocsrfgI95pnQ7wrmKDxIe.jpg
 
-const refs = {
-    API:'2d536748299a0654176fee96f4763797',
-  genres:[
+export default {
+  API: '2d536748299a0654176fee96f4763797',
+  defaultURL: 'https://api.themoviedb.org/3/movie/popular',
+  defaultSearch: 'https://api.themoviedb.org/3/search/movie',
+  genres: [
     {
       "id": 28,
       "name": "Action"
@@ -88,4 +90,7 @@ const refs = {
       "name": "Western"
     }
   ],
+  filmList: document.querySelector('.film-list'),
+  errorNotification: document.querySelector('.search-error'),
+  modal: document.querySelector('.modal-section')
 }

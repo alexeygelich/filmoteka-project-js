@@ -13,169 +13,208 @@
     <title>Filmoteka</title>
   </head>
   <body>
-    <main>
-      <div class="container main">
-        <ul class="film-list">
-          <li class="film-list-item">
-            <picture>
-              <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
-              <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
-              <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster">
-            </picture>
-            <h3 class="film-name">GREYHOUND</h3>
-            <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
-          </li>
-          <li class="film-list-item">
-            <picture>
-              <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
-              <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
-              <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster">
-            </picture>
-            <h3 class="film-name">GREYHOUND</h3>
-            <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
-          </li>
-          <li class="film-list-item">
-            <picture>
-              <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
-              <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
-              <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster">
-            </picture>
-            <h3 class="film-name">GREYHOUND</h3>
-            <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
-          </li>
-          <li class="film-list-item">
-            <picture>
-              <source srcset="./images/example-poster-mobile.jpg" media="(min-width: 320px)" />
-              <source srcset="./images/example-poster-tablet.jpg" media="(min-width: 768px)" />
-              <source srcset="./images/example-poster-desktop.jpg" media="(min-width: 1200px)" />
-              <img class="film-image" src="./images/example-poster-desktop.jpg" alt="film poster">
-            </picture>
-            <h3 class="film-name">GREYHOUND</h3>
-            <p class="film-about"><span> Drama, Action </span><span> | 2020 </span></p>
-          </li>
-        </ul>
-      </div>
-    </main>
-      <footer class="footer">
-        <div class="container">
-          <a href="" class="main-logo">
-            <svg class="logo-svg" width="24" height="24">
-              <use href="./images/sprite.svg#icon-film"></use>
-            </svg>
-            Filmoteka
-          </a>
-          <div class="footer-section">
-            <div class="applications">
-              <p class="section-desc">Our applications</p>
-              <ul class="app-list">
-                <li class="app-item"><a href="">
-                    <svg width="60" height="50" class="app-svg">
-                      <use href="./images/sprite.svg#icon-appleinc"></use>
-                    </svg>
-                  </a></li>
-                <li class="app-item"><a href="">
-                    <svg width="120" height="70" class="app-svg">
-                      <use href="./images/sprite.svg#icon-youtube2"></use>
-                    </svg>
-                  </a></li>
-              </ul>
-            </div>
-            <div class="socials">
-              <p class="section-desc">Join us on our networks</p>
-              <ul class="socials-list">
-                <li>
-                  <a href="#" class="social-link">
-                    <svg class="social-svg" width="20" height="20">
-                      <use href="./images/sprite.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
+    <header class="header">
+      <div class="container nav-container">
+        <!-- !Navigation -->
+
+        <div class="header-container">
+          <div class="header-logo-container">
+            <a href="./index.html" class="logo-link">
+              <svg width="24" height="24">
+                <use href="./images/sprite.svg#icon-film"></use>
+              </svg>
+            </a>
+            <p class="logo-text">Filmoteka</p>
+          </div>
+          <div class="header-nav-container">
+            <nav class="header-nav">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="./index.html" class="link current">HOME</a>
                 </li>
-                <li>
-                  <a href="#" class="social-link">
-                    <svg class="social-svg" width="20" height="20">
-                      <use href="./images/sprite.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="social-link">
-                    <svg class="social-svg" width="20" height="20">
-                      <use href="./images/sprite.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
+                <li class="nav-item">
+                  <button class="lib-link" type="button">MY LIBRARY</button>
                 </li>
               </ul>
-            </div>
-          </div>
-          <div class="copyright">
-            <p class="copyright-desc">&copy 2020 | All Rights Reserved | </p>
-            <p class="developer"> Developed with <span> <svg class="footer-svg" width="14" height="13">
-                  <use href="./images/sprite.svg#icon-favorite"></use>
-                </svg> </span> by &nbsp <a href="https://goit.ua/"><span class="logo">Go</span> <span class="accent">IT
-                </span> </a> &nbsp Students </p>
-      
+            </nav>
           </div>
         </div>
-      
-      </footer>
-<div class="backdrop">
-  <div class="container modal-section">
-    <button class="close-modal-btn" type="button">X</button>
-      <img class="film-image" src="./images/Rectangle 18.jpg" alt="Фильм" />
-      <div class="info-section">
-        <h2 class="title">A FISTFUL OF LEAD</h2>
-        <div class="modal-info">
-          <ul class="list-info">
-            <li>
-              <p class="about-film">Vote / Votes</p>
-            </li>
-            <li>
-              <p class="about-film">Popularity</p>
-            </li>
-            <li>
-              <p class="about-film">Original Title</p>
-            </li>
-            <li>
-              <p class="about-film genre">Genre</p>
-            </li>
-          </ul>
-          <ul class="list-info">
-            <li>
-              <p class="about-film-info">
-                <span class="about-film-vote">7.3</span> / 1260
-              </p>
-            </li>
-            <li>
-              <p class="about-film-info">100.2</p>
-            </li>
-            <li>
-              <p class="about-film-info">A FISTFUL OF LEAD</p>
-            </li>
-            <li>
-              <p class="about-film-info">Western</p>
-            </li>
-          </ul>
+
+        <!-- !Input -->
+
+        <div class="input-container">
+          <div class="input-wrap">
+            <form action="">
+              <input
+                type="text"
+                class="header-input"
+                placeholder="Поиск фильмов"
+              />
+              <svg width="12" height="12" class="input-icon">
+                <use href="./images/sprite.svg#icon-search"></use>
+              </svg>
+            </form>
+          </div>
         </div>
-        <div>
-          <h3 class="subtitle">ABOUT</h3>
-          <p class="description">
-            Four of the West’s most infamous outlaws assemble to steal a huge
-            stash of gold from the most corrupt settlement of the gold rush towns.
-            But not all goes to plan one is killed and the other three escapes
-            with bags of gold hide out in the abandoned gold mine where they
-            happen across another gang of three – who themselves were planning to
-            hit the very same bank! As tensions rise, things go from bad to worse
-            as they realise the bags of gold are filled with lead... they’ve been
-            double crossed – but by who and how?
+        <div class="search-error-container">
+          <p class="search-error is-hidden">
+            Search result not successful. Enter the correct movie name and
           </p>
         </div>
-        <button class="first add-btn" type="button">ADD TO WATCHED</button>
-        <button class="second add-btn" type="button">ADD TO QUEUE</button>
+      </div>
+
+      <div class="search-error-container">
+        <p class="search-error is-hidden">
+          Search result not successful. Enter the correct movie name and
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <div class="container main">
+
+      </div>
+      
+
+      <div id="pagination" class="tui-pagination"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <a href="./index.html" class="footer-logo">
+          <svg class="footer-logo-svg" width="24" height="24">
+            <use href="./images/sprite.svg#icon-film"></use>
+          </svg>
+          Filmoteka
+        </a>
+        <div class="footer-section">
+          <div class="applications">
+            <p class="section-desc">Our applications</p>
+            <ul class="app-list">
+              <li class="app-item">
+                <a href="">
+                  <svg width="60" height="50" class="app-svg">
+                    <use href="./images/sprite.svg#icon-appleinc"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="app-item">
+                <a href="">
+                  <svg width="120" height="70" class="app-svg">
+                    <use href="./images/sprite.svg#icon-youtube2"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="socials">
+            <p class="section-desc">Join us on our networks</p>
+            <ul class="socials-list">
+              <li>
+                <a href="#" class="social-link">
+                  <svg class="social-svg" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link">
+                  <svg class="social-svg" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link">
+                  <svg class="social-svg" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="support">
+            <p class="section-desc">Support</p>
+            <a href="mailto:support@filmoteka.tv" class="email"
+              >support@filmoteka.tv</a
+            >
+          </div>
+        </div>
+        <div class="copyright">
+          <p class="copyright-desc">&copy 2020 | All Rights Reserved |</p>
+          <p class="developer">
+            Developed with
+            <span>
+              <svg class="footer-svg" width="14" height="13">
+                <use href="./images/sprite.svg#icon-favorite"></use>
+              </svg>
+            </span>
+            by &nbsp
+            <a href="https://goit.ua/"
+              ><span class="copyright-logo">Go</span>
+              <span class="copyright-accent">IT </span>
+            </a>
+            &nbsp Students
+          </p>
+        </div>
+        <div class="pagination"></div>
+      </div>
+    </footer>
+    <div class="backdrop is-hidden">
+      <div class="container modal-section">
+        <button class="close-modal-btn" type="button">X</button>
+        <img class="film-image" src="./images/Rectangle 18.jpg" alt="Фильм" />
+        <div class="info-section">
+          <h2 class="title">A FISTFUL OF LEAD</h2>
+          <div class="modal-info">
+            <ul class="list-info">
+              <li>
+                <p class="about-film">Vote / Votes</p>
+              </li>
+              <li>
+                <p class="about-film">Popularity</p>
+              </li>
+              <li>
+                <p class="about-film">Original Title</p>
+              </li>
+              <li>
+                <p class="about-film genre">Genre</p>
+              </li>
+            </ul>
+            <ul class="list-info">
+              <li>
+                <p class="about-film-info">
+                  <span class="about-film-vote">7.3</span> / 1260
+                </p>
+              </li>
+              <li>
+                <p class="about-film-info">100.2</p>
+              </li>
+              <li>
+                <p class="about-film-info">A FISTFUL OF LEAD</p>
+              </li>
+              <li>
+                <p class="about-film-info">Western</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="subtitle">ABOUT</h3>
+            <p class="description">
+              Four of the West’s most infamous outlaws assemble to steal a huge
+              stash of gold from the most corrupt settlement of the gold rush
+              towns. But not all goes to plan one is killed and the other three
+              escapes with bags of gold hide out in the abandoned gold mine
+              where they happen across another gang of three – who themselves
+              were planning to hit the very same bank! As tensions rise, things
+              go from bad to worse as they realise the bags of gold are filled
+              with lead... they’ve been double crossed – but by who and how?
+            </p>
+          </div>
+          <button class="first add-btn" type="button">ADD TO WATCHED</button>
+          <button class="second add-btn" type="button">ADD TO QUEUE</button>
+        </div>
       </div>
     </div>
-</div>
   </body>
 </html>
