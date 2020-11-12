@@ -2,6 +2,8 @@
 import modalTemplate from './templates/modalTemplate-new.hbs';
 import localStorage from "./localStorage";
 
+import trailer from "./trailers";
+
 export default function (arr) {
   const filmList = document.querySelector('.film-list');
   const onModalOpen = e => {
@@ -19,6 +21,13 @@ export default function (arr) {
       modalOn.classList.remove('is-hidden')
       
       localStorage(test);
+    
+    const trailerRef = document.querySelector('.trailer-btn');
+
+    trailerRef.addEventListener('click', () => { 
+      trailer(test.title,test.release_date);
+    })
+    
     const onEscapeClose = function (e) {
       console.log(e.key);
       if (e.key === "Escape") {

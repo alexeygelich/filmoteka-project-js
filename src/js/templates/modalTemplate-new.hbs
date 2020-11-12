@@ -1,10 +1,16 @@
 {{#if poster_path}}
 <img class="film-image" src="http://image.tmdb.org/t/p/w440_and_h660_face/{{poster_path}}" alt="Фильм" />
 {{else}}
-<img class="film-image" style="height:auto" src="https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697" alt="film poster">
+<img class="film-image" style="height:auto" src="https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697"
+  alt="film poster">
 {{/if}}
 <div class="info-section">
   <h2 class="title">{{title}}</h2>
+  <p class="trailer-btn">
+    <svg class="play-svg" width="24" height="24">
+      <use href="./images/sprite.svg#icon-play"></use>
+    </svg>
+    Play Trailer</p>
   <div class="modal-info">
     <ul class="list-info">
       <li>
@@ -43,4 +49,5 @@
   </div>
   <button class="first add-btn" type="button">ADD TO WATCHED</button>
   <button class="second add-btn" type="button">ADD TO QUEUE</button>
+  <button class="close-modal-btn" type="button">X</button>
 </div>
