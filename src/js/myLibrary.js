@@ -1,20 +1,36 @@
 import libMark from "./templates/mainTemplate.hbs";
 import refs from "./refs.js";
+
+
 const myLibraryLink = document.querySelector(".lib-link");
 const headerOfLib = document.querySelector(".header");
-
+  
 const watched = function () {
+  const mainDiv = document.querySelector('.main');
+mainDiv.innerHTML = `
+    <ul class="film-list">
+    </ul>
+    `;
+    const filmList = document.querySelector('.film-list');
+console.log(filmList);
   document.querySelector(".watched").classList.add("current-btn");
   document.querySelector(".queue").classList.remove("current-btn");
   const localStorageArrW = JSON.parse(localStorage.getItem(`w`)) || [];
-  refs.filmList.innerHTML = `${libMark(localStorageArrW)}`;
+  filmList.innerHTML = `${libMark(localStorageArrW)}`;
 };
 const queue = function () {
+  const mainDiv = document.querySelector('.main');
+mainDiv.innerHTML = `
+    <ul class="film-list">
+    </ul>
+    `;
+    const filmList = document.querySelector('.film-list');
+console.log(filmList);
   document.querySelector(".watched").classList.remove("current-btn");
   document.querySelector(".queue").classList.add("current-btn");
   const localStorageArrQ = JSON.parse(localStorage.getItem(`q`)) || [];
 
-  refs.filmList.innerHTML = `${libMark(localStorageArrQ)}`;
+  filmList.innerHTML = `${libMark(localStorageArrQ)}`;
 };
 
 const libMarkup = function () {
@@ -48,6 +64,8 @@ const libMarkup = function () {
       <button class="lib-btn queue">Queue</button>
     </div>
   </div>`;
+
+
 
   watched();
   document.querySelector(".watched").addEventListener("click", watched);
