@@ -1,13 +1,13 @@
-import { error } from "../../node_modules/@pnotify/core";
+import { error, success } from "../../node_modules/@pnotify/core";
 import "../../node_modules/@pnotify/core/dist/BrightTheme.css";
 import "../../node_modules/@pnotify/core/dist/PNotify.css";
 export default function (data) {
-  console.log(data);
   const addToWatched = document.querySelector(".first");
   const addToQueue = document.querySelector(".second");
 
   const watched = JSON.parse(localStorage.getItem(`w`)) || [];
   const queue = JSON.parse(localStorage.getItem(`q`)) || [];
+
   const notificationFn = () => {
     const myNotice = error({
       title: "You already added this movie !",
@@ -15,25 +15,46 @@ export default function (data) {
       delay: 1200,
     });
   };
+  const notificationGood = () => {
+    const myNoticeGood = success({
+      title: "You added this movie !",
+      text: "Enjoy watching the movie !",
+      delay: 1200,
+    });
+  };
 
   const addToLocalStorageWatched = function () {
-    if (watched.includes(data)) {
+    let isUniq = true;
+    watched.forEach((element) => {
+      if (element.id === data.id) {
+        isUniq = false;
+      }
+    });
+    if (isUniq) {
+      watched.push(data);
+      let watchedStr = JSON.stringify(watched);
+      localStorage.setItem(`w`, watchedStr);
+      notificationGood();
+    } else {
       notificationFn();
-      return;
     }
-    watched.push(data);
-    let watchedStr = JSON.stringify(watched);
-    localStorage.setItem(`w`, watchedStr);
   };
 
   const addToLocalStorageQueue = function () {
-    if (queue.includes(data)) {
+    let isUniq = true;
+    queue.forEach((element) => {
+      if (element.id === data.id) {
+        isUniq = false;
+      }
+    });
+    if (isUniq) {
+      queue.push(data);
+      let queueStr = JSON.stringify(queue);
+      localStorage.setItem(`q`, queueStr);
+      notificationGood();
+    } else {
       notificationFn();
-      return;
     }
-    queue.push(data);
-    let queueStr = JSON.stringify(queue);
-    localStorage.setItem(`q`, queueStr);
   };
 
   addToWatched.addEventListener(`click`, addToLocalStorageWatched);
