@@ -165,6 +165,7 @@ export default async function(value=false, promisTotalItems) {
       draftArray = [...w_FullArray.slice(firstIndexOfElements, lastIndexOfElements)]
 
       renderMain(draftArray);
+      modalOpen(draftArray);
     } // закриваємо [promisTotalItems is FALSE ]
   }
 }
