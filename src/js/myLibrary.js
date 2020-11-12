@@ -1,36 +1,30 @@
 import libMark from "./templates/mainTemplate.hbs";
 import refs from "./refs.js";
 import modal from "./modal.js";
+import arrForRender from './arr-for-render.js';
+import renderFilm from './render-film.js'; 
 
 const myLibraryLink = document.querySelector(".lib-link");
 const headerOfLib = document.querySelector(".header");
 
 const watched = function () {
-  const mainDiv = document.querySelector(".main");
-  mainDiv.innerHTML = `
-    <ul class="film-list">
-    </ul>
-    `;
-  const filmList = document.querySelector(".film-list");
-  console.log(filmList);
+
   document.querySelector(".watched").classList.add("current-btn");
   document.querySelector(".queue").classList.remove("current-btn");
-  const localStorageArrW = JSON.parse(localStorage.getItem(`w`)) || [];
-  filmList.innerHTML = `${libMark(localStorageArrW)}`;
+  let localStorageArrW = JSON.parse(localStorage.getItem(`w`)) || [];
+  // filmList.innerHTML = `${libMark(localStorageArrW)}`;
+  localStorageArrW=arrForRender(localStorageArrW);
+  renderFilm(localStorageArrW);
   modal(localStorageArrW);
 };
 const queue = function () {
-  const mainDiv = document.querySelector(".main");
-  mainDiv.innerHTML = `
-    <ul class="film-list">
-    </ul>
-    `;
-  const filmList = document.querySelector(".film-list");
-  console.log(filmList);
+
   document.querySelector(".watched").classList.remove("current-btn");
   document.querySelector(".queue").classList.add("current-btn");
-  const localStorageArrQ = JSON.parse(localStorage.getItem(`q`)) || [];
-  filmList.innerHTML = `${libMark(localStorageArrQ)}`;
+  let localStorageArrQ = JSON.parse(localStorage.getItem(`q`)) || [];
+  // filmList.innerHTML = `${libMark(localStorageArrQ)}`;
+  localStorageArrQ=arrForRender(localStorageArrQ);
+  renderFilm(localStorageArrQ);
   modal(localStorageArrQ);
 };
 
