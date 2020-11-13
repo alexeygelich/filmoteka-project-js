@@ -50,7 +50,7 @@
             <nav class="header-nav">
               <ul class="nav-list">
                 <li class="nav-item">
-                  <a href="./index.html" class="link current">HOME</a>
+                  <a href="./index.html" id="home" class="link current">HOME</a>
                 </li>
                 <li class="nav-item">
                   <button class="lib-link" type="button">MY LIBRARY</button>
@@ -58,6 +58,13 @@
               </ul>
             </nav>
           </div>
+
+          
+          
+        </div>
+        <div class="btn-container is-hidden">
+          <button class="lib-btn watched">Watched</button>
+          <button class="lib-btn queue">Queue</button>
         </div>
 
         <!-- !Input -->
@@ -74,6 +81,7 @@
                 <use href="./images/sprite.svg#icon-search"></use>
               </svg>
             </form>
+            <ul class="search-list"></ul>
           </div>
         </div>
         <div class="search-error-container">
@@ -91,13 +99,31 @@
     </header>
 
     <main>
+      <!-- =================spinner=============== -->
+    <div class="loader" title="2">
+      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="100px" height="100px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+      <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+        <animateTransform attributeType="xml"
+          attributeName="transform"
+          type="rotate"
+          from="0 25 25"
+          to="360 25 25"
+          dur="0.5s"
+          repeatCount="indefinite"/>
+        </path>
+      </svg>
+    </div>
+    <!-- ================= END spinner=============== -->
       <div class="container main">
-
-
+        <ul class="film-list"></ul>
       </div>
-      
 
-      <div id="pagination" class="tui-pagination"></div>
+      
+   
+      <div id="pagination-wrapper">
+        <div id="pagination" class="tui-pagination"></div>
+      </div>
     </main>
 
     <footer class="footer">
@@ -236,6 +262,9 @@
           <button class="second add-btn" type="button">ADD TO QUEUE</button>
         </div>
       </div>
+    
+    
     </div>
+    <div class="backdrop-modal is-hidden"></div>
   </body>
 </html>
