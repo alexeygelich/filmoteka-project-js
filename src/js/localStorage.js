@@ -3,11 +3,11 @@ import "../../node_modules/@pnotify/core/dist/BrightTheme.css";
 import "../../node_modules/@pnotify/core/dist/PNotify.css";
 import renderFilm from "./render-film.js";
 
-export default function (data) {
-  const addToWatched = document.querySelector(".first");
-  const addToQueue = document.querySelector(".second");
+export default function (data, watchedBtn, queueBtn) {
+  console.log(data);
+  console.log(watchedBtn);
+  console.log(queueBtn);
   const myLibraryLink = document.querySelector(".lib-link");
-  console.dir(myLibraryLink);
 
   let watched = JSON.parse(localStorage.getItem(`w`)) || [];
 
@@ -32,14 +32,14 @@ export default function (data) {
   const checkForBtn = function () {
     watched.forEach((element, i) => {
       if (element.id === data.id) {
-        addToWatched.textContent = "REMOVE FROM WATCHED";
+        watchedBtn.textContent = "REMOVE FROM WATCHED";
         indexOfElW = i;
       }
     });
 
     queue.forEach((element, i) => {
       if (element.id === data.id) {
-        addToQueue.textContent = "REMOVE FROM QUEUE";
+        queueBtn.textContent = "REMOVE FROM QUEUE";
         indexOfElQ = i;
       }
     });
@@ -47,10 +47,10 @@ export default function (data) {
   checkForBtn();
 
   const addToLocalStorageWatched = function () {
-    if (addToWatched.textContent === "REMOVE FROM WATCHED") {
+    if (watchedBtn.textContent === "REMOVE FROM WATCHED") {
       watched.splice(indexOfElW, 1);
       localStorage.setItem(`w`, JSON.stringify(watched));
-      addToWatched.textContent = "ADD TO WATCHED";
+      watchedBtn.textContent = "ADD TO WATCHED";
       checkForBtn();
       notificationFn();
       if (myLibraryLink.classList.contains("current")) {
@@ -68,10 +68,10 @@ export default function (data) {
     }
   };
   const addToLocalStorageQueue = function () {
-    if (addToQueue.textContent === "REMOVE FROM QUEUE") {
+    if (queueBtn.textContent === "REMOVE FROM QUEUE") {
       queue.splice(indexOfElQ, 1);
       localStorage.setItem(`q`, JSON.stringify(queue));
-      addToQueue.textContent = "ADD TO QUEUE";
+      queueBtn.textContent = "ADD TO QUEUE";
       checkForBtn();
       notificationFn();
       if (myLibraryLink.classList.contains("current")) {
@@ -89,6 +89,6 @@ export default function (data) {
     }
   };
 
-  addToWatched.addEventListener(`click`, addToLocalStorageWatched);
-  addToQueue.addEventListener("click", addToLocalStorageQueue);
+  watchedBtn.addEventListener(`click`, addToLocalStorageWatched);
+  queueBtn.addEventListener("click", addToLocalStorageQueue);
 }
