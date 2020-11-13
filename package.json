@@ -56,6 +56,7 @@
     "fs": "0.0.1-security",
     "handlebars": "^4.7.6",
     "include": "^1.1.0",
+    "lodash.debounce": "^4.0.8",
     "paginator": "^1.0.0",
     "tui-pagination": "^3.4.0"
   }

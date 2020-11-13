@@ -1,0 +1,22 @@
+// .search-list {
+//   width: 100%;
+//   background: black;
+//   box-shadow: 0 4px 6px rgba(32, 33, 36, 0.28);
+//   display: flex;
+//   flex-direction: column;
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
+//   border-radius: 0 0 10px 10px;
+//   padding-left: 5px;
+//   padding-right: 5px;
+//   overflow: hidden;
+// }
+
+.search-list-item {
+  color: #ffffff;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
