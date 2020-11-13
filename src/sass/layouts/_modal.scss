@@ -30,6 +30,14 @@
   background-color: #1a273136;
 }
 
+.list-info-item {
+  display: flex;
+}
+
+.list-info-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .is-hidden,
 .backdrop-modal.is-hidden {
   display: none;
@@ -86,13 +94,14 @@
 .list-info {
   margin-right: 41px;
 
-  :not(:last-child) {
-    padding-bottom: 10px;
-  }
+  // :not(:last-child) {
+  //   padding-bottom: 10px;
+  // }
 }
 .about-film {
   color: $about-text-color;
   line-height: 1.33;
+  padding-right: 108px;
 }
 
 .about-film-vote {
