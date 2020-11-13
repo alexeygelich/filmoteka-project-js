@@ -33,7 +33,7 @@ export default function (name, year) {
             const wrapper = document.querySelector('#modal-trailer-wrapper');            
             // modalTrailer.style.width = `${width}`;
             // modalTrailer.style.height = `${height}`;
-            modalTrailer.innerHTML=`<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/${idYoutube}?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+            modalTrailer.innerHTML=`<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/${idYoutube}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
             modalTrailer.insertAdjacentHTML('beforeend',`<button type="button" class="close-trailer">X</button>`)
             setTimeout(()=>{
               wrapper.removeChild(spinner); //!видаляємо спіннер через 2s

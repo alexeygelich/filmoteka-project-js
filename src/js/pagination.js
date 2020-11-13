@@ -126,7 +126,7 @@ export default async function(value=false, promisTotalItems) {
           }
           renderMain(draftArray);
           refs.ARR = [...draftArray];
-          clearInput();
+          // clearInput();
           // modalOpen(draftArray);
         }
         QUERY(calculateURIparameters())
@@ -169,7 +169,7 @@ export default async function(value=false, promisTotalItems) {
 
       renderMain(draftArray);
       refs.ARR = [...draftArray];
-      clearInput();
+      // clearInput();
       // modalOpen(draftArray);
     } // закриваємо [promisTotalItems is FALSE ]
   }

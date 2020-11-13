@@ -1,0 +1,50 @@
+.year-search {
+  width: 50px;
+  border-radius: 5px;
+  border: 0;
+  text-align: center;
+  outline: none;
+}
+
+.parametr {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.genre-wrapper,
+.sort-wrapper,
+.year-wrapper {
+  color: white;
+}
+
+.category-list,
+.sort-list,
+.year-list {
+  position: absolute;
+  z-index: 4;
+}
+
+.year-list {
+  width: 50px;
+  height: 100px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.category-list-item,
+.sort-list-item,
+.year-list-item {
+  background-color: black;
+  &:hover {
+    cursor: pointer;
+    background-color: $accent-color;
+  }
+}
+
+.search-btn {
+  color: white;
+  font-size: 15px;
+}

@@ -3,11 +3,17 @@ const Theme = {
     DARK: 'dark-theme',
 }
 
+
 const changeTheme = document.querySelector('#theme-switch-toggle');
 
 changeTheme.addEventListener('change', savedChangeTheme);
 const themeShow = document.querySelector('body');
-console.log(themeShow);
+
+if (localStorage.getItem('Theme') === 'dark-theme') { 
+    themeShow.classList.add(Theme.DARK); 
+    changeTheme.checked = true;
+    // themeShow.classList.remove(Theme.LIGHT);
+}
 
 function defaultTheme() {
     if (localStorage.getItem('Theme') === Theme.DARK) {

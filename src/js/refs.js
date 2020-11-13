@@ -11,9 +11,22 @@
 export default {
   ARR: [],
   API: '2d536748299a0654176fee96f4763797',
-  defaultURL: 'https://api.themoviedb.org/3/movie/popular',
+  defaultURL: 'https://api.themoviedb.org/3/discover/movie',
   defaultSearch: 'https://api.themoviedb.org/3/search/movie',
-  genres: [
+  yearSearch: document.querySelector('.year-search'),
+  searchBtn: document.querySelector('.search-btn'),
+  searchInput: document.querySelector('.header-input'),
+  listPrediction: document.querySelector('.search-list'),
+  genreChoise: document.querySelector('.genre'),
+  categoryGenreList:document.querySelector('.category-list'),
+  sortChoise: document.querySelector('.sort'),
+  sortList:document.querySelector('.sort-list'),
+  yearChoise: document.querySelector('.year'),
+  yearList:document.querySelector('.year-list'),
+  clearBtn:document.querySelector('.clear-btn'),
+  sortWrapper:document.querySelector('.sort-wrapper'),  
+  genreWrapper:document.querySelector('.genre-wrapper'),
+genres: [
     {
       "id": 28,
       "name": "Action"

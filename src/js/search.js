@@ -13,22 +13,17 @@ const form = document.querySelector("form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  
-
-  
+  refs.listPrediction.classList.add('is-hidden');
   refs.errorNotification.classList.add('is-hidden');
-  // console.log('input.value',input);
   const moviesData = search(input.value);
 
-
+console.log('input.value',input.value);
   getMoviesData(moviesData)
     .then(data => arrRender(data))
     .then(data => {
       renderMain(data);
-      // modalOpen(data);
       refs.ARR = [...data];
       pagination(input.value, moviesData.then(data => data.total_results));
-      clearInput();
+      // clearInput();
     })
-  // clearInput();
 });
