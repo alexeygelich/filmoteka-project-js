@@ -1,12 +1,16 @@
 import { error, success } from "../../node_modules/@pnotify/core";
 import "../../node_modules/@pnotify/core/dist/BrightTheme.css";
 import "../../node_modules/@pnotify/core/dist/PNotify.css";
+import renderFilm from "./render-film.js";
 
 export default function (data) {
   const addToWatched = document.querySelector(".first");
   const addToQueue = document.querySelector(".second");
+  const myLibraryLink = document.querySelector(".lib-link");
+  console.dir(myLibraryLink);
 
   let watched = JSON.parse(localStorage.getItem(`w`)) || [];
+
   let queue = JSON.parse(localStorage.getItem(`q`)) || [];
 
   const notificationFn = () => {
@@ -49,15 +53,20 @@ export default function (data) {
       addToWatched.textContent = "ADD TO WATCHED";
       checkForBtn();
       notificationFn();
+      if (myLibraryLink.classList.contains("current")) {
+        renderFilm(watched);
+      }
     } else {
       watched.push(data);
       let watchedStr = JSON.stringify(watched);
       localStorage.setItem(`w`, watchedStr);
       notificationGood();
       checkForBtn();
+      if (myLibraryLink.classList.contains("current")) {
+        renderFilm(watched);
+      }
     }
   };
-
   const addToLocalStorageQueue = function () {
     if (addToQueue.textContent === "REMOVE FROM QUEUE") {
       queue.splice(indexOfElQ, 1);
@@ -65,12 +74,18 @@ export default function (data) {
       addToQueue.textContent = "ADD TO QUEUE";
       checkForBtn();
       notificationFn();
+      if (myLibraryLink.classList.contains("current")) {
+        renderFilm(queue);
+      }
     } else {
       queue.push(data);
       let queueStr = JSON.stringify(queue);
       localStorage.setItem(`q`, queueStr);
       notificationGood();
       checkForBtn();
+      if (myLibraryLink.classList.contains("current")) {
+        renderFilm(queue);
+      }
     }
   };
 
