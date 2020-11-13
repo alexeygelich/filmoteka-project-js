@@ -3,7 +3,7 @@ import getMoviesData from './getMoviesData.js';
 import refs from './refs.js';
 import debounce from '../../node_modules/lodash.debounce/'
 
-const input = document.querySelector('input');
+const input = document.querySelector('.header-input');
 const searchUl = document.querySelector('.search-list');
 // const inputWrap = document.querySelector('.input-wrap');
 

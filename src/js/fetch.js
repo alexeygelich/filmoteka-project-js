@@ -24,7 +24,7 @@ export default function (page = 1, searchValue = false) {
         .catch(data => console.log('ошибка'))
     }
     if (searchValue) {
-       
+      //  console.log('searchValue',searchValue);
       fetch(`${refs.defaultSearch}?api_key=${refs.API}&page=${page}&query=${searchValue}&include_adult=false`)
         .then(data => {
           if (!data.ok) {
@@ -35,7 +35,7 @@ export default function (page = 1, searchValue = false) {
         .then(data => data.json())
         .then(json => {
           if (json.results.length > 0) {
-            console.log("json ",json);
+          
             return json
           }
           throw 'Масив з данними пустий [запит виконано]';

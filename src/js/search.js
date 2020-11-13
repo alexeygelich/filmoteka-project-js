@@ -8,7 +8,7 @@ import clearInput from './clearInput'
 
 
 const error = document.querySelector(".search-error");
-const input = document.querySelector("input");
+const input = document.querySelector(".header-input");
 const form = document.querySelector("form");
 
 form.addEventListener("submit", (e) => {
@@ -17,6 +17,7 @@ form.addEventListener("submit", (e) => {
 
   
   refs.errorNotification.classList.add('is-hidden');
+  // console.log('input.value',input);
   const moviesData = search(input.value);
 
 

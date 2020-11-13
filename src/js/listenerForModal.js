@@ -13,6 +13,7 @@ const logoLink = document.querySelector('.logo-link');
 const homeRef = document.querySelector('#home');
 
 const onModalOpen = function (e) {
+  console.log('click');
     e.path.forEach(el => {
         if (
             el.className === 'film-list-item' ||
