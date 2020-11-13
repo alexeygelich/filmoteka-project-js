@@ -1,6 +1,7 @@
+import './js/yearList';
 import './sass/main.scss';
 import './js/popular.js';
-// import './js/searchPrepare.js';
+import './js/filter.js';
 import './js/pagination.js';
 import './js/search.js';
 import './js/search-prediction.js';
