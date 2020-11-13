@@ -1,30 +1,23 @@
 import fetchQuery from './fetch.js';
 import getMoviesData from './getMoviesData.js';
 import refs from './refs.js';
-import debounce from '../../node_modules/lodash.debounce/'
+import debounce from '../../node_modules/lodash.debounce/';
 
 const input = document.querySelector('.header-input');
 const searchUl = document.querySelector('.search-list');
-// const inputWrap = document.querySelector('.input-wrap');
-
-// inputWrap.insertAdjacentHTML(
-//   'beforeend',
-//   `<div class="search-wrapper">
-//             </div>`,
-// );
-// const searchWrapper = document.querySelector('.search-wrapper');
 
 const inputSearch = function () {
+  searchUl.classList.remove('is-hidden');
   searchUl.innerHTML = '';
   refs.errorNotification.classList.add('is-hidden');
 
-  if (!input.value) { 
+  if (!input.value) {
+    searchUl.classList.add('is-hidden');
     return;
   }
 
   getMoviesData(fetchQuery(1, input.value)).then(data => {
-   
-    if (!data.length) { 
+    if (!data.length) {
       refs.errorNotification.classList.remove('is-hidden');
       return;
     }
@@ -36,12 +29,11 @@ const inputSearch = function () {
       i++;
       searchUl.insertAdjacentHTML(
         'beforeend',
-        `<li class="search-list-item" data-id=${id}>${title} - ${vote_average}</li>`,
+        `<li class="search-list-item" data-id=${id}>${title} - <span class="vote-average">${vote_average}</span></li>`,
       );
     });
-    // modal(data);
-    refs.ARR = [...refs.ARR,...data];
-  })
+    refs.ARR = [...refs.ARR, ...data];
+  });
 };
 
-input.addEventListener('input', debounce(inputSearch,500));
+input.addEventListener('input', debounce(inputSearch, 500));

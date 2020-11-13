@@ -1,5 +1,5 @@
 // ! NAVIGATION
-.logo-link{
+.logo-link {
   display: flex;
   align-items: center;
 }
@@ -19,9 +19,6 @@
       url(../images/search-pc.jpg);
   }
 
-  
-
-  
   .container.lib-container {
     width: 1024px;
     padding-right: 71px;
@@ -236,7 +233,7 @@
 
 .link.current::after {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 3px;
@@ -248,7 +245,7 @@
 // ! INPUT
 
 .header-input::placeholder {
-  color: white;
+  color: rgb(153, 151, 151);
 }
 .search-error {
   font-size: 14px;
@@ -317,7 +314,7 @@
 }
 .lib-link.current::after {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 3px;
