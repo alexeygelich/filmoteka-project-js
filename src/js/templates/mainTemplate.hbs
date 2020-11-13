@@ -7,10 +7,13 @@
         <source srcset="https://image.tmdb.org/t/p/w500/{{poster_path}}" media="(min-width: 1024px)" />
         <img class="film-image" src="http://image.tmdb.org/t/p/w440_and_h660_face/{{poster_path}}" alt="film poster">
         {{else}}
-        <img class="film-image" style="height:auto" src="https://via.placeholder.com/400x600?text=YOU%27RE+AWESOME+:)" alt="film poster">
+        <img class="film-image" style="height:auto" src="https://via.placeholder.com/400x600?text=YOU%27RE+AWESOME+:)"
+            alt="film poster">
         {{/if}}
     </picture>
-    <h3 class="film-name">"{{title}}"</h3>
-    <p class="film-about">{{genre_ids}} | {{release_date}} <span class="mark">{{vote_average}}</span></p>
+    <div class="film-list-wrapper">
+        <h3 class="film-name">"{{title}}"</h3>
+        <p class="film-about">{{genre_ids}} | {{release_date}} <span class="mark">{{vote_average}}</span></p>
+    </div>
 </li>
 {{/each}}

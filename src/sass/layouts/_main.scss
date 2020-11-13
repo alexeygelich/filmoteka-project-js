@@ -126,6 +126,10 @@ main {
   height: 16px;
   text-align: center;
   border-radius: 5px;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  padding-top: 1px;
 }
 
 .is-active {
@@ -197,4 +201,10 @@ main {
 
 .film-list-item:hover {
   cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+.film-list-wrapper {
+  position: relative;
+  padding-right: 50px;
 }
