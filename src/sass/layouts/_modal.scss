@@ -55,8 +55,10 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .modal-section .film-image {
+  object-fit: cover;
   width: 280px;
   height: 416px;
+  border-radius: 5px;
 
   @media screen and (min-width: 768px) {
     width: 294px;
@@ -84,6 +86,7 @@
 
 .original-title {
   text-transform: uppercase;
+  width: 172px;
 }
 
 .subtitle {
@@ -91,17 +94,9 @@
   font-size: $primary-font-size;
 }
 
-.list-info {
-  margin-right: 41px;
-
-  // :not(:last-child) {
-  //   padding-bottom: 10px;
-  // }
-}
 .about-film {
   color: $about-text-color;
   line-height: 1.33;
-  padding-right: 108px;
 }
 
 .about-film-vote {
@@ -112,6 +107,48 @@
   padding-left: 10px;
   line-height: 1.17;
 }
+
+.about-film-votes {
+  padding-right: 41px;
+
+  @media screen and (min-width: 1024px) {
+    padding-right: 85px;
+  }
+}
+
+.vote-divider {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.vote-count {
+  padding-right: 4px;
+  padding-left: 4px;
+  background: #f7f7f7;
+  border-radius: 5px;
+}
+
+.about-film-popularity {
+  padding-right: 53px;
+  @media screen and (min-width: 1024px) {
+    padding-right: 97px;
+  }
+}
+
+.about-film-title {
+  padding-right: 39px;
+  @media screen and (min-width: 1024px) {
+    padding-right: 83px;
+  }
+}
+
+.about-film-genre {
+  padding-right: 75px;
+  @media screen and (min-width: 1024px) {
+    padding-right: 119px;
+  }
+}
+
 .description {
   line-height: 1.67;
   margin-bottom: 40px;
