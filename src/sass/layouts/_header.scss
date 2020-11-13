@@ -1,6 +1,7 @@
 // ! NAVIGATION
 @media screen and (min-width: 1024px) {
   .container.nav-container {
+    position: relative;
     width: 1024px;
     padding-right: 71px;
     padding-left: 71px;
@@ -74,6 +75,7 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .container.nav-container {
+    position: relative;
     width: 768px;
     padding-right: 76px;
     padding-left: 76px;
@@ -147,6 +149,7 @@
 
 @media screen and(max-width: 767px) {
   .container.nav-container {
+    position: relative;
     width: 320px;
     height: 230px;
     background-repeat: no-repeat;
