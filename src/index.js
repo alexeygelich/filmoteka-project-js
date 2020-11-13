@@ -5,3 +5,4 @@ import "./js/pagination.js";
 import "./js/search.js";
 import "./js/myLibrary.js";
 import './js/modal.js';
+import "./js/theme-tumbler.js"

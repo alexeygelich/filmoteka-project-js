@@ -7,6 +7,7 @@ const changeTheme = document.querySelector('#theme-switch-toggle');
 
 changeTheme.addEventListener('change', savedChangeTheme);
 const themeShow = document.querySelector('body');
+console.log(themeShow);
 
 function defaultTheme() {
     if (localStorage.getItem('Theme') === Theme.DARK) {
