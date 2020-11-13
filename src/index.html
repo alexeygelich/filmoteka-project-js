@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -16,33 +19,39 @@
   </head>
   <body>
     <header class="header">
-      
       <div class="container nav-container">
         <div class="toolbar">
-      <div class="theme-switch">
-      <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
-        <use href="./images/sprite.svg#sun"></use>
-      </svg>
+          <div class="theme-switch">
+            <svg
+              class="theme-switch__icon"
+              role="img"
+              aria-label="Иконка солнца"
+            >
+              <use href="./images/sprite.svg#sun"></use>
+            </svg>
 
+            <div class="theme-switch__control">
+              <input
+                class="theme-switch__toggle"
+                type="checkbox"
+                name="theme"
+                id="theme-switch-toggle"
+                aria-label="Переключить между тёмной и светлой темой"
+              />
+              <label
+                aria-hidden="true"
+                class="theme-switch__track"
+                for="theme-switch-toggle"
+              >
+              </label>
+              <div aria-hidden="true" class="theme-switch__marker"></div>
+            </div>
 
-          <div class="theme-switch__control">
-            <input
-              class="theme-switch__toggle"
-              type="checkbox"
-              name="theme"
-              id="theme-switch-toggle"
-              aria-label="Переключить между тёмной и светлой темой"
-            />
-            <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle"> </label>
-            <div aria-hidden="true" class="theme-switch__marker"></div>
+            <svg class="theme-switch__icon" aria-label="Иконка луны">
+              <use href="./images/sprite.svg#moon"></use>
+            </svg>
           </div>
-
-
-      <svg class="theme-switch__icon" aria-label="Иконка луны">
-        <use href="./images/sprite.svg#moon"></use>
-      </svg>
-    </div>
-    </div>
+        </div>
 
         <!-- !Navigation -->
 
@@ -78,21 +87,29 @@
         <div class="input-container">
           <div class="input-wrap">
             <form action="">
-              <input type="text" class="header-input" placeholder="Поиск фильмов" />
+              <input
+                type="text"
+                class="header-input"
+                placeholder="Поиск фильмов"
+              />
               <svg width="12" height="12" class="input-icon">
                 <use href="./images/sprite.svg#icon-search"></use>
               </svg>
             </form>
-            <ul class="search-list"></ul>
+            <ul class="search-list is-hidden"></ul>
           </div>
         </div>
         <div class="search-error-container">
-          <p class="search-error is-hidden">Search result not successful. Enter the correct movie name and</p>
+          <p class="search-error is-hidden">
+            Search result not successful. Enter the correct movie name and
+          </p>
         </div>
       </div>
 
       <div class="search-error-container">
-        <p class="search-error is-hidden">Search result not successful. Enter the correct movie name and</p>
+        <p class="search-error is-hidden">
+          Search result not successful. Enter the correct movie name and
+        </p>
       </div>
     </header>
 
@@ -194,7 +211,9 @@
           </div>
           <div class="support">
             <p class="section-desc">Support</p>
-            <a href="mailto:support@filmoteka.tv" class="email">support@filmoteka.tv</a>
+            <a href="mailto:support@filmoteka.tv" class="email"
+              >support@filmoteka.tv</a
+            >
           </div>
         </div>
         <div class="copyright">
@@ -240,7 +259,9 @@
             </ul>
             <ul class="list-info">
               <li>
-                <p class="about-film-info"><span class="about-film-vote">7.3</span> / 1260</p>
+                <p class="about-film-info">
+                  <span class="about-film-vote">7.3</span> / 1260
+                </p>
               </li>
               <li>
                 <p class="about-film-info">100.2</p>
@@ -256,11 +277,14 @@
           <div>
             <h3 class="subtitle">ABOUT</h3>
             <p class="description">
-              Four of the West’s most infamous outlaws assemble to steal a huge stash of gold from the most corrupt
-              settlement of the gold rush towns. But not all goes to plan one is killed and the other three escapes with
-              bags of gold hide out in the abandoned gold mine where they happen across another gang of three – who
-              themselves were planning to hit the very same bank! As tensions rise, things go from bad to worse as they
-              realise the bags of gold are filled with lead... they’ve been double crossed – but by who and how?
+              Four of the West’s most infamous outlaws assemble to steal a huge
+              stash of gold from the most corrupt settlement of the gold rush
+              towns. But not all goes to plan one is killed and the other three
+              escapes with bags of gold hide out in the abandoned gold mine
+              where they happen across another gang of three – who themselves
+              were planning to hit the very same bank! As tensions rise, things
+              go from bad to worse as they realise the bags of gold are filled
+              with lead... they’ve been double crossed – but by who and how?
             </p>
           </div>
           <button class="first add-btn" type="button">ADD TO WATCHED</button>
