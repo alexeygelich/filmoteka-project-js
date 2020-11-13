@@ -1,4 +1,9 @@
 // ! NAVIGATION
+.logo-link{
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (min-width: 1024px) {
   .container.nav-container {
     position: relative;
@@ -13,6 +18,10 @@
       ),
       url(../images/search-pc.jpg);
   }
+
+  
+
+  
   .container.lib-container {
     width: 1024px;
     padding-right: 71px;

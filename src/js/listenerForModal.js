@@ -11,6 +11,7 @@ const filmList = document.querySelector('.film-list');
 const searchPrediction = document.querySelector('.search-list');
 const logoLink = document.querySelector('.logo-link');
 const homeRef = document.querySelector('#home');
+const logoFooterLink = document.querySelector('.footer-logo');
 
 const onModalOpen = function (e) {
   console.log('click');
@@ -58,3 +59,4 @@ filmList.addEventListener('click', onModalOpen);
 searchPrediction.addEventListener('click', onModalOpen);
 logoLink.addEventListener('click', homeFn);
 homeRef.addEventListener('click', homeFn);
+logoFooterLink.addEventListener('click', homeFn);
