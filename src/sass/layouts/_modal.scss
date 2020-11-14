@@ -17,7 +17,7 @@
 }
 .modal-info {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .backdrop {
@@ -143,6 +143,16 @@
   }
 }
 
+.about-film-info-genre {
+  width: 170px;
+  @media screen and (min-width: 768px) {
+    width: 180px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 280px;
+  }
+}
+
 .about-film-title {
   width: 108px;
   @media screen and (min-width: 1024px) {
@@ -201,7 +211,14 @@
 }
 @media screen and (min-width: 768px) {
   .info-section {
+    width: 294px;
     margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .info-section {
+    width: 426px;
   }
 }
 
@@ -249,4 +266,31 @@
   position: relative;
   min-width: 250px;
   z-index: 6;
+}
+
+.telegram-icon {
+  fill: $accent-color;
+  width: 12px;
+  height: 10px;
+}
+
+.social-link {
+  &:hover .telegram-icon {
+    fill: white;
+  }
+  &:focus .telegram-icon {
+    fill: white;
+  }
+}
+
+.share-btn {
+  margin-right: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.modal-share-btns {
+  width: 150px;
+  display: flex;
+  margin-bottom: 5px;
 }
