@@ -4,19 +4,27 @@
   align-items: center;
 }
 
+
 @media screen and (min-width: 1024px) {
+
+  .header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+       url(../images/search-pc.jpg);
+    }
+  
+
   .container.nav-container {
     position: relative;
     width: 1024px;
     padding-right: 71px;
     padding-left: 71px;
     height: 230px;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/search-pc.jpg);
   }
 
   .container.lib-container {
@@ -80,19 +88,25 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+.header{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/search-tablet.jpg);
+}
+
   .container.nav-container {
     position: relative;
     width: 768px;
     padding-right: 76px;
     padding-left: 76px;
     height: 230px;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/search-tablet.jpg);
   }
+  
   .container.lib-container {
     width: 768px;
     padding-right: 76px;
@@ -154,18 +168,22 @@
 }
 
 @media screen and(max-width: 767px) {
+.header{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.56),
+      rgba(0, 0, 0, 0.56)
+    ),
+    url(../images/header-mobile.jpg);
+}
+
   .container.nav-container {
     position: relative;
     width: 320px;
     height: 230px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/header-mobile.jpg);
+
   }
   .container.lib-container {
     width: 320px;
@@ -198,6 +216,7 @@
     color: white;
     outline: none;
   }
+
   .logo-text {
     color: white;
     display: none;
