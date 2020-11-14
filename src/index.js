@@ -9,3 +9,4 @@ import './js/myLibrary.js';
 import './js/modal.js';
 import "./js/theme-tumbler.js"
 import './js/listenerForModal.js'
+import './js/languages.js'

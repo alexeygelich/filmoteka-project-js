@@ -2,7 +2,7 @@ import refs from './refs.js';
 
 
 export default function (page = 1, searchValue = false) {
-console.log('searchValue',searchValue);
+// console.log('searchValue',searchValue);
   return new Promise((resolve, reject) => {
     let year = '&primary_release_year=' + refs.yearChoise.dataset.id;
     let genres = '&with_genres=' + refs.genreChoise.dataset.id;

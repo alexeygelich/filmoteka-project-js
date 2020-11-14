@@ -26,6 +26,11 @@ export default {
   clearBtn:document.querySelector('.clear-btn'),
   sortWrapper:document.querySelector('.sort-wrapper'),  
   genreWrapper:document.querySelector('.genre-wrapper'),
+  langChoise: document.querySelector('.choose-language'),
+  langList: document.querySelector('.languages-list'),
+  home: document.querySelector('#home'),
+  libLink: document.querySelector('.lib-link'),
+  logoText: document.querySelector('.logo-text'),
 genres: [
     {
       "id": 28,
