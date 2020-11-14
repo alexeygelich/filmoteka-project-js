@@ -100,6 +100,8 @@
 }
 
 .about-film-vote {
+  display: flex;
+  align-items: center;
   color: $header-text-color;
   background-color: $accent-color;
   border-radius: 5px;
@@ -110,19 +112,23 @@
 }
 
 .about-film-votes {
-  padding-right: 41px;
+  width: 108px;
 
   @media screen and (min-width: 1024px) {
-    padding-right: 85px;
+    width: 150px;
   }
 }
 
 .vote-divider {
+  display: flex;
+  align-items: center;
   padding-left: 3px;
   padding-right: 3px;
 }
 
 .vote-count {
+  display: flex;
+  align-items: center;
   padding-right: 4px;
   padding-left: 4px;
   background: #f7f7f7;
@@ -131,23 +137,23 @@
 }
 
 .about-film-popularity {
-  padding-right: 53px;
+  width: 108px;
   @media screen and (min-width: 1024px) {
-    padding-right: 97px;
+    width: 150px;
   }
 }
 
 .about-film-title {
-  padding-right: 39px;
+  width: 108px;
   @media screen and (min-width: 1024px) {
-    padding-right: 83px;
+    width: 150px;
   }
 }
 
 .about-film-genre {
-  padding-right: 75px;
+  width: 108px;
   @media screen and (min-width: 1024px) {
-    padding-right: 119px;
+    width: 150px;
   }
 }
 

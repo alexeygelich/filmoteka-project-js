@@ -10,37 +10,37 @@
     <svg class="play-svg" width="24" height="24">
       <use href="./images/sprite.svg#icon-play"></use>
     </svg>
-    Play Trailer</p>
+    Смотреть трейлер</p>
   <div class="modal-info">
     <ul class="list-info">
       <li class="list-info-item">
-        <span class="about-film about-film-votes">Vote / Votes</span><span
+        <span class="about-film about-film-votes">Ретинг / кол-во Голосов</span><span
           class="about-film-vote">{{vote_average}}</span><span class="about-film-info vote-divider"> / </span>
         <span class="about-film-info vote-count">{{vote_count}}</span>
       </li>
       <li class="list-info-item">
-        <span class="about-film about-film-popularity">Popularity</span><span
+        <span class="about-film about-film-popularity">Популярность</span><span
           class="about-film-info">{{popularity}}</span>
       </li>
       <li class="list-info-item">
-        <span class="about-film about-film-title">Original Title</span><span
+        <span class="about-film about-film-title">Название</span><span
           class="about-film-info original-title">{{title}}</span>
       </li>
       <li class="list-info-item">
-        <span class="about-film about-film-genre">Genre</span><span class="about-film-info">{{genre_ids}}</span>
+        <span class="about-film about-film-genre">Жанры</span><span class="about-film-info">{{genre_ids}}</span>
       </li>
     </ul>
   </div>
   <div>
-    <h3 class="subtitle">ABOUT</h3>
+    <h3 class="subtitle">О фильме</h3>
     {{#if overview}}
     <p class="description">"{{overview}}"</p>
     {{else}}
-    <p class="description">We're sorry, this movie has no description :(</p>
+    <p class="description">К сожалению у фильма нет описания :(</p>
     {{/if}}
   </div>
-  <button class="first add-btn" type="button">ADD TO WATCHED</button>
-  <button class="second add-btn" type="button">ADD TO QUEUE</button>
+  <button class="first add-btn" type="button">Добавить в просмотренные</button>
+  <button class="second add-btn" type="button">Добавить в очередь</button>
   <button class="close-modal-btn" type="button">X</button>
 </div>
 

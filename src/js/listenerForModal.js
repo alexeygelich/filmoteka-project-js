@@ -14,7 +14,6 @@ const homeRef = document.querySelector('#home');
 const logoFooterLink = document.querySelector('.footer-logo');
 
 const onModalOpen = function (e) {
-  console.log('click');
     e.path.forEach(el => {
         if (
             el.className === 'film-list-item' ||
