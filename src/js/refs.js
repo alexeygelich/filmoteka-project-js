@@ -26,82 +26,113 @@ export default {
   clearBtn:document.querySelector('.clear-btn'),
   sortWrapper:document.querySelector('.sort-wrapper'),  
   genreWrapper:document.querySelector('.genre-wrapper'),
-genres: [
+  langChoise: document.querySelector('.choose-language'),
+  langList: document.querySelector('.languages-list'),
+  home: document.querySelector('#home'),
+  libLink: document.querySelector('.lib-link'),
+  logoText: document.querySelector('.logo-text'),
+  footerLogo: document.querySelector('.footer-logo'),
+  sectionDesc: document.querySelector('.section-desc'),
+  sectionDescJoin: document.querySelector('.socials .section-desc'),
+  sectionDescSupport: document.querySelector('.support .section-desc'),
+  copyrightDesc: document.querySelector('.copyright'),
+  developer: document.querySelector('.developer'),
+  students: document.querySelector('.students'),
+  genres: [
     {
       "id": 28,
-      "name": "Action"
+      "name": "Action",
+      "name_ru": "Экшн"
     },
     {
       "id": 12,
-      "name": "Adventure"
+      "name": "Adventure",
+      "name_ru": "Приключения"
     },
     {
       "id": 16,
-      "name": "Animation"
+      "name": "Animation",
+      "name_ru": "Анимационный"
     },
     {
       "id": 35,
-      "name": "Comedy"
+      "name": "Comedy",
+      "name_ru": "Комедии"
     },
     {
       "id": 80,
-      "name": "Crime"
+      "name": "Crime",
+      "name_ru": "Криминал"
     },
     {
       "id": 99,
-      "name": "Documentary"
+      "name": "Documentary",
+      "name_ru": "Документальные"
     },
     {
       "id": 18,
-      "name": "Drama"
+      "name": "Drama",
+      "name_ru": "Драма"
     },
     {
       "id": 10751,
-      "name": "Family"
+      "name": "Family",
+      "name_ru": "Семейные"
     },
     {
       "id": 14,
-      "name": "Fantasy"
+      "name": "Fantasy",
+      "name_ru": "Фантасктика"
     },
     {
       "id": 36,
-      "name": "History"
+      "name": "History",
+      "name_ru": "Исторические"
     },
     {
       "id": 27,
-      "name": "Horror"
+      "name": "Horror",
+      "name_ru": "Хоррор"
     },
     {
       "id": 10402,
-      "name": "Music"
+      "name": "Music",
+      "name_ru": "Музыка"
     },
     {
       "id": 9648,
-      "name": "Mystery"
+      "name": "Mystery",
+      "name_ru": "Мистика"
     },
     {
       "id": 10749,
-      "name": "Romance"
+      "name": "Romance",
+      "name_ru": "Мелодрама"
     },
     {
       "id": 878,
-      "name": "Science Fiction"
+      "name": "Science Fiction",
+      "name_ru": "Научная фантастика"
     },
     {
       "id": 10770,
-      "name": "TV Movie"
+      "name": "TV Movie",
+      "name_ru": "Сериал"
     },
     {
       "id": 53,
-      "name": "Thriller"
+      "name": "Thriller",
+      "name_ru": "Триллер"
     },
     {
       "id": 10752,
-      "name": "War"
+      "name": "War",
+      "name_ru": "Война"
     },
     {
       "id": 37,
-      "name": "Western"
+      "name": "Western",
+      "name_ru": "Вестерн"
     }
   ],
   filmList: document.querySelector('.film-list'),

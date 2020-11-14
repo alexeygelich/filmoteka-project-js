@@ -4,20 +4,12 @@
   align-items: center;
 }
 
-
 @media screen and (min-width: 1024px) {
-
-  .header{
+  .header {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-       url(../images/search-pc.jpg);
-    }
-  
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/search-pc.jpg);
+  }
 
   .container.nav-container {
     position: relative;
@@ -34,12 +26,7 @@
     height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/lib-pc.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/lib-pc.jpg);
   }
   .header-logo-container {
     display: flex;
@@ -88,16 +75,11 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-.header{
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/search-tablet.jpg);
-}
+  .header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/search-tablet.jpg);
+  }
 
   .container.nav-container {
     position: relative;
@@ -106,7 +88,7 @@
     padding-left: 76px;
     height: 230px;
   }
-  
+
   .container.lib-container {
     width: 768px;
     padding-right: 76px;
@@ -114,12 +96,7 @@
     height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/lib-tablet.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/lib-tablet.jpg);
   }
   .header-logo-container {
     display: flex;
@@ -168,34 +145,23 @@
 }
 
 @media screen and(max-width: 767px) {
-.header{
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.56),
-      rgba(0, 0, 0, 0.56)
-    ),
-    url(../images/header-mobile.jpg);
-}
+  .header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/header-mobile.jpg);
+  }
 
   .container.nav-container {
     position: relative;
     width: 320px;
     height: 230px;
-
   }
   .container.lib-container {
     width: 320px;
     height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/header-lib.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/header-lib.jpg);
   }
   .input-container {
     position: relative;
@@ -252,7 +218,7 @@
 
 .link.current::after {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 3px;
@@ -333,7 +299,7 @@
 }
 .lib-link.current::after {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 3px;
@@ -349,4 +315,18 @@
   border: 0;
   border-radius: 5px;
   outline: none;
+}
+
+.language-wrapper {
+  position: absolute;
+  top: 25px;
+  right: 150px;
+}
+
+.choose-language:hover {
+  cursor: pointer;
+}
+
+.languages-list-item:hover {
+  cursor: pointer;
 }
