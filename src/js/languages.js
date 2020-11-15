@@ -27,7 +27,6 @@ refs.langList.addEventListener('click', e => {
 
 // перевод сайта
 function transleteFn() {
-    console.dir(refs.categoryGenreList.children);
     // Перевод хедера
     refs.langChoise.dataset.id === 'ru' ? refs.home.textContent = 'ГЛАВНАЯ' : refs.home.textContent = 'HOME';
     refs.langChoise.dataset.id === 'ru' ? refs.libLink.textContent = 'БИБЛИОТЕКА' : refs.libLink.textContent = 'MY LIBRARY';
@@ -35,21 +34,21 @@ function transleteFn() {
     // Перевод фильтра
     refs.langChoise.dataset.id === 'ru' ? refs.searchInput.placeholder = "Поиск фильмов" : refs.searchInput.placeholder = "Search films";
     refs.langChoise.dataset.id === 'ru' ? refs.sortChoise.textContent = 'Сортировка' : refs.sortChoise.textContent = 'Sort by';
-    refs.langChoise.dataset.id === 'ru' ? refs.genreChoise.textContent = 'Категория' : refs.genreChoise.textContent = 'Category';
+    refs.langChoise.dataset.id === 'ru' ? refs.genreChoise.textContent = 'Жанр' : refs.genreChoise.textContent = 'Category';
     refs.langChoise.dataset.id === 'ru' ? refs.yearChoise.textContent = 'Год' : refs.genreChoise.textContent = 'Year';
     refs.langChoise.dataset.id === 'ru' ? refs.clearBtn.textContent = 'Очистить' : refs.clearBtn.textContent = 'Clear';
     [...refs.sortList.children].forEach(el => {
         if (el.dataset.id === 'popularity.desc') {
-            refs.langChoise.dataset.id === 'ru' ? el.textContent = 'По популярности(↓)' : el.textContent = 'popularity.desc';
+            refs.langChoise.dataset.id === 'ru' ? el.textContent = 'Популярность(↓)' : el.textContent = 'popularity(↓)';
         }
         if (el.dataset.id === 'popularity.asc') {
-            refs.langChoise.dataset.id === 'ru' ? el.textContent = 'По популярности(↑)' : el.textContent = 'popularity.asc';
+            refs.langChoise.dataset.id === 'ru' ? el.textContent = 'Популярность(↑)' : el.textContent = 'popularity(↑)';
         }
         if (el.dataset.id === 'vote_average.desc') {
-            refs.langChoise.dataset.id === 'ru' ? el.textContent = 'По рейтингу(↓)' : el.textContent = 'vote_average.desc';
+            refs.langChoise.dataset.id === 'ru' ? el.textContent = 'Рейтинг(↓)' : el.textContent = 'vote_average(↓)';
         }
         if (el.dataset.id === 'vote_average.asc') {
-            refs.langChoise.dataset.id === 'ru' ? el.textContent = `По рейтингу(↑)` : el.textContent = 'vote_average.asc';
+            refs.langChoise.dataset.id === 'ru' ? el.textContent = `Рейтинг(↑)` : el.textContent = 'vote_average(↑)';
         }
     });
 

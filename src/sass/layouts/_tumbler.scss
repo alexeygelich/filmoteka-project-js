@@ -2,24 +2,27 @@
 body.light-theme {
   background-color: #fff;
   color: #333333;
+  transition: 0.5s;
 }
 
 body.dark-theme {
   background-color: #333333;
   color: #fff;
+  transition: 0.5s;
 }
 
 .toolbar {
   position: absolute;
   right: 15px;
   top: 15px;
+  transition: 0.5s;
 
-   @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     right: 60px;
     top: 20px;
   }
 
-   @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     right: 55px;
     top: 20px;
   }
@@ -37,18 +40,18 @@ body.dark-theme {
   margin-right: 3px;
   margin-left: 3px;
 
-    @media screen and (min-width: 768px) {
-  height: 20px;
-  width: 20px;
-  margin-right: 5px;
-  margin-left: 5px;
+  @media screen and (min-width: 768px) {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
   }
 
-   @media screen and (min-width: 1200px) {
-  height: 20px;
-  width: 20px;
-  margin-right: 5px;
-  margin-left: 5px;
+  @media screen and (min-width: 1200px) {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
   }
 }
 
@@ -101,10 +104,9 @@ body.dark-theme {
   transform: translateX(3px);
   transition: transform 250ms var(--timing-function);
 
-
-    @media screen and (min-width: 768px) {
-  height: 15px;
-  width: 15px;
+  @media screen and (min-width: 768px) {
+    height: 15px;
+    width: 15px;
   }
 }
 
@@ -120,7 +122,6 @@ body.dark-theme {
 .theme-switch__toggle:active + .theme-switch__track {
   box-shadow: 0 0 0 3px #2196f3;
 }
-
 
 .film-name {
   color: #818181;

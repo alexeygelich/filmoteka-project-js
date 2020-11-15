@@ -28,12 +28,12 @@ const homeFn = function (e) {
   e.preventDefault()
   refs.genreWrapper.classList.remove("is-hidden")
   refs.sortWrapper.classList.remove("is-hidden")
-  refs.yearChoise.textContent = "Год"
-  refs.yearChoise.dataset.id = ""
-  refs.sortChoise.textContent = "Сортировка"
-  refs.sortChoise.dataset.id = "vote_average.desc"
-  refs.genreChoise.textContent = "Категория"
-  refs.genreChoise.dataset.id = ""
+  // refs.yearChoise.textContent = 
+  // refs.yearChoise.dataset.id = ""
+  // refs.sortChoise.textContent = "Сортировка"
+  // refs.sortChoise.dataset.id = "vote_average.desc"
+  // refs.genreChoise.textContent = "Категория"
+  // refs.genreChoise.dataset.id = ""
   const btnContainer = document.querySelector(".btn-container")
   const inputWrap = document.querySelector(".input-wrap")
   const navContainer = document.querySelector(".nav-container")
@@ -64,8 +64,9 @@ const homeFn = function (e) {
 
 filmList.addEventListener("click", onModalOpen)
 searchPrediction.addEventListener("click", (e) => {
-  refs.genreWrapper.classList.remove("is-hidden")
-  refs.sortWrapper.classList.remove("is-hidden")
+  refs.genreWrapper.classList.remove("is-hidden");
+  refs.sortWrapper.classList.remove("is-hidden");
+  searchPrediction.classList.add('is-hidden');
   onModalOpen(e)
 })
 logoLink.addEventListener("click", homeFn)
