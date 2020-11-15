@@ -17,13 +17,11 @@ export default function (arr) {
 
   const film = mainTemplate(arr);
   filmList.innerHTML = film;
-}
+
     setTimeout(()=> {
         loaderDiv.classList.add('is-hidden');
         ulFilmList.classList.add('show');
     }, 800);
 
     toTop();
-    const film = mainTemplate(arr);
-    filmList.innerHTML = film;
 }

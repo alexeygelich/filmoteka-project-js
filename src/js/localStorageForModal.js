@@ -2,6 +2,7 @@ import { error, success } from "../../node_modules/@pnotify/core";
 import "../../node_modules/@pnotify/core/dist/BrightTheme.css";
 import "../../node_modules/@pnotify/core/dist/PNotify.css";
 import renderFilm from "./render-film.js";
+import arrForRender from "./arr-for-render.js";
 
 export default function (data) {
   const addToWatched = document.querySelector(".first");
@@ -53,7 +54,7 @@ export default function (data) {
       checkForBtn();
       notificationFn();
       if (myLibraryLink.classList.contains("current")) {
-        renderFilm(watched);
+        renderFilm(arrForRender(watched));
       }
     } else {
       watched.push(data);
@@ -62,7 +63,7 @@ export default function (data) {
       notificationGood();
       checkForBtn();
       if (myLibraryLink.classList.contains("current")) {
-        renderFilm(watched);
+        renderFilm(arrForRender(watched));
       }
     }
   };
@@ -74,7 +75,7 @@ export default function (data) {
       checkForBtn();
       notificationFn();
       if (myLibraryLink.classList.contains("current")) {
-        renderFilm(queue);
+        renderFilm(arrForRender(queue));
       }
     } else {
       queue.push(data);
@@ -83,7 +84,7 @@ export default function (data) {
       notificationGood();
       checkForBtn();
       if (myLibraryLink.classList.contains("current")) {
-        renderFilm(queue);
+        renderFilm(arrForRender(queue));
       }
     }
   };
