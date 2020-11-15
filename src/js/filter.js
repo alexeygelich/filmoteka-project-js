@@ -15,27 +15,36 @@ const renderFn = function() {
 })
 }
 
-// refs.searchBtn.addEventListener('click', (e) => { 
-  
-//   if (!refs.searchInput.value) { 
-//       homeFn(e);
-//       return;
-//   }
-//   e.preventDefault();
-//     renderFn();
-// });
-
 
 refs.genreChoise.addEventListener('click', () => {
+    refs.genreChoise.classList.toggle('checked');
+    refs.sortChoise.classList.remove('checked');
+    refs.yearChoise.classList.remove('checked');
+
     refs.categoryGenreList.classList.toggle('is-hidden');
+    refs.sortList.classList.add('is-hidden');
+    refs.yearList.classList.add('is-hidden');
 });
 
 refs.sortChoise.addEventListener('click', () => {
+    refs.sortChoise.classList.toggle('checked');
+    refs.genreChoise.classList.remove('checked');
+    refs.yearChoise.classList.remove('checked');
+
     refs.sortList.classList.toggle('is-hidden');
+    refs.categoryGenreList.classList.add('is-hidden');
+    refs.yearList.classList.add('is-hidden');
+    
 });
 
 refs.yearChoise.addEventListener('click', () => {
+    refs.yearChoise.classList.toggle('checked');
+    refs.genreChoise.classList.remove('checked');
+    refs.sortChoise.classList.remove('checked');
+
     refs.yearList.classList.toggle('is-hidden');
+    refs.categoryGenreList.classList.add('is-hidden');
+    refs.sortList.classList.add('is-hidden');
 });
 
 refs.categoryGenreList.addEventListener('click', e => {
