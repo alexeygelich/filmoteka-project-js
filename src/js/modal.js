@@ -1,31 +1,10 @@
-//! ВИПРАВИТИ ШАПБЛОН (КНОПКА close)
+import localStorage from "./localStorageForModal.js";
 import modalTemplate from "./templates/modalTemplate-new.hbs"
 import modalTemplateRu from "./templates/modalTemplate-new_rus.hbs"
-import localStorage from "./localStorage"
+//import localStorage from "./localStorage"
 import refs from "./refs.js"
 import trailer from "./trailers"
 import onShareBtnClick from "./shareButtons.js"
-
-// const modalTranslate = function () {
-//   const filmVotes = document.querySelector('.about-film.about-film-votes');
-//   const filmPopularity = document.querySelector('.about-film.about-film-popularity');
-//   const titleFilm = document.querySelector('.about-film.about-film-title');
-//   const genreFilm = document.querySelector('.about-film.about-film-genre');
-//   const aboutFilm = document.querySelector('.subtitle');
-//   const addWatched = document.querySelector('.first.add-btn');
-//   const addQueu = document.querySelector('.second.add-btn');
-//   const playTrailer = document.querySelector('.trailer-btn');
-//   if (refs.langChoise.dataset.id === 'en') {
-//     filmVotes.textContent = 'Vote / Votes';
-//     filmPopularity.textContent = 'Popularity';
-//     titleFilm.textContent = 'Original Title';
-//     genreFilm.textContent = 'Genre';
-//     aboutFilm.textContent = 'ABOUT';
-//     addWatched.textContent = 'ADD TO WATCHED';
-//     addQueu.textContent = 'ADD TO QUEUE';
-//     console.dir(playTrailer);
-//   }
-// }
 
 export default function (ID) {
   let test = refs.ARR.find((el) => el.id === ID)

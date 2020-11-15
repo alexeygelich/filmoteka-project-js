@@ -1,3 +1,6 @@
+import btnsOfCards from "./btnsOfCards";
+import btnsFromLocalStorage from "./localStorage";
+
 import modal from "./modal.js"
 import getMoviesData from "./getMoviesData.js"
 import getMovies from "./fetch.js"
@@ -14,7 +17,25 @@ const homeRef = document.querySelector("#home")
 const logoFooterLink = document.querySelector(".footer-logo")
 const headerRef = document.querySelector('header');
 
+
+const searchPrediction = document.querySelector(".search-list");
+const logoLink = document.querySelector(".logo-link");
+const homeRef = document.querySelector("#home");
+const logoFooterLink = document.querySelector(".footer-logo");
+btnsOfCards();
 const onModalOpen = function (e) {
+
+  let isBtn = false;
+
+  e.path.forEach((el) => {
+    if (el.nodeName === "BUTTON") {
+      isBtn = true;
+      return;
+    }
+  });
+  if (isBtn) {
+    return;
+  }
   e.path.forEach((el) => {
     if (el.className === "film-list-item" || el.className === "search-list-item") {
       const elId = +el.dataset.id

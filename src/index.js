@@ -1,5 +1,5 @@
-import './js/yearList';
 import './sass/main.scss';
+import './js/yearList';
 import './js/popular.js';
 import './js/filter.js';
 import './js/pagination.js';

@@ -1,3 +1,48 @@
+.backdrop-btns {
+  position: relative;
+}
+.backdrop-btns > .wrap-for-btns {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  & .backdrop-btn {
+    opacity: 0;
+    align-items: center;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.33;
+    background-color: $header-text-color;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    transition: all 500ms ease;
+    &:hover,
+    :focus {
+      color: $header-text-color;
+      background-color: $accent-color;
+      border: none;
+    }
+  }
+}
+.backdrop-btn:first-child {
+  margin-bottom: 5px;
+}
+.wrap-for-btns:hover > .backdrop-btn {
+  opacity: 1;
+}
+.card-text-wrap {
+  padding: 5px;
+}
 .main-section {
   padding-bottom: 40px;
   @media screen and (min-width: 768px) {
@@ -53,8 +98,11 @@ main {
     color: $accent-color;
   }
 }
-
+.film-list-item:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
 .film-list-item {
+  border-radius: 5px;
   @media screen and (max-width: 767px) {
     &:not(:nth-child(-n + 1)) {
       margin-top: 22px;
