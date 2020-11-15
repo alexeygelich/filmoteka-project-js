@@ -9,10 +9,20 @@
   background-color: $accent-color;
   box-shadow: 0 0 6px rgba(255, 0, 27, 0.6);
   transition: 250ms linear;
+  @media screen and (max-width: 1024px) {
+    right: 4vh;
+    width: 60px;
+    height: 60px;
+  }
+  @media screen and (max-width: 767px) {
+    right: 2vh;
+    width: 40px;
+    height: 40px;
+  }
   &.hide {
     transform: scale(0);
   }
-  &::before{
+  &::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -24,13 +34,12 @@
     border-radius: 2px;
     transform: translate(-50%, -40%) rotate(45deg);
   }
-  &:hover{
+  &:hover {
     cursor: pointer;
     box-shadow: 0 0 12px #b94e06;
     transform: scale(1.1);
   }
-  &.hide:hover{
+  &.hide:hover {
     pointer-events: none;
   }
 }
-

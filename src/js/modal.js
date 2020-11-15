@@ -4,9 +4,11 @@ import modalTemplateRu from "./templates/modalTemplate-new_rus.hbs"
 //import localStorage from "./localStorage"
 import refs from "./refs.js"
 import trailer from "./trailers"
-import onShareBtnClick from "./shareButtons.js"
+import onShareBtnClick from "./shareButtons.js";
+
 
 export default function (ID) {
+  refs.toTop.classList.add('hide');
   let test = refs.ARR.find((el) => el.id === ID)
 
   const filmModal = document.querySelector(".modal-section")
@@ -39,6 +41,7 @@ export default function (ID) {
       modalOn.classList.add("is-hidden")
       document.body.classList.remove("stop-scroll")
       window.removeEventListener("keydown", onEscapeClose)
+      refs.toTop.classList.remove('hide');
     }
   }
   window.addEventListener("keydown", onEscapeClose)
@@ -47,6 +50,7 @@ export default function (ID) {
       window.removeEventListener("keydown", onEscapeClose)
       document.body.classList.remove("stop-scroll")
       modalOn.classList.add("is-hidden")
+      refs.toTop.classList.remove('hide');
     }
   })
   const closeBtn = document.querySelector(".close-modal-btn")
@@ -54,5 +58,6 @@ export default function (ID) {
     window.removeEventListener("keydown", onEscapeClose)
     document.body.classList.remove("stop-scroll")
     modalOn.classList.add("is-hidden")
+    refs.toTop.classList.remove('hide');
   })
 }
