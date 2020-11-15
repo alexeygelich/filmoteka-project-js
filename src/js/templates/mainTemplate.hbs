@@ -2,12 +2,11 @@
 <li class="film-list-item" data-id="{{id}}">
     <picture>
         {{#if poster_path}}
-        <source srcset="http://image.tmdb.org/t/p/w220_and_h330_face{{poster_path}}" media="(min-width: 320px)"
-            type="image/svg+xml" />
+        <source srcset="https://image.tmdb.org/t/p/w500{{poster_path}}" media="(min-width: 1024px)" type="image/jpeg" />
         <source srcset="http://image.tmdb.org/t/p/w440_and_h660_face{{poster_path}}" media="(min-width: 768px)"
-            type="image/svg+xml" />
-        <source srcset="https://image.tmdb.org/t/p/w500{{poster_path}}" media="(min-width: 1024px)"
-            type="image/svg+xml" />
+            type="image/jpeg" />
+        <source srcset="http://image.tmdb.org/t/p/w220_and_h330_face{{poster_path}}" media="(min-width: 320px)"
+            type="image/jpeg" />
         <img class="film-image" src="http://image.tmdb.org/t/p/w440_and_h660_face{{poster_path}}" alt="film poster">
         {{else}}
         <img class="film-image" style="height:auto" src="https://via.placeholder.com/400x600?text=YOU%27RE+AWESOME+:)"

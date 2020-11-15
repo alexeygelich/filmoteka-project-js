@@ -12,6 +12,7 @@ const searchPrediction = document.querySelector(".search-list")
 const logoLink = document.querySelector(".logo-link")
 const homeRef = document.querySelector("#home")
 const logoFooterLink = document.querySelector(".footer-logo")
+const headerRef = document.querySelector('header');
 
 const onModalOpen = function (e) {
   e.path.forEach((el) => {
@@ -41,7 +42,7 @@ const homeFn = function (e) {
 
   btnContainer.classList.add("is-hidden")
   inputWrap.classList.remove("is-hidden")
-  navContainer.classList.remove("lib-container")
+  headerRef.classList.remove("lib")
   libLink.classList.remove("current")
   homeRef.classList.add("current")
   clearInput()
@@ -59,14 +60,6 @@ const homeFn = function (e) {
         firstFetch().then((data) => data.total_results)
       )
     })
-
-  //   refs.yearChoise.textContent = 'Год';
-  //   refs.yearChoise.dataset.id = '';
-  //   refs.sortChoise.textContent = 'Сортировка';
-  //   refs.sortChoise.dataset.id = 'vote_average.desc';
-  //   refs.genreChoise.textContent = 'Категория';
-  // refs.genreChoise.dataset.id = '';
-  // onModalOpen();
 }
 
 filmList.addEventListener("click", onModalOpen)

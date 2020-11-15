@@ -19,11 +19,12 @@
     height: 230px;
   }
 
-  .container.lib-container {
-    width: 1024px;
-    padding-right: 71px;
-    padding-left: 71px;
-    height: 230px;
+  // .container
+  .lib {
+    // width: 1024px;
+    // padding-right: 71px;
+    // padding-left: 71px;
+    // height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/lib-pc.jpg);
@@ -72,6 +73,7 @@
     margin-left: 10px;
     font-weight: 500;
     font-size: 30px;
+    transition: 0.4s;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -89,11 +91,12 @@
     height: 230px;
   }
 
-  .container.lib-container {
-    width: 768px;
-    padding-right: 76px;
-    padding-left: 76px;
-    height: 230px;
+  // .container
+  .lib {
+    // width: 768px;
+    // padding-right: 76px;
+    // padding-left: 76px;
+    // height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/lib-tablet.jpg);
@@ -156,9 +159,10 @@
     width: 320px;
     height: 230px;
   }
-  .container.lib-container {
-    width: 320px;
-    height: 230px;
+  // .container
+  .lib {
+    // width: 320px;
+    // height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/header-lib.jpg);
@@ -207,6 +211,7 @@
   font-size: 12px;
   padding-bottom: 3px;
   color: white;
+  transition: 0.4s;
 }
 
 .nav-item {
@@ -296,6 +301,7 @@
   font-size: 12px;
   padding-bottom: 3px;
   color: white;
+  transition: 0.4s;
 }
 .lib-link.current::after {
   position: absolute;
@@ -329,4 +335,16 @@
 
 .languages-list-item:hover {
   cursor: pointer;
+}
+
+.link:hover,
+.lib-link:hover,
+.logo-text:hover {
+  color: $accent-color;
+  transition: 0.4s;
+}
+
+.logo-link:hover .logo-svg {
+  fill: $accent-color;
+  transition: 0.4s;
 }
