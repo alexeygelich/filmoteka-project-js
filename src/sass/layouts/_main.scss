@@ -41,6 +41,7 @@
   opacity: 1;
 }
 .card-text-wrap {
+  position: relative;
   padding: 5px;
 }
 .main-section {
@@ -100,6 +101,10 @@ main {
 }
 .film-list-item:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  & .film-list-wrapper {
+    // padding: 0 5px px 5px;
+    transition: 0.3s;
+  }
 }
 .film-list-item {
   border-radius: 5px;
