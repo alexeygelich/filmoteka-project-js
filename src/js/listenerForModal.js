@@ -6,24 +6,21 @@ import renderMain from "./render-film";
 import refs from "./refs.js";
 import pagination from "./pagination.js";
 import clearInput from "./clearInput";
-import btnsFromLocalStorage from "./localStorage.js";
+import btnsOfCards from "./btnsOfCards";
+import btnsFromLocalStorage from "./localStorage";
 
 const filmList = document.querySelector(".film-list");
+
 const searchPrediction = document.querySelector(".search-list");
 const logoLink = document.querySelector(".logo-link");
 const homeRef = document.querySelector("#home");
 const logoFooterLink = document.querySelector(".footer-logo");
-
+btnsOfCards();
 const onModalOpen = function (e) {
   let isBtn = false;
+
   e.path.forEach((el) => {
     if (el.nodeName === "BUTTON") {
-      const elForStorageId = +el.dataset.id;
-      btnsFromLocalStorage(
-        refs.ARR.find((el) => el.id === elForStorageId),
-        document.querySelector(`[data-id="${elForStorageId}"] .first-backdrop`),
-        document.querySelector(`[data-id="${elForStorageId}"] .second-backdrop`)
-      );
       isBtn = true;
       return;
     }
@@ -71,6 +68,7 @@ const homeFn = function (e) {
         firstFetch().then((data) => data.total_results)
       );
     });
+  btnsOfCards();
 };
 
 filmList.addEventListener("click", onModalOpen);

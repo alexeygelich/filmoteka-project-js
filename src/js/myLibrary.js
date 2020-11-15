@@ -1,10 +1,9 @@
-import libMark from "./templates/mainTemplate.hbs";
+import libMark from "./templates/mainTemplateLib.hbs";
 import refs from "./refs.js";
-import pagination from './pagination.js';
+import pagination from "./pagination.js";
 import modal from "./modal.js";
-import arrForRender from './arr-for-render.js';
-import renderFilm from './render-film.js'; 
-
+import arrForRender from "./arr-for-render.js";
+import renderFilm from "./render-film-lib.js";
 
 const myLibraryLink = document.querySelector(".lib-link");
 const headerOfLib = document.querySelector(".header");
@@ -16,9 +15,9 @@ const watched = function () {
   document.querySelector(".queue").classList.remove("current-btn");
   let localStorageArrW = JSON.parse(localStorage.getItem(`w`)) || [];
   // filmList.innerHTML = `${libMark(localStorageArrW)}`;
-  localStorageArrW=arrForRender(localStorageArrW);
+  localStorageArrW = arrForRender(localStorageArrW);
   renderFilm(localStorageArrW);
-  refs.ARR = [...localStorageArrW]
+  refs.ARR = [...localStorageArrW];
   // modal(localStorageArrW);
 };
 const queue = function () {
@@ -28,25 +27,25 @@ const queue = function () {
   document.querySelector(".queue").classList.add("current-btn");
   let localStorageArrQ = JSON.parse(localStorage.getItem(`q`)) || [];
   // filmList.innerHTML = `${libMark(localStorageArrQ)}`;
-  localStorageArrQ=arrForRender(localStorageArrQ);
+  localStorageArrQ = arrForRender(localStorageArrQ);
   renderFilm(localStorageArrQ);
-  refs.ARR = [...localStorageArrQ]
+  refs.ARR = [...localStorageArrQ];
   // modal(localStorageArrQ);
 };
 
 const libMarkup = function () {
-  const btnContainer = document.querySelector('.btn-container');
-  const inputWrap = document.querySelector('.input-wrap');
-  const navContainer = document.querySelector('.nav-container');
-  const libLink = document.querySelector('.lib-link');
-  const homeRef = document.querySelector('#home');
+  const btnContainer = document.querySelector(".btn-container");
+  const inputWrap = document.querySelector(".input-wrap");
+  const navContainer = document.querySelector(".nav-container");
+  const libLink = document.querySelector(".lib-link");
+  const homeRef = document.querySelector("#home");
 
-  btnContainer.classList.remove('is-hidden');
-  inputWrap.classList.add('is-hidden');
-  navContainer.classList.add('lib-container');
+  btnContainer.classList.remove("is-hidden");
+  inputWrap.classList.add("is-hidden");
+  navContainer.classList.add("lib-container");
   // navContainer.classList.remove('nav-container');
-  libLink.classList.add('current');
-  homeRef.classList.remove('current');
+  libLink.classList.add("current");
+  homeRef.classList.remove("current");
   // headerOfLib.innerHTML = `<div class="container lib-container">
 
   //   <div class="header-container">

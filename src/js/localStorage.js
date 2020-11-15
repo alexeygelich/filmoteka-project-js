@@ -3,10 +3,11 @@ import "../../node_modules/@pnotify/core/dist/BrightTheme.css";
 import "../../node_modules/@pnotify/core/dist/PNotify.css";
 import renderFilm from "./render-film.js";
 
-export default function (data, watchedBtn, queueBtn) {
-  console.log(data);
-  console.log(watchedBtn);
-  console.log(queueBtn);
+export default function (data, watchedBtn, queueBtn, number) {
+  // console.log(data);
+  // console.log(watchedBtn);
+  // console.log(queueBtn);
+
   const myLibraryLink = document.querySelector(".lib-link");
 
   let watched = JSON.parse(localStorage.getItem(`w`)) || [];
@@ -88,7 +89,9 @@ export default function (data, watchedBtn, queueBtn) {
       }
     }
   };
-
-  watchedBtn.addEventListener(`click`, addToLocalStorageWatched);
-  queueBtn.addEventListener("click", addToLocalStorageQueue);
+  if (number === 1) {
+    addToLocalStorageWatched();
+  } else {
+    addToLocalStorageQueue();
+  }
 }

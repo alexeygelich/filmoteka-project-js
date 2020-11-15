@@ -1,4 +1,4 @@
-import mainTemplate from "./templates/mainTemplate.hbs";
+import mainTemplate from "./templates/mainTemplateLib.hbs";
 import btnsOfCards from "./btnsOfCards";
 import refs from "./refs.js";
 import btnsFromLocalStorage from "./localStorage";
