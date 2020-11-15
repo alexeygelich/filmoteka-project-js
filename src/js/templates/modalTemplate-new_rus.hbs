@@ -1,11 +1,11 @@
 <div class="poster-wrapper">
-{{#if poster_path}}
-<img class="film-image" src="http://image.tmdb.org/t/p/w440_and_h660_face{{poster_path}}" alt="Фильм" />
+  {{#if poster_path}}
+  <img class="film-image" src="https://image.tmdb.org/t/p/w440_and_h660_face{{poster_path}}" alt="Фильм" />
 
-{{else}}
-<img class="film-image" style="height:auto" src="https://via.placeholder.com/416x500?text=YOU%27RE+AWESOME+:)"
-  alt="placeholder">
-{{/if}}
+  {{else}}
+  <img class="film-image" style="height:auto" src="https://via.placeholder.com/416x500?text=YOU%27RE+AWESOME+:)"
+    alt="placeholder">
+  {{/if}}
 </div>
 <div class="info-section">
   <h2 class="title">{{title}}</h2>
@@ -30,27 +30,28 @@
           class="about-film-info original-title">{{title}}</span>
       </li>
       <li class="list-info-item">
-        <span class="about-film about-film-genre">Жанры</span><span class="about-film-info about-film-info-genre">{{genre_ids}}</span>
+        <span class="about-film about-film-genre">Жанры</span><span
+          class="about-film-info about-film-info-genre">{{genre_ids}}</span>
       </li>
     </ul>
   </div>
   <ul class="modal-share-btns">
-<a href="#" target="_blank" class="social-link share-btn" id="#telegram">
-        <svg class="telegram-icon">
-          <use href="images/sprite.svg#icon-telegram"></use>
-        </svg>
-</a>
-<a href="#" target="_blank" class="social-link share-btn" id="#twitter">
-        <svg class="telegram-icon">
-          <use href="images/sprite.svg#icon-twitter"></use>
-        </svg>
-</a>
-<a href="#" target="_blank" class="social-link share-btn" id="#facebook">
-        <svg class="telegram-icon">
-          <use href="images/sprite.svg#icon-facebook"></use>
-        </svg>
-</a>
-</ul>
+    <a href="#" target="_blank" class="social-link share-btn" id="#telegram">
+      <svg class="telegram-icon">
+        <use href="images/sprite.svg#icon-telegram"></use>
+      </svg>
+    </a>
+    <a href="#" target="_blank" class="social-link share-btn" id="#twitter">
+      <svg class="telegram-icon">
+        <use href="images/sprite.svg#icon-twitter"></use>
+      </svg>
+    </a>
+    <a href="#" target="_blank" class="social-link share-btn" id="#facebook">
+      <svg class="telegram-icon">
+        <use href="images/sprite.svg#icon-facebook"></use>
+      </svg>
+    </a>
+  </ul>
   <div>
     <h3 class="subtitle">О фильме</h3>
     {{#if overview}}
