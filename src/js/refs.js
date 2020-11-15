@@ -38,6 +38,7 @@ export default {
   copyrightDesc: document.querySelector('.copyright'),
   developer: document.querySelector('.developer'),
   students: document.querySelector('.students'),
+  toTop: document.querySelector('#to-top'),
   genres: [
     {
       "id": 28,
