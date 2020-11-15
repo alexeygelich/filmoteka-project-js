@@ -3,11 +3,9 @@ import "../../node_modules/@pnotify/core/dist/BrightTheme.css";
 import "../../node_modules/@pnotify/core/dist/PNotify.css";
 import renderFilm from "./render-film.js";
 import arrForRender from "./arr-for-render.js";
+import refs from './refs';
 
 export default function (data, watchedBtn, queueBtn, number) {
-  // console.log(data);
-  // console.log(watchedBtn);
-  // console.log(queueBtn);
 
   const myLibraryLink = document.querySelector(".lib-link");
 
@@ -17,16 +15,16 @@ export default function (data, watchedBtn, queueBtn, number) {
 
   const notificationFn = () => {
     const myNotice = error({
-      title: "You successfully removed movie !",
+      title: refs.langChoise.dataset.id === 'en' ? "You successfully removed movie !" : "Вы успешно удалили фильм",
       text: "",
-      delay: 1200,
+      delay: 800,
     });
   };
   const notificationGood = () => {
     const myNoticeGood = success({
-      title: "You added this movie !",
-      text: "Enjoy watching the movie !",
-      delay: 1200,
+      title: refs.langChoise.dataset.id === 'en' ? "You added this movie !" : "Вы добавили фильм",
+      text: refs.langChoise.dataset.id === 'en' ? "Enjoy watching the movie !" : "Хорошего просмотра",
+      delay: 800,
     });
   };
   let indexOfElW = 0;
@@ -34,14 +32,14 @@ export default function (data, watchedBtn, queueBtn, number) {
   const checkForBtn = function () {
     watched.forEach((element, i) => {
       if (element.id === data.id) {
-        watchedBtn.textContent = "REMOVE FROM WATCHED";
+        refs.langChoise.dataset.id === 'en' ? watchedBtn.textContent = "REMOVE FROM WATCHED" : watchedBtn.textContent = "УБРАТЬ ИЗ ПРОСМОТРЕННЫХ";
         indexOfElW = i;
       }
     });
 
     queue.forEach((element, i) => {
       if (element.id === data.id) {
-        queueBtn.textContent = "REMOVE FROM QUEUE";
+        refs.langChoise.dataset.id === 'en' ? queueBtn.textContent = "REMOVE FROM QUEUE" : queueBtn.textContent = "УБРАТЬ ИЗ ОЧЕРЕДИ";
         indexOfElQ = i;
       }
     });
@@ -49,10 +47,10 @@ export default function (data, watchedBtn, queueBtn, number) {
   checkForBtn();
 
   const addToLocalStorageWatched = function () {
-    if (watchedBtn.textContent === "REMOVE FROM WATCHED") {
+    if (watchedBtn.textContent === "REMOVE FROM WATCHED" || watchedBtn.textContent === "УБРАТЬ ИЗ ПРОСМОТРЕННЫХ") {
       watched.splice(indexOfElW, 1);
       localStorage.setItem(`w`, JSON.stringify(watched));
-      watchedBtn.textContent = "ADD TO WATCHED";
+      refs.langChoise.dataset.id === 'en' ? watchedBtn.textContent = "ADD TO WATCHED" : watchedBtn.textContent = "ДОБАВИТЬ В ПРОСМОТРЕННЫЕ";
       checkForBtn();
       notificationFn();
       if (myLibraryLink.classList.contains("current")) {
@@ -70,10 +68,10 @@ export default function (data, watchedBtn, queueBtn, number) {
     }
   };
   const addToLocalStorageQueue = function () {
-    if (queueBtn.textContent === "REMOVE FROM QUEUE") {
+    if (queueBtn.textContent === "REMOVE FROM QUEUE" || queueBtn.textContent === "УБРАТЬ ИЗ ОЧЕРЕДИ") {
       queue.splice(indexOfElQ, 1);
       localStorage.setItem(`q`, JSON.stringify(queue));
-      queueBtn.textContent = "ADD TO QUEUE";
+      refs.langChoise.dataset.id === 'en' ? queueBtn.textContent = "ADD TO QUEUE" : queueBtn.textContent = "ДОБАВИТЬ В ОЧЕРЕДЬ";
       checkForBtn();
       notificationFn();
       if (myLibraryLink.classList.contains("current")) {

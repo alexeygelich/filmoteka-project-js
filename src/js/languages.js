@@ -5,11 +5,19 @@ import arrRender from './arr-for-render';
 import renderMain from './render-film';
 import pagination from './pagination.js';
 
+refs.langChoise.dataset.id = localStorage.getItem('lang') || 'en';
+refs.langChoise.dataset.id === 'ru' ? refs.langChoise.innerHTML = `<svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+                <use href="./images/sprite.svg#icon-rus"></use>
+              </svg>` : refs.langChoise.innerHTML = `<svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+                <use href="./images/sprite.svg#icon-en"></use>
+              </svg>`;
 
+transleteFn();
 
 refs.langChoise.addEventListener('click', () => {
     refs.langList.classList.toggle('is-hidden');
 });
+
 
 
 
@@ -18,7 +26,8 @@ refs.langList.addEventListener('click', e => {
         if (el.className === 'languages-list-item') {
             refs.langChoise.innerHTML = el.innerHTML;
             refs.langChoise.dataset.id = el.dataset.id;
-            refs.langList.classList.add('is-hidden');
+          refs.langList.classList.add('is-hidden');
+          localStorage.setItem('lang', el.dataset.id);
         }
     })
     transleteFn();
@@ -31,6 +40,8 @@ function transleteFn() {
     refs.langChoise.dataset.id === 'ru' ? refs.home.textContent = 'ГЛАВНАЯ' : refs.home.textContent = 'HOME';
     refs.langChoise.dataset.id === 'ru' ? refs.libLink.textContent = 'БИБЛИОТЕКА' : refs.libLink.textContent = 'MY LIBRARY';
     refs.langChoise.dataset.id === 'ru' ? refs.logoText.textContent = 'Фильмотека' : refs.logoText.textContent = 'Filmoteka';
+  refs.langChoise.dataset.id === 'ru' ? refs.addW.textContent = 'Просмотренные' : refs.addW.textContent = 'Watched';
+      refs.langChoise.dataset.id === 'ru' ? refs.addQ.textContent = 'Очередь' : refs.addQ.textContent = 'Queue';
     // Перевод фильтра
     refs.langChoise.dataset.id === 'ru' ? refs.searchInput.placeholder = "Поиск фильмов" : refs.searchInput.placeholder = "Search films";
     refs.langChoise.dataset.id === 'ru' ? refs.sortChoise.textContent = 'Сортировка' : refs.sortChoise.textContent = 'Sort by';

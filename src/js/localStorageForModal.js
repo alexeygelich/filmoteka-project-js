@@ -3,6 +3,7 @@ import "../../node_modules/@pnotify/core/dist/BrightTheme.css";
 import "../../node_modules/@pnotify/core/dist/PNotify.css";
 import renderFilm from "./render-film.js";
 import arrForRender from "./arr-for-render.js";
+import refs from './refs';
 
 export default function (data) {
   const addToWatched = document.querySelector(".first");
@@ -32,14 +33,14 @@ export default function (data) {
   const checkForBtn = function () {
     watched.forEach((element, i) => {
       if (element.id === data.id) {
-        addToWatched.textContent = "REMOVE FROM WATCHED";
+        refs.langChoise.dataset.id==='en' ? addToWatched.textContent = "REMOVE FROM WATCHED" :addToWatched.textContent = "УБРАТЬ ИЗ ПРОСМОТРЕННЫХ";
         indexOfElW = i;
       }
     });
 
     queue.forEach((element, i) => {
       if (element.id === data.id) {
-        addToQueue.textContent = "REMOVE FROM QUEUE";
+        refs.langChoise.dataset.id==='en' ? addToQueue.textContent = "REMOVE FROM QUEUE" : addToQueue.textContent = "УБРАТЬ ИЗ ОЧЕРЕДИ";
         indexOfElQ = i;
       }
     });
@@ -47,10 +48,10 @@ export default function (data) {
   checkForBtn();
 
   const addToLocalStorageWatched = function () {
-    if (addToWatched.textContent === "REMOVE FROM WATCHED") {
+    if (addToWatched.textContent === "REMOVE FROM WATCHED" || addToWatched.textContent === "УБРАТЬ ИЗ ПРОСМОТРЕННЫХ") {
       watched.splice(indexOfElW, 1);
       localStorage.setItem(`w`, JSON.stringify(watched));
-      addToWatched.textContent = "ADD TO WATCHED";
+      refs.langChoise.dataset.id==='en' ? addToWatched.textContent = "ADD TO WATCHED" : addToWatched.textContent = "ДОБАВИТЬ В ПРОСМОТРЕННЫЕ";
       checkForBtn();
       notificationFn();
       if (myLibraryLink.classList.contains("current")) {
@@ -68,10 +69,10 @@ export default function (data) {
     }
   };
   const addToLocalStorageQueue = function () {
-    if (addToQueue.textContent === "REMOVE FROM QUEUE") {
+    if (addToQueue.textContent === "REMOVE FROM QUEUE" || addToQueue.textContent === "УБРАТЬ ИЗ ОЧЕРЕДИ") {
       queue.splice(indexOfElQ, 1);
       localStorage.setItem(`q`, JSON.stringify(queue));
-      addToQueue.textContent = "ADD TO QUEUE";
+      refs.langChoise.dataset.id==='en' ? addToQueue.textContent = "ADD TO QUEUE" : addToQueue.textContent = "ДОБАВИТЬ В ОЧЕРЕДЬ";
       checkForBtn();
       notificationFn();
       if (myLibraryLink.classList.contains("current")) {

@@ -1,7 +1,9 @@
 import mainTemplate from "./templates/mainTemplate.hbs";
-import btnsOfCards from "./btnsOfCards";
+import mainTemplateRu from "./templates/mainTemplate_ru.hbs";
+
+// import btnsOfCards from "./btnsOfCards";
 import refs from "./refs.js";
-import btnsFromLocalStorage from "./localStorage";
+// import btnsFromLocalStorage from "./localStorage";
 import toTop from "./toTop.js";
 
 
@@ -15,7 +17,9 @@ export default function (arr) {
     ulFilmList.classList.add("show");
   }, 800);
 
-  const film = mainTemplate(arr);
+  let film;
+  refs.langChoise.dataset.id === 'ru' ? film = mainTemplateRu(arr) : film = mainTemplate(arr);
+
   filmList.innerHTML = film;
 
     setTimeout(()=> {

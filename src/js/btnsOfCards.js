@@ -27,27 +27,27 @@ export default function () {
     let isActive = false;
     if (event.target === wrapForBtns) {
       if (watched.length === 0) {
-        watchedBtn.textContent = "ADD TO WATCHED";
+        refs.langChoise.dataset.id==='en' ? watchedBtn.textContent = "ADD TO WATCHED" : watchedBtn.textContent = "ДОБАВИТЬ В ПРОСМОТРЕННЫЕ";
       }
       watched.forEach((element) => {
         if (element.id === +idForStorage) {
-          watchedBtn.textContent = "REMOVE FROM WATCHED";
+          refs.langChoise.dataset.id==='en' ? watchedBtn.textContent = "REMOVE FROM WATCHED" : watchedBtn.textContent = "УБРАТЬ ИЗ ПРОСМОТРЕННЫХ";
           isActive = true;
         }
         if (!isActive) {
-          watchedBtn.textContent = "ADD TO WATCHED";
+          refs.langChoise.dataset.id==='en' ? watchedBtn.textContent = "ADD TO WATCHED" : watchedBtn.textContent = "ДОБАВИТЬ В ПРОСМОТРЕННЫЕ";
         }
       });
       if (queue.length === 0) {
-        queueBtn.textContent = "ADD TO QUEUE";
+        refs.langChoise.dataset.id==='en' ? queueBtn.textContent = "ADD TO QUEUE" :  queueBtn.textContent = "ДОБАВИТЬ В ОЧЕРЕДЬ";
       }
       queue.forEach((element) => {
         if (element.id === +idForStorage) {
-          queueBtn.textContent = "REMOVE FROM QUEUE";
+          refs.langChoise.dataset.id==='en' ? queueBtn.textContent = "REMOVE FROM QUEUE" : queueBtn.textContent = "УБРАТЬ ИЗ ОЧЕРЕДИ";
           isActive = true;
         }
         if (!isActive) {
-          queueBtn.textContent = "ADD TO QUEUE";
+          refs.langChoise.dataset.id==='en' ? queueBtn.textContent = "ADD TO QUEUE" : queueBtn.textContent = "ДОБАВИТЬ В ОЧЕРЕДЬ";
         }
       });
     }
@@ -80,5 +80,5 @@ export default function () {
       );
     });
   };
-  filmList.addEventListener("mouseover", debounce(debounceForCards, 200));
+  filmList.addEventListener("mouseover", debounce(debounceForCards, 10));
 }

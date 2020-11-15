@@ -39,6 +39,8 @@ export default {
   developer: document.querySelector('.developer'),
   students: document.querySelector('.students'),
   toTop: document.querySelector('#to-top'),
+  addQ: document.querySelector('.lib-btn.queue'),
+  addW: document.querySelector('.lib-btn.watched'),
   genres: [
     {
       "id": 28,
