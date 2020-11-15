@@ -8,12 +8,16 @@
 .parametr {
   position: absolute;
   top: 10px;
-  left: -33px;
   display: flex;
-  width: 400px;
+  flex-wrap: wrap;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
+  @media screen and (min-width: 768px) {
+    left: -85px;
+    width: 500px;
+  }
 }
 
 .genre-wrapper,
@@ -23,9 +27,17 @@
   color: white;
 }
 
+.sort-wrapper,
+.genre-wrapper {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+}
+
 .category-list,
 .sort-list,
 .year-list {
+  text-align: center;
   position: absolute;
   z-index: 4;
 }
@@ -56,6 +68,7 @@
 .genre,
 .year,
 .clear-btn {
+  text-align: center;
   padding: 5px;
   background-color: white;
   color: black;
@@ -66,8 +79,11 @@
 .sort,
 .genre,
 .year,
+.year-list,
+.category-list,
+.sort-list,
 .clear-btn {
-  width: 91px;
+  width: 122px;
 }
 
 .sort:hover,
@@ -82,7 +98,6 @@
 .category-list-item,
 .year-list-item {
   padding: 5px;
-  width: 91px;
   background-color: white;
   color: black;
 }
