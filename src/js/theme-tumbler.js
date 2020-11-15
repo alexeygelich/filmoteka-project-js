@@ -22,10 +22,10 @@ if (localStorage.getItem('Theme') === 'dark-theme') {
 function defaultTheme() {
     if (localStorage.getItem('Theme') === Theme.DARK) {
         themeShow.classList.add(Theme.DARK);
-
         changeTheme.checked = true;
         themeShow.classList.remove(Theme.LIGHT);
-        darkFooter.classList.remove('footer-light')
+        darkFooter.classList.remove('footer-light');
+
     } else {
         localStorage.setItem('Theme', 'light-theme');
         themeShow.classList.add(Theme.LIGHT);
@@ -38,6 +38,7 @@ function savedChangeTheme(e) {
         darkFooter.classList.add('footer-dark');
         darkFooter.classList.remove('footer-light')
 
+        document.querySelector('.modal-section').style.backgroundColor = "#333333";
         themeShow.classList.remove(Theme.LIGHT);
         localStorage.setItem('Theme', 'dark-theme');
     } else if (!e.target.checked) {

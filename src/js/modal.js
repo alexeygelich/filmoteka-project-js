@@ -60,4 +60,10 @@ export default function (ID) {
     modalOn.classList.add("is-hidden")
     refs.toTop.classList.remove('hide');
   })
+
+  const modalTheme = document.querySelector("#theme-switch-toggle");
+  console.log(modalTheme.value);
+  modalTheme.value === "on" ? filmModal.style.backgroundColor = "#333333" : "";
+
+
 }
