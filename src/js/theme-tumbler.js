@@ -25,10 +25,15 @@ function defaultTheme() {
         changeTheme.checked = true;
         themeShow.classList.remove(Theme.LIGHT);
         darkFooter.classList.remove('footer-light');
+        document.querySelector('.modal-section').style.backgroundColor = "#252525";
+        document.querySelector('.modal-section').style.color = "#818181"
+
 
     } else {
         localStorage.setItem('Theme', 'light-theme');
         themeShow.classList.add(Theme.LIGHT);
+        // document.querySelector('.modal-section').style.backgroundColor = "#fff";
+
     }
 }
 
@@ -37,8 +42,9 @@ function savedChangeTheme(e) {
         themeShow.classList.add(Theme.DARK);
         darkFooter.classList.add('footer-dark');
         darkFooter.classList.remove('footer-light')
+        document.querySelector('.modal-section').style.backgroundColor = "#252525";
+        document.querySelector('.modal-section').style.color = "#818181"
 
-        document.querySelector('.modal-section').style.backgroundColor = "#333333";
         themeShow.classList.remove(Theme.LIGHT);
         localStorage.setItem('Theme', 'dark-theme');
     } else if (!e.target.checked) {
@@ -46,6 +52,9 @@ function savedChangeTheme(e) {
         themeShow.classList.remove(Theme.DARK);
         darkFooter.classList.remove('footer-dark')
         darkFooter.classList.add('footer-light')
+        document.querySelector('.modal-section').style.backgroundColor = "#fff";
+        document.querySelector('.modal-section').style.color = "#000"
+
         localStorage.setItem('Theme', 'light-theme');
     }
 }

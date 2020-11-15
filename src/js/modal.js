@@ -61,9 +61,13 @@ export default function (ID) {
     refs.toTop.classList.remove('hide');
   })
 
-  const modalTheme = document.querySelector("#theme-switch-toggle");
-  console.log(modalTheme.value);
-  modalTheme.value === "on" ? filmModal.style.backgroundColor = "#333333" : "";
+  // const modalTheme = document.querySelector("#theme-switch-toggle");
+
+  // if (modalTheme.value === DARK) {
+  //   filmModal.style.backgroundColor = "#333333";
+  // }
+  // else { filmModal.style.backgroundColor = "#fff" }
+
 
 
 }
