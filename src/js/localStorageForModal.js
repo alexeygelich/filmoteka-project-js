@@ -16,15 +16,15 @@ export default function (data) {
 
   const notificationFn = () => {
     const myNotice = error({
-      title: "You successfully removed movie !",
+      title: refs.langChoise.dataset.id==='en' ? "You successfully removed movie !" : "Вы успешно удалили фильм !",
       text: "",
       delay: 1200,
     });
   };
   const notificationGood = () => {
     const myNoticeGood = success({
-      title: "You added this movie !",
-      text: "Enjoy watching the movie !",
+      title: refs.langChoise.dataset.id==='en' ? "You added this movie !" : "Вы успешно добавили фильм !",
+      text: refs.langChoise.dataset.id==='en' ? "Enjoy watching the movie !" : "Хорошего просмотра !" ,
       delay: 1200,
     });
   };

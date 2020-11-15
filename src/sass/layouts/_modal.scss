@@ -215,15 +215,15 @@
 }
 
 .first.add-btn {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  // padding-top: 12px;
+  // padding-bottom: 12px;
   padding-left: 8px;
   padding-right: 8px;
   margin-right: 15px;
 }
 .second.add-btn {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  // padding-top: 12px;
+  // padding-bottom: 12px;
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -342,4 +342,10 @@
   width: 150px;
   display: flex;
   margin-bottom: 5px;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }

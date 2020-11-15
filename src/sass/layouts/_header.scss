@@ -329,7 +329,7 @@
 .language-wrapper {
   position: absolute;
   top: 25px;
-  right: 150px;
+  right: 170px;
 }
 
 .choose-language:hover {
@@ -350,4 +350,20 @@
 .logo-link:hover .logo-svg {
   fill: $accent-color;
   transition: 0.4s;
+}
+
+.watched.rus {
+  width: auto;
+}
+
+.lib-btn.rus {
+  @media screen and (max-width: 767px) {
+    padding: 5px 5px;
+  }
+}
+
+.info-section .add-btn {
+  @media screen and (max-width: 767px) {
+    width: 131px;
+  }
 }
