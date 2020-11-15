@@ -1,5 +1,6 @@
 {{#each this}}
 <li class="film-list-item" data-id="{{id}}">
+
     <div class="backdrop-btns">
         <div class="wrap-for-btns" data-id="{{id}}">
             <button type=" button " class=" backdrop-btn first-backdrop" data-id="{{id}}"> ADD TO WATCHED</button>
@@ -7,9 +8,11 @@
         </div>
         <picture>
             {{#if poster_path}}
-            <source srcset="http://image.tmdb.org/t/p/w220_and_h330_face/{{poster_path}}" media="(min-width: 320px)" />
-            <source srcset="http://image.tmdb.org/t/p/w440_and_h660_face/{{poster_path}}" media="(min-width: 768px)" />
-            <source srcset="https://image.tmdb.org/t/p/w500/{{poster_path}}" media="(min-width: 1024px)" />
+            <source srcset="https://image.tmdb.org/t/p/w500{{poster_path}}" media="(min-width: 1024px)" type="image/jpeg" />
+        <source srcset="http://image.tmdb.org/t/p/w440_and_h660_face{{poster_path}}" media="(min-width: 768px)"
+            type="image/jpeg" />
+        <source srcset="http://image.tmdb.org/t/p/w220_and_h330_face{{poster_path}}" media="(min-width: 320px)"
+            type="image/jpeg" />
             <img class="film-image" src="http://image.tmdb.org/t/p/w440_and_h660_face/{{poster_path}}"
                 alt="film poster">
             {{else}}
@@ -18,7 +21,8 @@
             {{/if}}
         </picture>
     </div>
-    <div class="card-text-wrap">
+   
+    <div class="film-list-wrapper">
         <h3 class="film-name">"{{title}}"</h3>
         <p class="film-about">{{genre_ids}} | {{release_date}} <span class="mark">{{vote_average}}</span></p>
     </div>

@@ -18,9 +18,11 @@ const getMoviesData = async function (promis) {
         [...e.genre_ids].forEach((number) => {
           refs.genres.forEach((ref) => {
             if (number === ref.id) {
-              
-              arr.push(ref.name);
-              // str += `${ref.name}, `;
+              if(refs.langChoise.dataset.id === "en")
+              {arr.push(ref.name)}
+              else {
+                arr.push(ref.name_ru)
+              }
             }
           });
         });

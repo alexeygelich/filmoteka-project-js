@@ -44,9 +44,6 @@ export default async function(value=false, promisTotalItems) {
     //! не корректна робота погінатора, якщо клікаємо на стрілочку в середині спана
     //! потрібно додати data атрибут
       const searchClassDisable = ([...arr]) => arr.includes('tui-is-disabled');
-
-      console.dir(event.target);
-
       if(!searchClassDisable(event.target.classList)){
         if(event.target.textContent === "next") {
           page+=1;
@@ -126,7 +123,7 @@ export default async function(value=false, promisTotalItems) {
           }
           renderMain(draftArray);
           refs.ARR = [...draftArray];
-          clearInput();
+          // clearInput();
           // modalOpen(draftArray);
         }
         QUERY(calculateURIparameters())
@@ -169,7 +166,7 @@ export default async function(value=false, promisTotalItems) {
 
       renderMain(draftArray);
       refs.ARR = [...draftArray];
-      clearInput();
+      // clearInput();
       // modalOpen(draftArray);
     } // закриваємо [promisTotalItems is FALSE ]
   }

@@ -1,40 +1,33 @@
 // ! NAVIGATION
-.logo-link{
+.logo-link {
   display: flex;
   align-items: center;
 }
 
 @media screen and (min-width: 1024px) {
+  .header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/search-pc.jpg);
+  }
+
   .container.nav-container {
     position: relative;
     width: 1024px;
     padding-right: 71px;
     padding-left: 71px;
     height: 230px;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/search-pc.jpg);
   }
 
-  
-
-  
-  .container.lib-container {
-    width: 1024px;
-    padding-right: 71px;
-    padding-left: 71px;
-    height: 230px;
+  // .container
+  .lib {
+    // width: 1024px;
+    // padding-right: 71px;
+    // padding-left: 71px;
+    // height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/lib-pc.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/lib-pc.jpg);
   }
   .header-logo-container {
     display: flex;
@@ -80,35 +73,33 @@
     margin-left: 10px;
     font-weight: 500;
     font-size: 30px;
+    transition: 0.4s;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/search-tablet.jpg);
+  }
+
   .container.nav-container {
     position: relative;
     width: 768px;
     padding-right: 76px;
     padding-left: 76px;
     height: 230px;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/search-tablet.jpg);
   }
-  .container.lib-container {
-    width: 768px;
-    padding-right: 76px;
-    padding-left: 76px;
-    height: 230px;
+
+  // .container
+  .lib {
+    // width: 768px;
+    // padding-right: 76px;
+    // padding-left: 76px;
+    // height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/lib-tablet.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/lib-tablet.jpg);
   }
   .header-logo-container {
     display: flex;
@@ -157,30 +148,24 @@
 }
 
 @media screen and(max-width: 767px) {
+  .header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/header-mobile.jpg);
+  }
+
   .container.nav-container {
     position: relative;
     width: 320px;
     height: 230px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/header-mobile.jpg);
   }
-  .container.lib-container {
-    width: 320px;
-    height: 230px;
+  // .container
+  .lib {
+    // width: 320px;
+    // height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.56),
-        rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/header-lib.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../images/header-lib.jpg);
   }
   .input-container {
     position: relative;
@@ -201,6 +186,7 @@
     color: white;
     outline: none;
   }
+
   .logo-text {
     color: white;
     display: none;
@@ -225,6 +211,7 @@
   font-size: 12px;
   padding-bottom: 3px;
   color: white;
+  transition: 0.4s;
 }
 
 .nav-item {
@@ -248,7 +235,7 @@
 // ! INPUT
 
 .header-input::placeholder {
-  color: white;
+  color: rgb(153, 151, 151);
 }
 .search-error {
   font-size: 14px;
@@ -260,6 +247,9 @@
 }
 
 // !LIBRARY
+.btn-container.is-hidden {
+  display: none;
+}
 
 .btn-container {
   margin-top: 49px;
@@ -314,6 +304,7 @@
   font-size: 12px;
   padding-bottom: 3px;
   color: white;
+  transition: 0.4s;
 }
 .lib-link.current::after {
   position: absolute;
@@ -333,4 +324,30 @@
   border: 0;
   border-radius: 5px;
   outline: none;
+}
+
+.language-wrapper {
+  position: absolute;
+  top: 25px;
+  right: 150px;
+}
+
+.choose-language:hover {
+  cursor: pointer;
+}
+
+.languages-list-item:hover {
+  cursor: pointer;
+}
+
+.link:hover,
+.lib-link:hover,
+.logo-text:hover {
+  color: $accent-color;
+  transition: 0.4s;
+}
+
+.logo-link:hover .logo-svg {
+  fill: $accent-color;
+  transition: 0.4s;
 }

@@ -16,40 +16,57 @@
   </head>
   <body>
     <header class="header">
-      
       <div class="container nav-container">
         <div class="toolbar">
-      <div class="theme-switch">
-      <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
-        <use href="./images/sprite.svg#sun"></use>
-      </svg>
+          <div class="theme-switch">
+            <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+              <use href="./images/sprite.svg#sun"></use>
+            </svg>
 
+            <div class="theme-switch__control">
+              <input
+                class="theme-switch__toggle"
+                type="checkbox"
+                name="theme"
+                id="theme-switch-toggle"
+                aria-label="Переключить между тёмной и светлой темой"
+              />
+              <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle"> </label>
+              <div aria-hidden="true" class="theme-switch__marker"></div>
+            </div>
 
-          <div class="theme-switch__control">
-            <input
-              class="theme-switch__toggle"
-              type="checkbox"
-              name="theme"
-              id="theme-switch-toggle"
-              aria-label="Переключить между тёмной и светлой темой"
-            />
-            <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle"> </label>
-            <div aria-hidden="true" class="theme-switch__marker"></div>
+            <svg class="theme-switch__icon" aria-label="Иконка луны">
+              <use href="./images/sprite.svg#moon"></use>
+            </svg>
           </div>
+        </div>
 
-
-      <svg class="theme-switch__icon" aria-label="Иконка луны">
-        <use href="./images/sprite.svg#moon"></use>
-      </svg>
-    </div>
-    </div>
+        <div class="language-wrapper">
+          <div class="choose-language" data-id="en">
+            <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+              <use href="./images/sprite.svg#icon-en"></use>
+            </svg>
+          </div>
+          <ul class="languages-list is-hidden">
+            <li class="languages-list-item" data-id="en">
+              <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+                <use href="./images/sprite.svg#icon-en"></use>
+              </svg>
+            </li>
+            <li class="languages-list-item" data-id="ru">
+              <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+                <use href="./images/sprite.svg#icon-rus"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
 
         <!-- !Navigation -->
 
         <div class="header-container">
           <div class="header-logo-container">
             <a href="./index.html" class="logo-link">
-              <svg width="24" height="24">
+              <svg class="logo-svg" width="24" height="24">
                 <use href="./images/sprite.svg#icon-film"></use>
               </svg>
               <p class="logo-text">Filmoteka</p>
@@ -78,12 +95,46 @@
         <div class="input-container">
           <div class="input-wrap">
             <form action="">
-              <input type="text" class="header-input" placeholder="Поиск фильмов" />
+              <input type="text" class="header-input" placeholder="Search films" />
               <svg width="12" height="12" class="input-icon">
                 <use href="./images/sprite.svg#icon-search"></use>
               </svg>
             </form>
-            <ul class="search-list"></ul>
+            <ul class="search-list is-hidden"></ul>
+
+            <div class="parametr">
+              <div class="sort-wrapper">
+                <p class="sort" data-id="vote_average.desc">Sort by</p>
+                <ul class="sort-list is-hidden">
+                  <li class="sort-list-item" data-id="popularity.desc">popularity(↓)</li>
+                  <li class="sort-list-item" data-id="popularity.asc">popularity(↑)</li>
+                  <li class="sort-list-item" data-id="vote_average.desc">rating(↓)</li>
+                  <li class="sort-list-item" data-id="vote_average.asc">rating(↑)</li>
+                </ul>
+              </div>
+
+              <div class="genre-wrapper">
+                <p class="genre" data-id="">Genre</p>
+                <ul class="category-list is-hidden">
+                  <li class="category-list-item" data-id="28">Action</li>
+                  <li class="category-list-item" data-id="12">Adventure</li>
+                  <li class="category-list-item" data-id="16">Animation</li>
+                  <li class="category-list-item" data-id="35">Comedy</li>
+                  <li class="category-list-item" data-id="80">Crime</li>
+                  <li class="category-list-item" data-id="99">Documentary</li>
+                  <li class="category-list-item" data-id="18">Drama</li>
+                  <li class="category-list-item" data-id="10751">Family</li>
+                  <li class="category-list-item" data-id="14">Fantasy</li>
+                  <li class="category-list-item" data-id="36">History</li>
+                </ul>
+              </div>
+
+              <div class="year-wrapper">
+                <p class="year" data-id="">Year</p>
+                <ul class="year-list is-hidden"></ul>
+              </div>
+              <a href="./index.html" class="clear-btn">Clear</a>
+            </div>
           </div>
         </div>
         <div class="search-error-container">
@@ -129,6 +180,9 @@
         </svg>
       </div>
       <!-- ================= END spinner=============== -->
+      <!-- ================= to top =============== -->
+      <div id="to-top" class="hide"></div>
+      <!-- ================= END to top =============== -->
       <div class="container main">
         <ul class="film-list"></ul>
       </div>
@@ -169,20 +223,27 @@
           <div class="socials">
             <p class="section-desc">Join us on our networks</p>
             <ul class="socials-list">
+               <li>
+                <a href="https://www.youtube.com/" class="social-link">
+                  <svg class="social-svg" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-youtube"></use>
+                  </svg>
+                </a>
+              </li>
               <li>
-                <a href="#" class="social-link">
+                <a href="https://www.facebook.com/" class="social-link">
                   <svg class="social-svg" width="20" height="20">
                     <use href="./images/sprite.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
-              <li>
-                <a href="#" class="social-link">
+              <!-- <li>
+                <a href="https://www.instagram.com/" class="social-link">
                   <svg class="social-svg" width="20" height="20">
                     <use href="./images/sprite.svg#icon-instagram"></use>
                   </svg>
                 </a>
-              </li>
+              </li> -->
               <li>
                 <a href="#" class="social-link">
                   <svg class="social-svg" width="20" height="20">
@@ -211,61 +272,14 @@
               ><span class="copyright-logo">Go</span>
               <span class="copyright-accent">IT </span>
             </a>
-            &nbsp Students
+            &nbsp <a href="https://goit.ua/istorii-uspeha/">Students</a>
           </p>
         </div>
-        <div class="pagination"></div>
+        <!-- <div class="pagination"></div> -->
       </div>
     </footer>
     <div class="backdrop is-hidden">
       <div class="container modal-section">
-        <button class="close-modal-btn" type="button">X</button>
-        <img class="film-image" src="./images/Rectangle 18.jpg" alt="Фильм" />
-        <div class="info-section">
-          <h2 class="title">A FISTFUL OF LEAD</h2>
-          <div class="modal-info">
-            <ul class="list-info">
-              <li>
-                <p class="about-film">Vote / Votes</p>
-              </li>
-              <li>
-                <p class="about-film">Popularity</p>
-              </li>
-              <li>
-                <p class="about-film">Original Title</p>
-              </li>
-              <li>
-                <p class="about-film genre">Genre</p>
-              </li>
-            </ul>
-            <ul class="list-info">
-              <li>
-                <p class="about-film-info"><span class="about-film-vote">7.3</span> / 1260</p>
-              </li>
-              <li>
-                <p class="about-film-info">100.2</p>
-              </li>
-              <li>
-                <p class="about-film-info">A FISTFUL OF LEAD</p>
-              </li>
-              <li>
-                <p class="about-film-info">Western</p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="subtitle">ABOUT</h3>
-            <p class="description">
-              Four of the West’s most infamous outlaws assemble to steal a huge stash of gold from the most corrupt
-              settlement of the gold rush towns. But not all goes to plan one is killed and the other three escapes with
-              bags of gold hide out in the abandoned gold mine where they happen across another gang of three – who
-              themselves were planning to hit the very same bank! As tensions rise, things go from bad to worse as they
-              realise the bags of gold are filled with lead... they’ve been double crossed – but by who and how?
-            </p>
-          </div>
-          <button class="first add-btn" type="button">ADD TO WATCHED</button>
-          <button class="second add-btn" type="button">ADD TO QUEUE</button>
-        </div>
       </div>
     </div>
     <div class="backdrop-modal is-hidden"></div>
