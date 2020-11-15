@@ -11,6 +11,7 @@ export default function () {
   const debounceForCards = function (event) {
     watched = JSON.parse(localStorage.getItem(`w`)) || [];
     queue = JSON.parse(localStorage.getItem(`q`)) || [];
+
     let targetForStorage = event.target;
     let idForStorage = targetForStorage.getAttribute("data-id");
     const wrapForBtns = document.querySelector(
@@ -24,7 +25,7 @@ export default function () {
     const queueBtn = document.querySelector(
       `[data-id="${idForStorage}"] .second-backdrop`
     );
-    let isActive = false;
+
     if (event.target === wrapForBtns) {
       if (watched.length === 0) {
         watchedBtn.textContent = "ADD TO WATCHED";
@@ -32,9 +33,7 @@ export default function () {
       watched.forEach((element) => {
         if (element.id === +idForStorage) {
           watchedBtn.textContent = "REMOVE FROM WATCHED";
-          isActive = true;
-        }
-        if (!isActive) {
+        } else {
           watchedBtn.textContent = "ADD TO WATCHED";
         }
       });
@@ -44,9 +43,7 @@ export default function () {
       queue.forEach((element) => {
         if (element.id === +idForStorage) {
           queueBtn.textContent = "REMOVE FROM QUEUE";
-          isActive = true;
-        }
-        if (!isActive) {
+        } else {
           queueBtn.textContent = "ADD TO QUEUE";
         }
       });
