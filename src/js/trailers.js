@@ -25,24 +25,26 @@ export default function (name, year) {
                   </path>
                 </svg>
                 </div>
+                
                 <!-- ================= END spinner============ --> 
               <div class='modal-trailer' style="width: 80vw; height: 36vw"></div>
-            </div> `;
+              </div>`;
             const modalTrailer = document.querySelector('.modal-trailer');
             const spinner = document.querySelector('#modal-trailer-spinner');
-            const wrapper = document.querySelector('#modal-trailer-wrapper');            
-            // modalTrailer.style.width = `${width}`;
-            // modalTrailer.style.height = `${height}`;
+            const wrapper = document.querySelector('#modal-trailer-wrapper');   
             modalTrailer.innerHTML=`<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/${idYoutube}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
             modalTrailer.insertAdjacentHTML('beforeend',`<button type="button" class="close-trailer">X</button>`)
             setTimeout(()=>{
               wrapper.removeChild(spinner); //!видаляємо спіннер через 2s
             }, 2000);
-            backdropModal.classList.remove('is-hidden');
+            setTimeout(()=>{
+              backdropModal.classList.remove('is-hidden');
+            }, 500);
             const onEscapeClose = function (e) {
-        console.log(e.key);
+        
         if (e.key === "Escape") {
           backdropModal.classList.add('is-hidden');
+          modalTrailer.innerHTML = '';
           // document.body.classList.remove('stop-scroll');
           window.removeEventListener('keydown', onEscapeClose);
         }
@@ -51,6 +53,7 @@ export default function (name, year) {
       backdropModal.addEventListener('click', e => {
         if (e.target === e.currentTarget) {
           window.removeEventListener('keydown', onEscapeClose);
+          modalTrailer.innerHTML = '';
           // document.body.classList.remove('stop-scroll');
           backdropModal.classList.add('is-hidden');
         }
@@ -59,6 +62,7 @@ export default function (name, year) {
       const closeBtn = document.querySelector('.close-trailer');
       closeBtn.addEventListener('click', (e) => {
         window.removeEventListener('keydown', onEscapeClose);
+        modalTrailer.innerHTML = '';
       //   document.body.classList.remove('stop-scroll');
         backdropModal.classList.add('is-hidden');
       })
