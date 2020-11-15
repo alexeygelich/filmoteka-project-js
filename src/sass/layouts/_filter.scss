@@ -49,3 +49,35 @@
   color: white;
   font-size: 15px;
 }
+
+.sort,
+.genre,
+.year,
+.clear-btn {
+  padding: 5px;
+  background-color: white;
+  color: black;
+  border-radius: 9px;
+  font-weight: 500;
+}
+
+.sort {
+  width: 91px;
+}
+
+.sort:hover,
+.genre:hover,
+.year:hover,
+.clear-btn:hover {
+  bgc
+  cursor: pointer;
+  border-radius: 9px 9px 0 0;
+  border: 1px solid transparent;
+}
+
+.sort-list-item {
+  padding: 5px;
+  background-color: white;
+  color: black;
+  border: 1px solid;
+}
