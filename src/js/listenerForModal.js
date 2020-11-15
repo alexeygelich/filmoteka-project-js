@@ -14,7 +14,6 @@ const homeRef = document.querySelector('#home');
 const logoFooterLink = document.querySelector('.footer-logo');
 
 const onModalOpen = function (e) {
-  console.log('click');
     e.path.forEach(el => {
         if (
             el.className === 'film-list-item' ||
@@ -25,11 +24,20 @@ const onModalOpen = function (e) {
         }
     })
     clearInput();
+    
 
 }
 
 const homeFn = function (e) { 
     e.preventDefault();
+    refs.genreWrapper.classList.remove('is-hidden');
+    refs.sortWrapper.classList.remove('is-hidden');
+        refs.yearChoise.textContent = 'Год';
+      refs.yearChoise.dataset.id = '';
+      refs.sortChoise.textContent = 'Сортировка';
+      refs.sortChoise.dataset.id = 'vote_average.desc';
+      refs.genreChoise.textContent = 'Категория';
+      refs.genreChoise.dataset.id = '';
       const btnContainer = document.querySelector('.btn-container');
   const inputWrap = document.querySelector('.input-wrap');
   const navContainer = document.querySelector('.nav-container');
@@ -53,10 +61,24 @@ getMoviesData(firstFetch())
   refs.ARR = [...data];
   pagination(false, firstFetch().then(data => data.total_results));
 })
+
+  //   refs.yearChoise.textContent = 'Год';
+  //   refs.yearChoise.dataset.id = '';
+  //   refs.sortChoise.textContent = 'Сортировка';
+  //   refs.sortChoise.dataset.id = 'vote_average.desc';
+  //   refs.genreChoise.textContent = 'Категория';
+  // refs.genreChoise.dataset.id = '';
+  // onModalOpen();
 }
 
 filmList.addEventListener('click', onModalOpen);
-searchPrediction.addEventListener('click', onModalOpen);
+searchPrediction.addEventListener('click', e => { 
+  refs.genreWrapper.classList.remove('is-hidden');
+  refs.sortWrapper.classList.remove('is-hidden');
+  onModalOpen(e);
+});
 logoLink.addEventListener('click', homeFn);
 homeRef.addEventListener('click', homeFn);
 logoFooterLink.addEventListener('click', homeFn);
+
+export default homeFn;

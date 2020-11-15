@@ -3,15 +3,22 @@ const Theme = {
     DARK: 'dark-theme',
 }
 
+
 const changeTheme = document.querySelector('#theme-switch-toggle');
 
 changeTheme.addEventListener('change', savedChangeTheme);
 const themeShow = document.querySelector('body');
 
 
-const darkFooter = document.querySelector('.footer');
-console.log(darkFooter);
 
+const darkFooter = document.querySelector('.footer');
+
+
+
+if (localStorage.getItem('Theme') === 'dark-theme') { 
+    themeShow.classList.add(Theme.DARK); 
+    changeTheme.checked = true;
+}
 
 
 function defaultTheme() {
