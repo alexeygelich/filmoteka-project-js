@@ -74,6 +74,7 @@
   color: black;
   border-radius: 9px;
   font-weight: 500;
+  transition: 250ms;
 }
 
 .sort,
@@ -105,3 +106,13 @@
 .checked {
   border-radius: 9px 9px 0 0;
 }
+.clear-btn{
+  color: $main-text-color;
+  pointer-events:auto;
+  &.disable {
+    pointer-events: none;
+    opacity: 0.2;
+    color: gray;
+  }
+}
+

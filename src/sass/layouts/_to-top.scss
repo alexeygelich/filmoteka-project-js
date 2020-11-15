@@ -41,5 +41,6 @@
   }
   &.hide:hover {
     pointer-events: none;
+    transform: scale(0);
   }
 }
