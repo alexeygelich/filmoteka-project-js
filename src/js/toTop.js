@@ -12,10 +12,12 @@ function scroll(event) {
   // console.log(event.currentTarget.scrollY);
 }
 refs.toTop.addEventListener('click', toTop);
-function toTop(event) {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-});
+
+
+export default function toTop(event) {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+  });
 }
 

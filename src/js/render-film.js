@@ -1,4 +1,5 @@
 import mainTemplate from "./templates/mainTemplate.hbs";
+import toTop from "./toTop.js";
 
 
 
@@ -13,7 +14,7 @@ export default function (arr) {
         ulFilmList.classList.add('show');
     }, 800);
 
-
+    toTop();
     const film = mainTemplate(arr);
     filmList.innerHTML = film;
 }
