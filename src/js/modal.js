@@ -1,6 +1,7 @@
 //! ВИПРАВИТИ ШАПБЛОН (КНОПКА close)
 import modalTemplate from "./templates/modalTemplate-new.hbs";
-import localStorage from "./localStorage";
+import localStorage from "./localStorageForModal.js";
+
 import refs from "./refs.js";
 import trailer from "./trailers";
 
