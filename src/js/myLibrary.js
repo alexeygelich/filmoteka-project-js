@@ -51,6 +51,16 @@ const libMarkup = function () {
   homeRef.classList.remove("current");
   headerOfLib.classList.add('lib');
 
+  if (refs.langChoise.dataset.id === 'ru') { 
+    refs.addQ.classList.add('rus');
+refs.addW.classList.add('rus');
+  }
+
+  if (refs.langChoise.dataset.id === 'en') { 
+    refs.addQ.classList.remove('rus');
+refs.addW.classList.remove('rus');
+  }
+
 
   watched();
   document.querySelector(".watched").addEventListener("click", watched);
