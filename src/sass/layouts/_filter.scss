@@ -7,7 +7,7 @@
 
 .parametr {
   position: absolute;
-  top: 10px;
+  top: 33px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -71,7 +71,7 @@
   text-align: center;
   padding: 5px;
   background-color: #818181b0;
-  color: #FFF;
+  color: #fff;
   border-radius: 9px;
   font-weight: 500;
   transition: 250ms;
@@ -106,13 +106,13 @@
 .checked {
   border-radius: 9px 9px 0 0;
 }
-.clear-btn{
+.clear-btn {
   color: $main-text-color;
-  pointer-events:auto;
-  &.disable {
-    pointer-events: none;
-    opacity: 0.2;
-    color: gray;
-  }
+  pointer-events: auto;
 }
 
+.disable {
+  pointer-events: none;
+  opacity: 0.2;
+  color: gray;
+}

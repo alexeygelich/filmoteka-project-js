@@ -7,8 +7,8 @@ const input = document.querySelector('.header-input');
 const searchUl = document.querySelector('.search-list');
 
 const inputSearch = function () {
-  refs.genreWrapper.classList.add('is-hidden');
-  refs.sortWrapper.classList.add('is-hidden');
+  refs.genreChoise.classList.add('disable');
+  refs.sortChoise.classList.add('disable');
   searchUl.classList.remove('is-hidden');
   searchUl.innerHTML = '';
   refs.errorNotification.classList.add('is-hidden');

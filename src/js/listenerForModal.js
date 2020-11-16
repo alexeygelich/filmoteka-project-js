@@ -42,8 +42,16 @@ const onModalOpen = function (e) {
 
 const homeFn = function (e) {
   e.preventDefault()
-  refs.genreWrapper.classList.remove("is-hidden")
-  refs.sortWrapper.classList.remove("is-hidden")
+  refs.sortChoise.classList.remove('disable');
+  refs.genreChoise.classList.remove('disable');
+  refs.genreWrapper.classList.remove("is-hidden");
+  refs.sortWrapper.classList.remove("is-hidden");
+  refs.yearChoise.dataset.id = '';
+  if (refs.langChoise.dataset.id === "en") {
+        refs.yearChoise.textContent = 'Year';
+    } else { 
+        refs.yearChoise.textContent = 'Год';
+    }
 
   const btnContainer = document.querySelector(".btn-container")
   const inputWrap = document.querySelector(".input-wrap")

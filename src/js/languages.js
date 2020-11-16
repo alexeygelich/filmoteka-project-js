@@ -39,14 +39,14 @@ function transleteFn() {
     // Перевод хедера
     refs.langChoise.dataset.id === 'ru' ? refs.home.textContent = 'ГЛАВНАЯ' : refs.home.textContent = 'HOME';
     refs.langChoise.dataset.id === 'ru' ? refs.libLink.textContent = 'БИБЛИОТЕКА' : refs.libLink.textContent = 'MY LIBRARY';
-    refs.langChoise.dataset.id === 'ru' ? refs.logoText.textContent = 'Фильмотека' : refs.logoText.textContent = 'Filmoteka';
+    // refs.langChoise.dataset.id === 'ru' ? refs.logoText.textContent = 'Фильмотека' : refs.logoText.textContent = 'Filmoteka';
   refs.langChoise.dataset.id === 'ru' ? refs.addW.textContent = 'Просмотренные' : refs.addW.textContent = 'Watched';
       refs.langChoise.dataset.id === 'ru' ? refs.addQ.textContent = 'Очередь' : refs.addQ.textContent = 'Queue';
     // Перевод фильтра
     refs.langChoise.dataset.id === 'ru' ? refs.searchInput.placeholder = "Поиск фильмов" : refs.searchInput.placeholder = "Search films";
     refs.langChoise.dataset.id === 'ru' ? refs.sortChoise.textContent = 'Сортировка' : refs.sortChoise.textContent = 'Sort by';
-    refs.langChoise.dataset.id === 'ru' ? refs.genreChoise.textContent = 'Жанр' : refs.genreChoise.textContent = 'Category';
-    refs.langChoise.dataset.id === 'ru' ? refs.yearChoise.textContent = 'Год' : refs.genreChoise.textContent = 'Year';
+    refs.langChoise.dataset.id === 'ru' ? refs.genreChoise.textContent = 'Жанр' : refs.genreChoise.textContent = 'Genre';
+    refs.langChoise.dataset.id === 'ru' ? refs.yearChoise.textContent = 'Год' : refs.yearChoise.textContent = 'Year';
     refs.langChoise.dataset.id === 'ru' ? refs.clearBtn.textContent = 'Очистить' : refs.clearBtn.textContent = 'Clear';
     [...refs.sortList.children].forEach(el => {
         if (el.dataset.id === 'popularity.desc') {
@@ -99,7 +99,7 @@ function transleteFn() {
 
     
 // Footer
-    refs.langChoise.dataset.id === 'ru' ? refs.footerLogo.textContent = 'Фильмотека' : refs.footerLogo.textContent = 'Filmoteka';
+    // refs.langChoise.dataset.id === 'ru' ? refs.footerLogo.textContent = 'Фильмотека' : refs.footerLogo.textContent = 'Filmoteka';
     refs.langChoise.dataset.id === 'ru' ? refs.sectionDesc.textContent = 'НАШИ ПРИЛОЖЕНИЯ' : refs.sectionDesc.textContent = 'OUR APPLICATIONS';
     refs.langChoise.dataset.id === 'ru' ? refs.sectionDescJoin.textContent = 'ПРИСОЕДИНЯЙТЕСЬ К СОЦСЕТЯМ' : refs.sectionDescJoin.textContent = 'JOIN US ON OUR NETWORKS';
     refs.langChoise.dataset.id === 'ru' ? refs.sectionDescSupport.textContent = 'Поддержка' : refs.sectionDescSupport.textContent = 'Support';    
