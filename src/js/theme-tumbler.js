@@ -18,7 +18,6 @@ if (localStorage.getItem('Theme') === 'dark-theme') {
     changeTheme.checked = true;
 }
 
-
 function defaultTheme() {
     if (localStorage.getItem('Theme') === Theme.DARK) {
         themeShow.classList.add(Theme.DARK);
@@ -26,8 +25,8 @@ function defaultTheme() {
         themeShow.classList.remove(Theme.LIGHT);
         darkFooter.classList.remove('footer-light');
         document.querySelector('.modal-section').style.backgroundColor = "#252525";
-        document.querySelector('.modal-section').style.color = "#818181"
-
+        document.querySelector('.modal-section').style.color = "#818181";
+        document.querySelector('.film-name').style.color = "rgb(129, 129, 129"
 
     } else {
         localStorage.setItem('Theme', 'light-theme');
@@ -43,7 +42,9 @@ function savedChangeTheme(e) {
         darkFooter.classList.add('footer-dark');
         darkFooter.classList.remove('footer-light')
         document.querySelector('.modal-section').style.backgroundColor = "#252525";
-        document.querySelector('.modal-section').style.color = "#818181"
+        document.querySelector('.modal-section').style.color = "#818181";
+        document.querySelector('.film-name').style.color = "rgb(129, 129, 129"
+
 
         themeShow.classList.remove(Theme.LIGHT);
         localStorage.setItem('Theme', 'dark-theme');
@@ -53,8 +54,8 @@ function savedChangeTheme(e) {
         darkFooter.classList.remove('footer-dark')
         darkFooter.classList.add('footer-light')
         document.querySelector('.modal-section').style.backgroundColor = "#fff";
-        document.querySelector('.modal-section').style.color = "#000"
-
+        document.querySelector('.modal-section').style.color = "#000";
+        document.querySelector('.film-name').style.color = "#000";
         localStorage.setItem('Theme', 'light-theme');
     }
 }

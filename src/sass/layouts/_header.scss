@@ -328,8 +328,14 @@
 
 .language-wrapper {
   position: absolute;
-  top: 25px;
-  right: 170px;
+  top: 21px;
+  right: 100px;
+
+   @media screen and (min-width: 768px) {
+     top: 24px;
+    right:164px;
+  }
+
 }
 
 .choose-language:hover {
