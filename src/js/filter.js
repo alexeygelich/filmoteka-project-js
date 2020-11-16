@@ -6,6 +6,7 @@ import renderMain from './render-film';
 import pagination from './pagination.js';
 
 const renderFn = function() {
+    console.log(refs.searchInput.value);
     getMoviesData(getMovies(1, refs.searchInput.value))
   .then(data => arrRender(data))
 .then(data => {
@@ -54,6 +55,7 @@ refs.categoryGenreList.addEventListener('click', e => {
             refs.genreChoise.dataset.id = el.dataset.id;
             refs.categoryGenreList.classList.add('is-hidden');
             refs.genreChoise.classList.remove('checked');
+            refs.clearBtn.classList.remove('disable');//кнопка очистити [активна]
         }
     })
     renderFn();
@@ -66,6 +68,7 @@ refs.sortList.addEventListener('click', e => {
             refs.sortChoise.dataset.id = el.dataset.id;
             refs.sortList.classList.add('is-hidden');
             refs.sortChoise.classList.remove('checked');
+            refs.clearBtn.classList.remove('disable'); //кнопка очистити [активна]
         }
     })
 renderFn();
@@ -78,6 +81,7 @@ refs.yearList.addEventListener('click', e => {
             refs.yearChoise.dataset.id = el.dataset.id;
             refs.yearList.classList.add('is-hidden');
             refs.yearChoise.classList.remove('checked');
+            refs.clearBtn.classList.remove('disable');//кнопка очистити [активна]
         }
     })
     renderFn();
@@ -104,5 +108,6 @@ refs.clearBtn.addEventListener('click', e => {
     refs.genreChoise.classList.remove('checked');
     refs.sortChoise.classList.remove('checked');
     refs.yearChoise.classList.remove('checked');
+    refs.clearBtn.classList.add('disable');//кнопка очистити [НЕ активна]
     renderFn();
 })
