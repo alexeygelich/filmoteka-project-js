@@ -108,6 +108,8 @@ main {
 }
 .film-list-item {
   border-radius: 5px;
+  padding: 5px;
+  overflow: hidden;
   @media screen and (max-width: 767px) {
     &:not(:nth-child(-n + 1)) {
       margin-top: 22px;
@@ -250,13 +252,14 @@ main {
   .film-list-item:not(:nth-child(3n)) {
     margin-right: 30px;
   }
-}
-
-.film-list-item:hover {
+  .film-list-item:hover {
   cursor: pointer;
   transform: scale(1.05);
   transition: 0.5s;
 }
+}
+
+
 .film-list-wrapper {
   position: relative;
   padding-right: 50px;

@@ -60,4 +60,14 @@ export default function (ID) {
     modalOn.classList.add("is-hidden")
     refs.toTop.classList.remove('hide');
   })
+
+  // const modalTheme = document.querySelector("#theme-switch-toggle");
+
+  // if (modalTheme.value === DARK) {
+  //   filmModal.style.backgroundColor = "#333333";
+  // }
+  // else { filmModal.style.backgroundColor = "#fff" }
+
+
+
 }
