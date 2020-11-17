@@ -64,7 +64,6 @@ export default function () {
     idOfItems.push(event.target.getAttribute("data-id"));
 
     watchedBtn.addEventListener(`click`, () => {
-      console.log('clickW');
       btnsFromLocalStorage(
         refs.ARR.find((el) => el.id === +idForStorage),
         watchedBtn,
@@ -74,7 +73,6 @@ export default function () {
     });
 
     queueBtn.addEventListener("click", () => {
-  console.log('clickQ');
       btnsFromLocalStorage(
         refs.ARR.find((el) => el.id === +idForStorage),
         watchedBtn,

@@ -46,10 +46,8 @@ export default function (data, watchedBtn, queueBtn, number) {
   };
   checkForBtn();
   const addToLocalStorageWatched = function () {
-    console.log('hello');
     if (watchedBtn.textContent === "REMOVE FROM WATCHED" || watchedBtn.textContent === "УБРАТЬ ИЗ ПРОСМОТРЕННЫХ") {
       watched.splice(indexOfElW, 1);
-      console.log('watched', watched);
       localStorage.setItem(`w`, JSON.stringify(watched));
       refs.langChoise.dataset.id === 'en' ? watchedBtn.textContent = "ADD TO WATCHED" : watchedBtn.textContent = "ДОБАВИТЬ В ПРОСМОТРЕННЫЕ";
       checkForBtn();

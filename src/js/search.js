@@ -17,7 +17,6 @@ form.addEventListener("submit", (e) => {
   refs.errorNotification.classList.add('is-hidden');
   const moviesData = search(input.value);
 
-console.log('input.value',input.value);
   getMoviesData(moviesData)
     .then(data => arrRender(data))
     .then(data => {

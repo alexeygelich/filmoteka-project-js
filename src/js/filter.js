@@ -6,7 +6,6 @@ import renderMain from './render-film';
 import pagination from './pagination.js';
 
 const renderFn = function() {
-    console.log(refs.searchInput.value);
     getMoviesData(getMovies(1, refs.searchInput.value))
   .then(data => arrRender(data))
 .then(data => {
