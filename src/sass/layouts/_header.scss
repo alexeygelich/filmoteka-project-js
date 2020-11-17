@@ -331,15 +331,19 @@
   top: 21px;
   right: 100px;
 
-   @media screen and (min-width: 768px) {
-     top: 24px;
-    right:164px;
+  @media screen and (min-width: 768px) {
+    top: 24px;
+    right: 164px;
   }
-
 }
 
 .choose-language:hover {
   cursor: pointer;
+}
+
+.languages-list {
+  position: absolute;
+  z-index: 1;
 }
 
 .languages-list-item:hover {

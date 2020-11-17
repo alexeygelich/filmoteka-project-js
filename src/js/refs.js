@@ -41,6 +41,8 @@ export default {
   toTop: document.querySelector('#to-top'),
   addQ: document.querySelector('.lib-btn.queue'),
   addW: document.querySelector('.lib-btn.watched'),
+  // btnWatch: document.querySelector('.lib-btn .watched'),
+  // btnQueu:document.querySelector('.lib-btn .queue'),
   genres: [
     {
       "id": 28,

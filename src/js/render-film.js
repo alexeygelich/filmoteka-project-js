@@ -1,11 +1,7 @@
 import mainTemplate from "./templates/mainTemplate.hbs";
 import mainTemplateRu from "./templates/mainTemplate_ru.hbs";
-
-// import btnsOfCards from "./btnsOfCards";
-import refs from "./refs.js";
-// import btnsFromLocalStorage from "./localStorage";
 import toTop from "./toTop.js";
-
+import refs from './refs'
 
 const loaderDiv = document.querySelector(".loader");
 const ulFilmList = document.querySelector(".main ul.film-list");
@@ -27,5 +23,5 @@ export default function (arr) {
         ulFilmList.classList.add('show');
     }, 800);
 
-    toTop();
+    // toTop();
 }

@@ -1,5 +1,4 @@
 import btnsOfCards from "./btnsOfCards";
-import btnsFromLocalStorage from "./localStorage";
 
 import modal from "./modal.js"
 import getMoviesData from "./getMoviesData.js"
@@ -17,11 +16,10 @@ const homeRef = document.querySelector("#home")
 const logoFooterLink = document.querySelector(".footer-logo")
 const headerRef = document.querySelector('header');
 
-btnsOfCards();
 const onModalOpen = function (e) {
-
+  
   let isBtn = false;
-
+  
   e.path.forEach((el) => {
     if (el.nodeName === "BUTTON") {
       isBtn = true;
@@ -48,17 +46,17 @@ const homeFn = function (e) {
   refs.sortWrapper.classList.remove("is-hidden");
   refs.yearChoise.dataset.id = '';
   if (refs.langChoise.dataset.id === "en") {
-        refs.yearChoise.textContent = 'Year';
-    } else { 
-        refs.yearChoise.textContent = 'Год';
-    }
-
+    refs.yearChoise.textContent = 'Year';
+  } else { 
+    refs.yearChoise.textContent = 'Год';
+  }
+  
   const btnContainer = document.querySelector(".btn-container")
   const inputWrap = document.querySelector(".input-wrap")
   const navContainer = document.querySelector(".nav-container")
   const libLink = document.querySelector(".lib-link")
   const homeRef = document.querySelector("#home")
-
+  
   btnContainer.classList.add("is-hidden")
   inputWrap.classList.remove("is-hidden")
   headerRef.classList.remove("lib")
@@ -68,28 +66,31 @@ const homeFn = function (e) {
   const firstFetch = async function () {
     return await getMovies(1)
   }
-
+  
+  btnsOfCards();
+  
   getMoviesData(firstFetch())
-    .then((data) => arrRender(data))
-    .then((data) => {
-      renderMain(data)
-      refs.ARR = [...data]
-      pagination(
-        false,
-        firstFetch().then((data) => data.total_results)
-      )
-    })
-}
-
-filmList.addEventListener("click", onModalOpen)
-searchPrediction.addEventListener("click", (e) => {
-  refs.genreWrapper.classList.remove("is-hidden");
-  refs.sortWrapper.classList.remove("is-hidden");
-  searchPrediction.classList.add('is-hidden');
-  onModalOpen(e)
-})
-logoLink.addEventListener("click", homeFn)
-homeRef.addEventListener("click", homeFn)
-logoFooterLink.addEventListener("click", homeFn)
-
-export default homeFn
+  .then((data) => arrRender(data))
+  .then((data) => {
+    renderMain(data);
+    refs.ARR = [...data];
+    pagination(
+      false,
+      firstFetch().then((data) => data.total_results)
+    );
+    });
+  }
+  
+  filmList.addEventListener("click", onModalOpen)
+  searchPrediction.addEventListener("click", (e) => {
+    refs.genreWrapper.classList.remove("is-hidden");
+    refs.sortWrapper.classList.remove("is-hidden");
+    searchPrediction.classList.add('is-hidden');
+    onModalOpen(e)
+  })
+  logoLink.addEventListener("click", homeFn)
+  homeRef.addEventListener("click", homeFn)
+  logoFooterLink.addEventListener("click", homeFn)
+  
+  btnsOfCards();
+export default homeFn;

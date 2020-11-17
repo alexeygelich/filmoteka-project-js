@@ -38,6 +38,7 @@ export default function () {
           refs.langChoise.dataset.id==='en' ? watchedBtn.textContent = "ADD TO WATCHED" : watchedBtn.textContent = "ДОБАВИТЬ В ПРОСМОТРЕННЫЕ";
         }
       });
+      isActive = false;
       if (queue.length === 0) {
         refs.langChoise.dataset.id==='en' ? queueBtn.textContent = "ADD TO QUEUE" :  queueBtn.textContent = "ДОБАВИТЬ В ОЧЕРЕДЬ";
       }
@@ -63,6 +64,7 @@ export default function () {
     idOfItems.push(event.target.getAttribute("data-id"));
 
     watchedBtn.addEventListener(`click`, () => {
+      console.log('clickW');
       btnsFromLocalStorage(
         refs.ARR.find((el) => el.id === +idForStorage),
         watchedBtn,
@@ -72,6 +74,7 @@ export default function () {
     });
 
     queueBtn.addEventListener("click", () => {
+  console.log('clickQ');
       btnsFromLocalStorage(
         refs.ARR.find((el) => el.id === +idForStorage),
         watchedBtn,
@@ -80,5 +83,5 @@ export default function () {
       );
     });
   };
-  filmList.addEventListener("mouseover", debounce(debounceForCards, 10));
+  filmList.addEventListener("mouseover", debounceForCards);
 }

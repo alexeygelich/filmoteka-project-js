@@ -54,7 +54,7 @@ export default function (data) {
       refs.langChoise.dataset.id==='en' ? addToWatched.textContent = "ADD TO WATCHED" : addToWatched.textContent = "ДОБАВИТЬ В ПРОСМОТРЕННЫЕ";
       checkForBtn();
       notificationFn();
-      if (myLibraryLink.classList.contains("current")) {
+      if (refs.addW.classList.contains("current-btn")) {
         renderFilm(arrForRender(watched));
       }
     } else {
@@ -63,11 +63,12 @@ export default function (data) {
       localStorage.setItem(`w`, watchedStr);
       notificationGood();
       checkForBtn();
-      if (myLibraryLink.classList.contains("current")) {
+      if (refs.addW.classList.contains("current-btn")) {
         renderFilm(arrForRender(watched));
       }
     }
   };
+
   const addToLocalStorageQueue = function () {
     if (addToQueue.textContent === "REMOVE FROM QUEUE" || addToQueue.textContent === "УБРАТЬ ИЗ ОЧЕРЕДИ") {
       queue.splice(indexOfElQ, 1);
@@ -75,7 +76,7 @@ export default function (data) {
       refs.langChoise.dataset.id==='en' ? addToQueue.textContent = "ADD TO QUEUE" : addToQueue.textContent = "ДОБАВИТЬ В ОЧЕРЕДЬ";
       checkForBtn();
       notificationFn();
-      if (myLibraryLink.classList.contains("current")) {
+      if (refs.addQ.classList.contains("current-btn")) {
         renderFilm(arrForRender(queue));
       }
     } else {
@@ -84,7 +85,7 @@ export default function (data) {
       localStorage.setItem(`q`, queueStr);
       notificationGood();
       checkForBtn();
-      if (myLibraryLink.classList.contains("current")) {
+      if (refs.addQ.classList.contains("current-btn")) {
         renderFilm(arrForRender(queue));
       }
     }
