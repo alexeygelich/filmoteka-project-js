@@ -1,0 +1,43 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+header {
+  flex: 0 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+button {
+  cursor: pointer;
+}

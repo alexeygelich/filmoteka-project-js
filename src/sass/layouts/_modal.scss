@@ -1,0 +1,351 @@
+.modal-section {
+  padding-bottom: 40px;
+  padding-top: 20px;
+  color: $main-text-color;
+  background-color: $header-text-color;
+  font-size: $primary-font-size;
+  line-height: 1.33;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.4s;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.modal-info {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.backdrop {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #1a273136;
+  z-index: 1;
+  opacity: 1;
+}
+
+.backdrop.is-hidden .modal-section {
+  opacity: 0;
+  transform: scale(0.3);
+  transition: 0.4s;
+}
+
+.list-info-item {
+  display: flex;
+}
+
+.list-info-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop-modal.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.2);
+  transition: 0.4s;
+}
+
+.close-modal-btn,
+.close-trailer {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-section .film-image {
+  object-fit: cover;
+  width: 280px;
+  height: 416px;
+  border-radius: 5px;
+
+  @media screen and (min-width: 768px) {
+    width: 294px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 426px;
+    height: 514px;
+  }
+}
+.title {
+  font-size: 20px;
+  line-height: 1.15;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+    line-height: 1.17;
+    margin-top: 0;
+  }
+}
+
+.original-title {
+  text-transform: uppercase;
+  width: 172px;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: $primary-font-size;
+}
+
+.about-film {
+  color: $about-text-color;
+  line-height: 1.33;
+}
+
+.about-film-vote {
+  display: flex;
+  align-items: center;
+  color: $header-text-color;
+  background-color: $accent-color;
+  border-radius: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 1.17;
+  padding-top: 1px;
+}
+
+.about-film-votes {
+  width: 108px;
+
+  @media screen and (min-width: 1024px) {
+    width: 150px;
+  }
+}
+
+.vote-divider {
+  display: flex;
+  align-items: center;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.vote-count {
+  display: flex;
+  align-items: center;
+  padding-right: 4px;
+  padding-left: 4px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  padding-top: 1px;
+}
+
+.about-film-popularity {
+  width: 108px;
+  @media screen and (min-width: 1024px) {
+    width: 150px;
+  }
+}
+
+.about-film-info-genre {
+  width: 170px;
+  @media screen and (min-width: 768px) {
+    width: 180px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 280px;
+  }
+}
+
+.about-film-title {
+  width: 108px;
+  @media screen and (min-width: 1024px) {
+    width: 150px;
+  }
+}
+
+.about-film-genre {
+  width: 108px;
+  @media screen and (min-width: 1024px) {
+    width: 150px;
+  }
+}
+
+.description {
+  line-height: 1.67;
+  margin-bottom: 40px;
+  margin-top: 10px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+.add-btn {
+  align-items: center;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.33;
+  background-color: $header-text-color;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+
+  &:hover,
+  :focus {
+    color: $header-text-color;
+    background-color: $accent-color;
+    border: none;
+  }
+}
+
+.first.add-btn {
+  // padding-top: 12px;
+  // padding-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-right: 15px;
+}
+.second.add-btn {
+  // padding-top: 12px;
+  // padding-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+@media screen and (min-width: 768px) {
+  .info-section {
+    width: 294px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .info-section {
+    width: 426px;
+  }
+}
+
+.trailer-btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  width: auto;
+  height: auto;
+  font-weight: 600;
+  will-change: opacity;
+  transition: linear 0.1s;
+
+  &:hover {
+    cursor: pointer;
+    font-size: 21px;
+    color: $accent-color;
+
+    & .play-svg {
+      fill: $accent-color;
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.backdrop-modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #1a2731a6;
+  opacity: 1;
+}
+
+.backdrop-modal.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.backdrop-modal.is-hidden .modal-trailer {
+  opacity: 0;
+  transform: scale(0.3);
+  transition: 0.5s;
+}
+
+.backdrop-modal.is-hidden .close-trailer {
+  opacity: 0;
+}
+
+.close-trailer {
+  opacity: 1;
+  transition: 3.5s;
+}
+
+.modal-trailer {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  min-width: 250px;
+  z-index: 6;
+  transition: 0.8s;
+}
+
+.telegram-icon {
+  fill: $accent-color;
+  width: 12px;
+  height: 10px;
+}
+
+.social-link {
+  &:hover .telegram-icon {
+    fill: white;
+  }
+  &:focus .telegram-icon {
+    fill: white;
+  }
+}
+
+.share-btn {
+  margin-right: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.modal-share-btns {
+  width: 150px;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

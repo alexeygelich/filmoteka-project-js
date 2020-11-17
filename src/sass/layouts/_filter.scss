@@ -1,0 +1,118 @@
+.year-search {
+  border-radius: 5px;
+  border: 0;
+  text-align: center;
+  outline: none;
+}
+
+.parametr {
+  position: absolute;
+  top: 33px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  @media screen and (min-width: 768px) {
+    left: -85px;
+    width: 500px;
+  }
+}
+
+.genre-wrapper,
+.sort-wrapper,
+.year-wrapper,
+.clear-btn {
+  color: white;
+}
+
+.sort-wrapper,
+.genre-wrapper {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+}
+
+.category-list,
+.sort-list,
+.year-list {
+  text-align: center;
+  position: absolute;
+  z-index: 4;
+}
+
+.year-list,
+.category-list {
+  height: 104px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.category-list-item,
+.sort-list-item,
+.year-list-item {
+  background-color: black;
+  &:hover {
+    cursor: pointer;
+    background-color: $accent-color;
+  }
+}
+
+.search-btn {
+  color: white;
+  font-size: 15px;
+}
+
+.sort,
+.genre,
+.year,
+.clear-btn {
+  text-align: center;
+  padding: 5px;
+  background-color: #818181b0;
+  color: #fff;
+  border-radius: 9px;
+  font-weight: 500;
+  transition: 250ms;
+}
+
+.sort,
+.genre,
+.year,
+.year-list,
+.category-list,
+.sort-list,
+.clear-btn {
+  width: 122px;
+}
+
+.sort:hover,
+.genre:hover,
+.year:hover,
+.clear-btn:hover {
+  background-color: $accent-color;
+  cursor: pointer;
+}
+
+.sort-list-item,
+.category-list-item,
+.year-list-item {
+  padding: 5px;
+  background-color: white;
+  color: black;
+}
+
+.checked {
+  border-radius: 9px 9px 0 0;
+}
+.clear-btn {
+  color: $main-text-color;
+  pointer-events: auto;
+}
+
+.disable {
+  pointer-events: none;
+  opacity: 0.2;
+  color: gray;
+}

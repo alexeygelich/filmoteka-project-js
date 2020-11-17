@@ -1,0 +1,32 @@
+.search-list {
+  position: absolute;
+  width: 100%;
+  background: rgb(24, 24, 24);
+  box-shadow: 0 4px 6px rgba(32, 33, 36, 0.28);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 10px 10px;
+  padding-left: 7px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  text-align: left;
+  z-index: 1;
+}
+
+.search-list.is-hidden {
+  display: none;
+}
+
+.search-list-item {
+  color: #ffffff;
+  padding-top: 5px;
+
+  &:hover,
+  :focus {
+    cursor: pointer;
+    color: $accent-color;
+  }
+}
+.vote-average {
+  color: $accent-color;
+}

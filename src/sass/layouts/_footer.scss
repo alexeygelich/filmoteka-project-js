@@ -1,0 +1,231 @@
+.footer {
+  color: $footer-text-color;
+  background-color: $footer-background-color;
+ padding: 15px 5px;
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+
+// .footer-light {
+//   color: $footer-text-color;
+//   padding: 15px 5px;
+//   background-color: $footer-background-color;
+//   font-size: 14px;
+
+//   @media screen and (min-width: 768px) {
+//     font-size: 16px;
+//   }
+// }
+
+.footer-logo {
+  font-size: 25px;
+  font-weight: 500;
+  color: $accent-color;
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+    align-items: baseline;
+    justify-content: flex-start;
+  }
+}
+
+.footer-logo-svg {
+  margin-right: 10px;
+}
+
+.footer-section {
+  width: 100%;
+  border-top: 1px solid $accent-color;
+  border-bottom: 1px solid $accent-color;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    font-size: 15px;
+  }
+}
+
+.support {
+  display: none;
+   @media screen and (min-width: 768px) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.support .section-desc {
+ margin-bottom: 40px;
+}
+
+.email {
+  color: $footer-text-color;
+}
+
+.email:hover,
+.email:focus {
+  color: $accent-color;
+}
+
+.applications {
+  text-align: center;
+  padding: 10px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 25px;
+  }
+}
+
+.app-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.app-item {
+  color: $footer-text-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+   
+    fill: $accent-color;
+    transition: transform 500ms ease;
+  }
+}
+
+.app-item:not(:last-child) {
+   @media screen and (min-width: 1200px) {
+    margin-right: 25px;
+  }
+}
+
+.app-svg {
+   fill: black;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-item:focus .app-svg,
+.app-item:hover .app-svg {
+  fill: $accent-color;
+}
+
+.copyright {
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.copyright a {
+  color: inherit;
+}
+
+.copyright-desc {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.developer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-svg {
+  margin: 0 10px;
+  width: 14px;
+   height: 13px;
+
+    @media screen and (min-width: 1200px) {
+      width: 17px;
+   height: 16px;
+  }
+}
+
+.section-desc {
+  margin-bottom: 25px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+line-height: 1.33;
+letter-spacing: 0.1;
+}
+
+// !!!!
+.socials {
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 25px;
+  }
+}
+
+.socials .section-desc {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+.socials-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid $accent-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: $accent-color;
+}
+
+.social-svg {
+  fill: $accent-color;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .social-link:hover &,
+  .social-link:focus & {
+    fill: white;
+  }
+}
+
+.copyright-logo {
+  color: black;
+  font-weight: 600;
+}
+
+.copyright-accent {
+  color: $accent-color;
+  font-weight: 600;
+}
+
+
+.footer-dark {
+color: #818181;
+background-color: #333333;
+padding: 15px 5px;
+  // font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+

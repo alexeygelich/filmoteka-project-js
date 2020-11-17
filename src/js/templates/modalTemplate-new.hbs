@@ -1,0 +1,83 @@
+<div class="poster-wrapper">
+  {{#if poster_path}}
+  <img class="film-image" src="https://image.tmdb.org/t/p/w440_and_h660_face{{poster_path}}" alt="Фильм" />
+  {{else}}
+  <img class="film-image" style="height:auto" src="https://via.placeholder.com/416x500?text=YOU%27RE+AWESOME+:)"
+    alt="placeholder">
+  {{/if}}
+</div>
+<div class="info-section">
+  <h2 class="title">{{title}}</h2>
+  <p class="trailer-btn">
+    <svg class="play-svg" width="24" height="24">
+      <use href="./images/sprite.svg#icon-play"></use>
+    </svg>
+    Play Trailer</p>
+  <div class="modal-info">
+    <ul class="list-info">
+      <li class="list-info-item">
+        <span class="about-film about-film-votes">Vote / Votes</span><span
+          class="about-film-vote">{{vote_average}}</span><span class="about-film-info vote-divider"> / </span>
+        <span class="about-film-info vote-count">{{vote_count}}</span>
+      </li>
+      <li class="list-info-item">
+        <span class="about-film about-film-popularity">Popularity</span><span
+          class="about-film-info">{{popularity}}</span>
+      </li>
+      <li class="list-info-item">
+        <span class="about-film about-film-title">Original Title</span><span
+          class="about-film-info original-title">{{title}}</span>
+      </li>
+      <li class="list-info-item">
+        <span class="about-film about-film-genre">Genre</span><span class="about-film-info">{{genre_ids}}</span>
+      </li>
+    </ul>
+  </div>
+  <ul class="modal-share-btns">
+    <a href="#" target="_blank" class="social-link share-btn" id="#telegram">
+      <svg class="telegram-icon">
+        <use href="images/sprite.svg#icon-telegram"></use>
+      </svg>
+    </a>
+    <a href="#" target="_blank" class="social-link share-btn" id="#twitter">
+      <svg class="telegram-icon">
+        <use href="images/sprite.svg#icon-twitter"></use>
+      </svg>
+    </a>
+    <a href="#" target="_blank" class="social-link share-btn" id="#facebook">
+      <svg class="telegram-icon">
+        <use href="images/sprite.svg#icon-facebook"></use>
+      </svg>
+    </a>
+  </ul>
+  <div>
+    <h3 class="subtitle">ABOUT</h3>
+    {{#if overview}}
+    <p class="description">"{{overview}}"</p>
+    {{else}}
+    <p class="description">We're sorry, this movie has no description :(</p>
+    {{/if}}
+  </div>
+  <div class="button-wrapper">
+    <button class="first add-btn" type="button">ADD TO WATCHED</button>
+    <button class="second add-btn" type="button">ADD TO QUEUE</button>
+  </div>
+  <button class="close-modal-btn" type="button">X</button>
+</div>
+
+{{!-- <ul class="list-info">
+      <li>
+        <p class="about-film-info">
+          <span class="about-film-vote">{{vote_average}}</span> / {{vote_count}}
+        </p>
+      </li>
+      <li>
+        <p class="about-film-info">{{popularity}}</p>
+      </li>
+      <li>
+        <p class="about-film-info original-title">{{title}}</p>
+      </li>
+      <li>
+        <p class="about-film-info">{{genre_ids}}</p>
+      </li>
+    </ul> --}}
